@@ -1,4 +1,4 @@
-package abstractuser;
+package model;
 
 /**
  *
