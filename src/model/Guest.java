@@ -1,34 +1,35 @@
-package abstractuser;
+package model;
+
+import model.User;
 
 /**
  *
  * @author Edwynne Kalugdan
+ * @author Caleb Irvine
  */
 public class Guest extends User {
-    private int SIN;
-    private String citizenshipStatus;
-    private String hireDate;
+    private String billingAdress;
+    
+    
 
     // Constructor
-    public Guest(String email, String phoneNumber, String address, String password, int userID, int SIN, String citizenshipStatus, String hireDate) {
-        super(email, phoneNumber, address, password, userID);
-        this.SIN = SIN;
-        this.citizenshipStatus = citizenshipStatus;
-        this.hireDate = hireDate;
-    }
 
+    public Guest(String firstName, String lastName, String email, String phoneNumber, String billingAdress, String address, String password, int userID) {
+        super(firstName, lastName, email, phoneNumber, address, password, userID);
+        this.billingAdress = billingAdress;
+    }
+    
     @Override
     public void login() {
         System.out.println("Guest logged in with email: " + getEmail());
     }
 
     @Override
-    public void updateInfo(String newEmail, String newPhoneNumber, String newAddress) {
-        setEmail(newEmail);
-        setPhoneNumber(newPhoneNumber);
-        setAddress(newAddress);
-        System.out.println("Guest information updated.");
+    public void updateInfo(String newInfo, String attributeToChange) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+   
 
     // Guest-specific methods
     public void checkInGuest(int bookingNumber) {
@@ -48,28 +49,14 @@ public class Guest extends User {
     }
 
     // Getters and setters
-    public int getSIN() {
-        return SIN;
+
+    public String getBillingAdress() {
+        return billingAdress;
     }
 
-    public void setSIN(int SIN) {
-        this.SIN = SIN;
+    public void setBillingAdress(String billingAdress) {
+        this.billingAdress = billingAdress;
     }
-
-    public String getCitizenshipStatus() {
-        return citizenshipStatus;
-    }
-
-    public void setCitizenshipStatus(String citizenshipStatus) {
-        this.citizenshipStatus = citizenshipStatus;
-    }
-
-    public String getHireDate() {
-        return hireDate;
-    }
-
-    public void setHireDate(String hireDate) {
-        this.hireDate = hireDate;
-    }
+    
 }
 
