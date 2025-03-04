@@ -57,8 +57,8 @@ public class HotelController {
             String email = hotelGuestRegistrationView.getTxtEmail().getText();
             String password = hotelGuestRegistrationView.getTxtPassword().getText();
 
-            Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password, null);
-            boolean result = new hotelDAO.addGuestRecord(newGuest);
+            Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password, 0);
+//            boolean result = new hotelDAO.addGuestRecord(newGuest);
 
              if (firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || password.equals(0)) {
                 JOptionPane.showMessageDialog(null,
@@ -71,8 +71,8 @@ public class HotelController {
                 JOptionPane.showMessageDialog(null, "Form Success");
                 //method for DAO - Insert data into SQL table..
             }
-             
-            if (result) {
+             //make this result once implemented)
+            if (true) {
                 JOptionPane.showMessageDialog(null, "Successfully added a new course");
             } else {
                 JOptionPane.showMessageDialog(null, "Was not able to add a new course record");

@@ -5,6 +5,7 @@ import model.User;
 /**
  *
  * @author Edwynne Kalugdan
+ * @author Caleb Irvine
  */
 public class Guest extends User {
     private String billingAdress;
@@ -12,14 +13,11 @@ public class Guest extends User {
     
 
     // Constructor
-   
 
-    public Guest(String billingAdress, String email, String phoneNumber, String address, String password, int userID) {
-        super(email, phoneNumber, address, password, userID);
+    public Guest(String firstName, String lastName, String email, String phoneNumber, String billingAdress, String address, String password, int userID) {
+        super(firstName, lastName, email, phoneNumber, address, password, userID);
         this.billingAdress = billingAdress;
     }
-
-    
     
     @Override
     public void login() {
@@ -27,12 +25,11 @@ public class Guest extends User {
     }
 
     @Override
-    public void updateInfo(String newEmail, String newPhoneNumber, String newAddress) {
-        setEmail(newEmail);
-        setPhoneNumber(newPhoneNumber);
-        setAddress(newAddress);
-        System.out.println("Guest information updated.");
+    public void updateInfo(String newInfo, String attributeToChange) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+   
 
     // Guest-specific methods
     public void checkInGuest(int bookingNumber) {
