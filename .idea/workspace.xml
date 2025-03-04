@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5574fb50-5acb-4399-a8b0-8f4fded7fb42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "method",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter 2025/ICS 125 - SENG process/Final_Project/HotelReservationSystem",
     "node.js.detected.package.eslint": "true",
@@ -82,6 +82,7 @@
       <workItem from="1740957034568" duration="686000" />
       <workItem from="1740957734121" duration="180000" />
       <workItem from="1740966816153" duration="1687000" />
+      <workItem from="1741055992651" duration="35000" />
     </task>
     <servers />
   </component>
