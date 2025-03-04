@@ -10,7 +10,7 @@ import view.MainFrame;
  *
  * @author Caleb Irvine
  */
-public class HotelManagement {
+public class HotelReservationSystem {
     
     public static void main(String[] args){
      MainFrame mainFrame = new MainFrame();
