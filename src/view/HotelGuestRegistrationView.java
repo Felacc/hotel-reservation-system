@@ -4,21 +4,108 @@
  */
 package view;
 
-import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 /**
  *
  * @author kale
+/**
+ *
+ * @author kale
  */
-public class HotelRegistration extends javax.swing.JFrame {
+public class HotelGuestRegistrationView extends javax.swing.JFrame {
 
     /**
-     * Creates new form HotelRegistration
+     * Creates new form HotelStaffView
      */
-    public HotelRegistration() {
+    public HotelGuestRegistrationView() {
         initComponents();
     }
+    
+    public void addGuestBtnListener(ActionListener myActionListener){
+        btnAddGuest.addActionListener(myActionListener);
+    }
+    
+    public void addClearAllBtnListener(ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
 
+    public JButton getBtnAddGuest() {
+        return btnAddGuest;
+    }
+
+    public void setBtnAddGuest(JButton btnAddGuest) {
+        this.btnAddGuest = btnAddGuest;
+    }
+
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JTextField getTxtAddress() {
+        return txtAddress;
+    }
+
+    public void setTxtAddress(JTextField txtAddress) {
+        this.txtAddress = txtAddress;
+    }
+
+    public JTextField getTxtBillingAddress() {
+        return txtBillingAddress;
+    }
+
+    public void setTxtBillingAddress(JTextField txtBillingAddress) {
+        this.txtBillingAddress = txtBillingAddress;
+    }
+
+    public JTextField getTxtEmail() {
+        return txtEmail;
+    }
+
+    public void setTxtEmail(JTextField txtEmail) {
+        this.txtEmail = txtEmail;
+    }
+
+    public JTextField getTxtFirstName() {
+        return txtFirstName;
+    }
+
+    public void setTxtFirstName(JTextField txtFirstName) {
+        this.txtFirstName = txtFirstName;
+    }
+
+    public JTextField getTxtLastName() {
+        return txtLastName;
+    }
+
+    public void setTxtLastName(JTextField txtLastName) {
+        this.txtLastName = txtLastName;
+    }
+
+    public JTextField getTxtPhone() {
+        return txtPhone;
+    }
+
+    public void setTxtPhone(JTextField txtPhone) {
+        this.txtPhone = txtPhone;
+    }
+
+    public JPasswordField getTxtPassword() {
+        return txtPassword;
+    }
+
+    public void setTxtPassword(JPasswordField txtPassword) {
+        this.txtPassword = txtPassword;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,7 +115,7 @@ public class HotelRegistration extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ParentContainer = new javax.swing.JPanel();
+        javax.swing.JPanel parentPanel = new javax.swing.JPanel();
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
@@ -43,15 +130,18 @@ public class HotelRegistration extends javax.swing.JFrame {
         javax.swing.JLabel lblEmail = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         javax.swing.JLabel lblPassword = new javax.swing.JLabel();
-        javax.swing.JButton btnClear = new javax.swing.JButton();
-        javax.swing.JButton btnSubmit = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
+        btnAddGuest = new javax.swing.JButton();
         txtPassword = new javax.swing.JPasswordField();
+        javax.swing.JLabel lblBillingAddress = new javax.swing.JLabel();
+        txtBillingAddress = new javax.swing.JTextField();
         txtPasswordConfirmation = new javax.swing.JPasswordField();
         javax.swing.JLabel lblPassword1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Register User Account");
 
-        ParentContainer.setBackground(java.awt.Color.white);
+        parentPanel.setBackground(java.awt.Color.white);
 
         childPanel.setBackground(java.awt.Color.white);
 
@@ -59,7 +149,7 @@ public class HotelRegistration extends javax.swing.JFrame {
         lblRegister.setForeground(java.awt.Color.black);
         lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/user.png"))); // NOI18N
-        lblRegister.setText("Register Account:");
+        lblRegister.setText("Register Guest Account:");
         lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Information:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14), java.awt.Color.black)); // NOI18N
@@ -114,15 +204,19 @@ public class HotelRegistration extends javax.swing.JFrame {
             }
         });
 
-        btnSubmit.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSubmit.setForeground(new java.awt.Color(0, 0, 0));
-        btnSubmit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/add.png"))); // NOI18N
-        btnSubmit.setText("Register");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnAddGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnAddGuest.setForeground(new java.awt.Color(0, 0, 0));
+        btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/add.png"))); // NOI18N
+        btnAddGuest.setText("Register");
+        btnAddGuest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
+                btnAddGuestActionPerformed(evt);
             }
         });
+
+        lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblBillingAddress.setForeground(java.awt.Color.black);
+        lblBillingAddress.setText("Billing Address:");
 
         lblPassword1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblPassword1.setForeground(java.awt.Color.black);
@@ -150,13 +244,14 @@ public class HotelRegistration extends javax.swing.JFrame {
                             .addComponent(txtEmail)
                             .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblPassword1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                                    .addComponent(txtPasswordConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnAddGuest)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSubmit)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnClear)))
+                                .addComponent(btnClear))
+                            .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtBillingAddress)
+                            .addComponent(txtPasswordConfirmation, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblPassword1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -175,6 +270,10 @@ public class HotelRegistration extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblBillingAddress)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtBillingAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblPhone)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -186,19 +285,15 @@ public class HotelRegistration extends javax.swing.JFrame {
                 .addComponent(lblPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSubmit)
-                            .addComponent(btnClear))
-                        .addContainerGap())
-                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblPassword1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPasswordConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblPassword1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtPasswordConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAddGuest)
+                    .addComponent(btnClear))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
@@ -209,7 +304,7 @@ public class HotelRegistration extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE))
+                    .addComponent(lblRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -222,45 +317,25 @@ public class HotelRegistration extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout ParentContainerLayout = new javax.swing.GroupLayout(ParentContainer);
-        ParentContainer.setLayout(ParentContainerLayout);
-        ParentContainerLayout.setHorizontalGroup(
-            ParentContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
+        parentPanel.setLayout(parentPanelLayout);
+        parentPanelLayout.setHorizontalGroup(
+            parentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        ParentContainerLayout.setVerticalGroup(
-            ParentContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        parentPanelLayout.setVerticalGroup(
+            parentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getContentPane().add(ParentContainer, java.awt.BorderLayout.CENTER);
+        getContentPane().add(parentPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        // TODO add your handling code here:
-        //Let's read the text fields
-        String firstName = txtFirstName.getText();
-        String lastName = txtLastName.getText();
-        String address = txtAddress.getText();
-        String phone = txtPhone.getText();
-        String email = txtEmail.getText();
-        char[] password = txtPassword.getPassword();
-        
-        if(firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty()){
-            JOptionPane.showMessageDialog(this,
-                    "Please enter all fields",
-                    "Try Again Please...",
-                    JOptionPane.ERROR_MESSAGE
-                    );
-        } else
-            //
-            JOptionPane.showMessageDialog(this, "Form Success");
-            //method for DAO - Insert data into SQL table..
-        }
-        
-    }//GEN-LAST:event_btnSubmitActionPerformed
+    private void btnAddGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddGuestActionPerformed
+     
+    }//GEN-LAST:event_btnAddGuestActionPerformed
 
     private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
         // TODO add your handling code here:
@@ -271,51 +346,25 @@ public class HotelRegistration extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        txtFirstName.setText("");
-        txtLastName.setText("");
-        txtPhone.setText("");
-        txtEmail.setText("");
-        txtPassword.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HotelRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HotelRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HotelRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HotelRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
+/* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HotelRegistration().setVisible(true);
+                new HotelGuestRegistrationView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel ParentContainer;
+    private javax.swing.JButton btnAddGuest;
+    private javax.swing.JButton btnClear;
     private javax.swing.JTextField txtAddress;
+    private javax.swing.JTextField txtBillingAddress;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtLastName;
