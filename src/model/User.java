@@ -5,6 +5,8 @@ package model;
  * @author Edwynne Kalugdan
  */
 public abstract class User {
+    private String firstName;
+    private String lastName;
     private String email;
     private String phoneNumber;
     private String address;
@@ -12,7 +14,7 @@ public abstract class User {
     private int userID;
 
     // Constructor
-    public User(String email, String phoneNumber, String address, String password, int userID) {
+    public User(String firstName, String lastName, String email, String phoneNumber, String address, String password, int userID) {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
@@ -22,7 +24,7 @@ public abstract class User {
 
     // Abstract methods to be implemented by subclasses
     public abstract void login();
-    public abstract void updateInfo(String newEmail, String newPhoneNumber, String newAddress);
+    public abstract void updateInfo(String newInfo, String attributeToChange);
 
     // Getters and setters
     public String getEmail() {
