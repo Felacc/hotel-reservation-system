@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dao.HotelDAO;
+import dao.GuestDAO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -17,13 +17,12 @@ import view.HotelGuestRegistrationView;
  * @author kale
  */
 public class HotelController {
-
     private HotelGuestRegistrationView hotelGuestRegistrationView;
-    private HotelDAO hotelDAO;
+    private GuestDAO guestDAO;
 
-    public HotelController(HotelGuestRegistrationView hotelGuestRegistrationView, HotelDAO hotelDAO) {
+    public HotelController(HotelGuestRegistrationView hotelGuestRegistrationView, GuestDAO guestDAO) {
         this.hotelGuestRegistrationView = hotelGuestRegistrationView;
-        this.hotelDAO = hotelDAO;
+        this.guestDAO = guestDAO;
 
         hotelGuestRegistrationView.addGuestBtnListener(new AddGuestRecord());
         hotelGuestRegistrationView.addClearAllBtnListener(new ClearAllTextFields());
@@ -38,10 +37,8 @@ public class HotelController {
             hotelGuestRegistrationView.getTxtAddress().setText("");
             hotelGuestRegistrationView.getTxtBillingAddress().setText("");
             hotelGuestRegistrationView.getTxtPhone().setText("");
-//            hotelGuestRegistrationView.setTxtEmail().setText("");
-//            hotelGuestRegistrationView.setTxtPassword().setText("");
-
-          
+            hotelGuestRegistrationView.getTxtEmail().setText("");
+            hotelGuestRegistrationView.getTxtPassword().setText("");
         }
     }
 
@@ -57,22 +54,10 @@ public class HotelController {
             String email = hotelGuestRegistrationView.getTxtEmail().getText();
             String password = hotelGuestRegistrationView.getTxtPassword().getText();
 
-            Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password, 0);
-//            boolean result = new hotelDAO.addGuestRecord(newGuest);
-
-             if (firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || password.equals(0)) {
-                JOptionPane.showMessageDialog(null,
-                        "Please enter all fields",
-                        "Try Again Please...",
-                        JOptionPane.ERROR_MESSAGE
-                );
-            } else {
-                //
-                JOptionPane.showMessageDialog(null, "Form Success");
-                //method for DAO - Insert data into SQL table..
-            }
-             //make this result once implemented)
-            if (true) {
+            Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password);
+            boolean result = guestDAO.addGuestRecord(newGuest);
+       //make this result once implemented)
+            if (result) {
                 JOptionPane.showMessageDialog(null, "Successfully added a new course");
             } else {
                 JOptionPane.showMessageDialog(null, "Was not able to add a new course record");

@@ -6,17 +6,13 @@ package view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 
 /**
  *
  * @author kale
-/**
- *
- * @author kale
  */
+
 public class HotelGuestRegistrationView extends javax.swing.JFrame {
 
     /**
@@ -24,14 +20,6 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
      */
     public HotelGuestRegistrationView() {
         initComponents();
-    }
-    
-    public void addGuestBtnListener(ActionListener myActionListener){
-        btnAddGuest.addActionListener(myActionListener);
-    }
-    
-    public void addClearAllBtnListener(ActionListener myActionListener){
-        btnClear.addActionListener(myActionListener);
     }
 
     public JButton getBtnAddGuest() {
@@ -62,8 +50,8 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         return txtBillingAddress;
     }
 
-    public void setTxtBillingAddress(JTextField txtBillingAddress) {
-        this.txtBillingAddress = txtBillingAddress;
+    public void setTxtBillingAddress(JTextField txtBillingAddress1) {
+        this.txtBillingAddress = txtBillingAddress1;
     }
 
     public JTextField getTxtEmail() {
@@ -90,6 +78,14 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         this.txtLastName = txtLastName;
     }
 
+    public JTextField getTxtPassword() {
+        return txtPassword;
+    }
+
+    public void setTxtPassword(JTextField txtPassword) {
+        this.txtPassword = txtPassword;
+    }
+
     public JTextField getTxtPhone() {
         return txtPhone;
     }
@@ -97,15 +93,15 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
     public void setTxtPhone(JTextField txtPhone) {
         this.txtPhone = txtPhone;
     }
-
-    public JPasswordField getTxtPassword() {
-        return txtPassword;
-    }
-
-    public void setTxtPassword(JPasswordField txtPassword) {
-        this.txtPassword = txtPassword;
+    
+    public void addGuestBtnListener(ActionListener myActionListener){
+        btnAddGuest.addActionListener(myActionListener);
     }
     
+    public void addClearAllBtnListener(ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -132,11 +128,9 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         javax.swing.JLabel lblPassword = new javax.swing.JLabel();
         btnClear = new javax.swing.JButton();
         btnAddGuest = new javax.swing.JButton();
-        txtPassword = new javax.swing.JPasswordField();
         javax.swing.JLabel lblBillingAddress = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JTextField();
         txtBillingAddress = new javax.swing.JTextField();
-        txtPasswordConfirmation = new javax.swing.JPasswordField();
-        javax.swing.JLabel lblPassword1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register User Account");
@@ -159,12 +153,6 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         lblFirstName.setForeground(java.awt.Color.black);
         lblFirstName.setText("First Name:");
 
-        txtFirstName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFirstNameActionPerformed(evt);
-            }
-        });
-
         lblLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblLastName.setForeground(java.awt.Color.black);
         lblLastName.setText("Last Name:");
@@ -184,11 +172,6 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         lblEmail.setText("Email:");
 
         txtEmail.setText("email@host.com");
-        txtEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailActionPerformed(evt);
-            }
-        });
 
         lblPassword.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblPassword.setForeground(java.awt.Color.black);
@@ -198,29 +181,15 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/clear.png"))); // NOI18N
         btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
 
         btnAddGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnAddGuest.setForeground(new java.awt.Color(0, 0, 0));
         btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/add.png"))); // NOI18N
         btnAddGuest.setText("Register");
-        btnAddGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddGuestActionPerformed(evt);
-            }
-        });
 
         lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblBillingAddress.setForeground(java.awt.Color.black);
         lblBillingAddress.setText("Billing Address:");
-
-        lblPassword1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPassword1.setForeground(java.awt.Color.black);
-        lblPassword1.setText("Confirm Password");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -229,30 +198,26 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtFirstName)
-                            .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtLastName)
-                            .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtAddress)
-                            .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtPhone)
-                            .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtEmail)
-                            .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnAddGuest)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnClear))
-                            .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtBillingAddress)
-                            .addComponent(txtPasswordConfirmation, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblPassword1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())))
+                    .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtFirstName)
+                    .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtLastName)
+                    .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtAddress)
+                    .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPhone)
+                    .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtEmail)
+                    .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
+                        .addGap(0, 367, Short.MAX_VALUE)
+                        .addComponent(btnAddGuest)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnClear))
+                    .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPassword)
+                    .addComponent(txtBillingAddress))
+                .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,7 +238,7 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
                 .addComponent(lblBillingAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtBillingAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(12, 12, 12)
                 .addComponent(lblPhone)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,16 +250,15 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
                 .addComponent(lblPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblPassword1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPasswordConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddGuest)
                     .addComponent(btnClear))
                 .addContainerGap())
         );
+
+        btnClear.getAccessibleContext().setAccessibleParent(this);
+        btnAddGuest.getAccessibleContext().setAccessibleParent(this);
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
@@ -333,21 +297,6 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddGuestActionPerformed
-     
-    }//GEN-LAST:event_btnAddGuestActionPerformed
-
-    private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtFirstNameActionPerformed
-
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-    }//GEN-LAST:event_btnClearActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -368,8 +317,7 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtLastName;
-    private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JPasswordField txtPasswordConfirmation;
+    private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtPhone;
     // End of variables declaration//GEN-END:variables
 }

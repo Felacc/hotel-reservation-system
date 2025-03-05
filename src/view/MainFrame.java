@@ -5,7 +5,7 @@
 package view;
 
 import controller.HotelController;
-import dao.HotelDAO;
+import dao.GuestDAO;
 
 /**
  *
