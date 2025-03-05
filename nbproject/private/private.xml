@@ -4,8 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelReservationSystem/src/view/MainFrame.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelReservationSystem/src/view/HotelGuestRegistrationView.java</file>
             <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelReservationSystem/src/model/User.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelReservationSystem/src/dao/HotelDAO.java</file>
             <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelReservationSystem/src/model/Guest.java</file>
             <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelReservationSystem/src/controller/HotelController.java</file>
         </group>
