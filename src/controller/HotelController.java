@@ -37,10 +37,8 @@ public class HotelController {
             hotelGuestRegistrationView.getTxtAddress().setText("");
             hotelGuestRegistrationView.getTxtBillingAddress().setText("");
             hotelGuestRegistrationView.getTxtPhone().setText("");
-//            hotelGuestRegistrationView.setTxtEmail().setText("");
-//            hotelGuestRegistrationView.setTxtPassword().setText("");
-
-          
+            hotelGuestRegistrationView.getTxtEmail().setText("");
+            hotelGuestRegistrationView.getTxtPassword().setText("");
         }
     }
 
@@ -57,7 +55,7 @@ public class HotelController {
             String password = hotelGuestRegistrationView.getTxtPassword().getText();
 
             Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password);
-//            boolean result = new guestDAO.addGuestRecord(newGuest);
+//            boolean result = guestDAO.addGuestRecord(newGuest);
        //make this result once implemented)
             if (true) {
                 JOptionPane.showMessageDialog(null, "Successfully added a new course");
