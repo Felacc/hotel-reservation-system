@@ -27,6 +27,24 @@ public abstract class User {
     public abstract void updateInfo(String newInfo, String attributeToChange);
 
     // Getters and setters
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+    
     public String getEmail() {
         return email;
     }
