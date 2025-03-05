@@ -6,17 +6,13 @@ package view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 
 /**
  *
  * @author kale
-/**
- *
- * @author kale
  */
+
 public class HotelGuestRegistrationView extends javax.swing.JFrame {
 
     /**
@@ -260,6 +256,9 @@ public class HotelGuestRegistrationView extends javax.swing.JFrame {
                     .addComponent(btnClear))
                 .addContainerGap())
         );
+
+        btnClear.getAccessibleContext().setAccessibleParent(this);
+        btnAddGuest.getAccessibleContext().setAccessibleParent(this);
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);

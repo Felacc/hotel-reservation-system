@@ -55,9 +55,9 @@ public class HotelController {
             String password = hotelGuestRegistrationView.getTxtPassword().getText();
 
             Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password);
-//            boolean result = guestDAO.addGuestRecord(newGuest);
+            boolean result = guestDAO.addGuestRecord(newGuest);
        //make this result once implemented)
-            if (true) {
+            if (result) {
                 JOptionPane.showMessageDialog(null, "Successfully added a new course");
             } else {
                 JOptionPane.showMessageDialog(null, "Was not able to add a new course record");
