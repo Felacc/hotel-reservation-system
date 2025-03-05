@@ -10,16 +10,6 @@ package model;
  */
 
 interface Staff {
-    //Only admins would be able to set SIN, hiredate and Citizenship, but all staff can see their own
-    int SIN = 0;
-    int getSIN();
-    
-    String citizenshipStatus = "";
-    void getCitizenshipStatus();
-    
-    String hireDate ="01-01-1999";
-    String getHireDate();
-
     //checkin and checkout
     public void checkInGuest(int bookingNumber);
     public void checkoutGuest(int bookingNumber);
