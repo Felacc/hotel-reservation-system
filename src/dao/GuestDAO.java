@@ -21,7 +21,7 @@ public class GuestDAO {
     public GuestDAO() {
     }
 
-    public GuestDAO(String courseName, int credit) {
+    public GuestDAO(Guest guest) {
         this.guest = guest;
     }
 

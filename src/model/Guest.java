@@ -13,7 +13,6 @@ public class Guest extends User {
     
 
     // Constructor
-
     public Guest(String firstName, String lastName, String email, String phoneNumber, String billingAdress, String address, String password) {
         super(firstName, lastName, email, phoneNumber, address, password);
         this.billingAdress = billingAdress;
