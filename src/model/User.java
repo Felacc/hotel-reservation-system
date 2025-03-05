@@ -11,15 +11,13 @@ public abstract class User {
     private String phoneNumber;
     private String address;
     private String password;
-    private int userID;
 
     // Constructor
-    public User(String firstName, String lastName, String email, String phoneNumber, String address, String password, int userID) {
+    public User(String firstName, String lastName, String email, String phoneNumber, String address, String password) {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.password = password;
-        this.userID = userID;
     }
 
     // Abstract methods to be implemented by subclasses
@@ -75,14 +73,6 @@ public abstract class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
     }
 }
 
