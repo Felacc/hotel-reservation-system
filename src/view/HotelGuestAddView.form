@@ -100,7 +100,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/view/user.png"/>
+                  <Image iconType="3" name="/view/icons/user.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Create Guest Account:"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -319,7 +319,7 @@
                       <Color blue="50" green="54" id="Actions.Red" palette="3" red="c7" type="palette"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/view/clear.png"/>
+                      <Image iconType="3" name="/view/icons/clear.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Clear"/>
                   </Properties>
@@ -338,7 +338,7 @@
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/view/add.png"/>
+                      <Image iconType="3" name="/view/icons/add.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Register"/>
                   </Properties>

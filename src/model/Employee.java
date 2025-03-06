@@ -8,7 +8,7 @@ package model;
  *
  * @author felix
  */
-public class Employee extends User implements Staff {
+public class Employee extends User {
     private int SIN;
     private String citizenshipStatus;
     final private String hireDate; // will possibly want to refactor to use date type and instantiate objects with the current date
