@@ -32,7 +32,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         txtUserName = new javax.swing.JTextField();
         javax.swing.JLabel lblUserType = new javax.swing.JLabel();
         txtUserPassword = new javax.swing.JTextField();
-        javax.swing.JLabel lblUserPassword1 = new javax.swing.JLabel();
+        javax.swing.JLabel lblUserPassword = new javax.swing.JLabel();
         txtUserType = new javax.swing.JTextField();
         btnUpdateUser = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
@@ -57,8 +57,8 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         lblUserType.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblUserType.setText("User Type:");
 
-        lblUserPassword1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblUserPassword1.setText("Password:");
+        lblUserPassword.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblUserPassword.setText("Password:");
 
         btnUpdateUser.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnUpdateUser.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
@@ -91,7 +91,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
                     .addComponent(txtUserName)
                     .addComponent(lblUserType, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
                     .addComponent(txtUserPassword)
-                    .addComponent(lblUserPassword1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblUserPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtUserType)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -108,7 +108,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblUserPassword1)
+                .addComponent(lblUserPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)

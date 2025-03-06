@@ -30,7 +30,7 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         btnClear = new javax.swing.JButton();
-        txtDeleteGuest = new javax.swing.JTextField();
+        txtDeleteStaff = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,7 +56,7 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
             }
         });
 
-        txtDeleteGuest.setText("This cannot be undone...");
+        txtDeleteStaff.setText("This cannot be undone...");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -69,14 +69,14 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
                         .addComponent(btnClear))
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(txtDeleteGuest)))
+                        .addComponent(txtDeleteStaff)))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtDeleteGuest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDeleteStaff, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnClear)
                 .addContainerGap(165, Short.MAX_VALUE))
@@ -160,6 +160,6 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
-    private javax.swing.JTextField txtDeleteGuest;
+    private javax.swing.JTextField txtDeleteStaff;
     // End of variables declaration//GEN-END:variables
 }
