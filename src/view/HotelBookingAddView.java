@@ -22,77 +22,7 @@ public class HotelBookingAddView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnAddGuest() {
-        return btnAddGuest;
-    }
-
-    public void setBtnAddGuest(JButton btnAddGuest) {
-        this.btnAddGuest = btnAddGuest;
-    }
-
-    public JButton getBtnClear() {
-        return btnClear;
-    }
-
-    public void setBtnClear(JButton btnClear) {
-        this.btnClear = btnClear;
-    }
-
-    public JTextField getTxtAddress() {
-        return txtAddress;
-    }
-
-    public void setTxtAddress(JTextField txtAddress) {
-        this.txtAddress = txtAddress;
-    }
-
-    public JTextField getTxtBillingAddress() {
-        return txtBillingAddress;
-    }
-
-    public void setTxtBillingAddress(JTextField txtBillingAddress1) {
-        this.txtBillingAddress = txtBillingAddress1;
-    }
-
-    public JTextField getTxtEmail() {
-        return txtEmail;
-    }
-
-    public void setTxtEmail(JTextField txtEmail) {
-        this.txtEmail = txtEmail;
-    }
-
-    public JTextField getTxtFirstName() {
-        return txtFirstName;
-    }
-
-    public void setTxtFirstName(JTextField txtFirstName) {
-        this.txtFirstName = txtFirstName;
-    }
-
-    public JTextField getTxtLastName() {
-        return txtLastName;
-    }
-
-    public void setTxtLastName(JTextField txtLastName) {
-        this.txtLastName = txtLastName;
-    }
-
-    public JTextField getTxtPassword() {
-        return txtPassword;
-    }
-
-    public void setTxtPassword(JTextField txtPassword) {
-        this.txtPassword = txtPassword;
-    }
-
-    public JTextField getTxtPhone() {
-        return txtPhone;
-    }
-
-    public void setTxtPhone(JTextField txtPhone) {
-        this.txtPhone = txtPhone;
-    }
+   
     
     public void addGuestBtnListener(ActionListener myActionListener){
         btnAddGuest.addActionListener(myActionListener);
@@ -120,9 +50,9 @@ public class HotelBookingAddView extends javax.swing.JFrame {
         lblLastName = new javax.swing.JLabel();
         btnClear = new javax.swing.JButton();
         btnAddGuest = new javax.swing.JButton();
-        txtLastName1 = new javax.swing.JTextField();
         javax.swing.JLabel lblLastName1 = new javax.swing.JLabel();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register User Account");
@@ -147,7 +77,7 @@ public class HotelBookingAddView extends javax.swing.JFrame {
 
         lblLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblLastName.setForeground(java.awt.Color.black);
-        lblLastName.setText("Price Set:");
+        lblLastName.setText("Set Booking Date");
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
@@ -163,11 +93,9 @@ public class HotelBookingAddView extends javax.swing.JFrame {
         lblLastName1.setForeground(java.awt.Color.black);
         lblLastName1.setText("Price Set:");
 
-        try {
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        jFormattedTextField1.setText("jFormattedTextField1");
+        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+
+        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -186,7 +114,7 @@ public class HotelBookingAddView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnClear))
                     .addComponent(lblLastName1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtLastName1))
+                    .addComponent(jFormattedTextField2))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -198,13 +126,13 @@ public class HotelBookingAddView extends javax.swing.JFrame {
                 .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblLastName)
-                .addGap(12, 12, 12)
-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lblLastName1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtLastName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddGuest)
                     .addComponent(btnClear))
@@ -268,9 +196,9 @@ public class HotelBookingAddView extends javax.swing.JFrame {
     private javax.swing.JButton btnClear;
     private javax.swing.JPanel enterInfoPanel;
     private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblLastName;
     private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName1;
     // End of variables declaration//GEN-END:variables
 }
