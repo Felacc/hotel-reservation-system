@@ -4,7 +4,7 @@
  */
 package view;
 
-import controller.HotelController;
+import controller.GuestController;
 import dao.GuestDAO;
 
 /**
@@ -20,6 +20,11 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+     private void mnuItemExitActionPerformed(java.awt.event.ActionEvent evt) {                                            
+       System.exit(0);
+    }                                           
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,31 +34,53 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenu3 = new javax.swing.JMenu();
-        javax.swing.JPanel parentPanel = new javax.swing.JPanel();
+        lblBackgroundIMG = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuFile = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
-        mnuStaff = new javax.swing.JMenu();
+        mnuUser = new javax.swing.JMenu();
+        mnuItemAddUser = new javax.swing.JMenuItem();
+        mnuItemSearchUser = new javax.swing.JMenuItem();
+        mnuItemUpdateUser = new javax.swing.JMenuItem();
+        mnuItemDeleteUser = new javax.swing.JMenuItem();
+        mnuGuest = new javax.swing.JMenu();
         mnuItemAddGuest = new javax.swing.JMenuItem();
-
-        jMenu3.setText("jMenu3");
+        mnuItemSearchGuest = new javax.swing.JMenuItem();
+        mnuItemUpdateGuest = new javax.swing.JMenuItem();
+        mnuItemDeleteGuest = new javax.swing.JMenuItem();
+        mnuStaff = new javax.swing.JMenu();
+        mnuItemAddStaff = new javax.swing.JMenuItem();
+        mnuItemSearchStaff = new javax.swing.JMenuItem();
+        mnuItemUpdateStaff = new javax.swing.JMenuItem();
+        mnuItemDeleteStaff = new javax.swing.JMenuItem();
+        mnuReservation = new javax.swing.JMenu();
+        mnuItemAddReservation = new javax.swing.JMenuItem();
+        mnuItemSearchReservation = new javax.swing.JMenuItem();
+        mnuItemUpdateReservation = new javax.swing.JMenuItem();
+        mnuItemDeleteReservation = new javax.swing.JMenuItem();
+        mnuBooking = new javax.swing.JMenu();
+        mnuItemAddBooking = new javax.swing.JMenuItem();
+        mnuItemSearchBooking = new javax.swing.JMenuItem();
+        mnuItemUpdateBooking = new javax.swing.JMenuItem();
+        mnuItemDeleteBooking = new javax.swing.JMenuItem();
+        mnuRooms = new javax.swing.JMenu();
+        mnuItemAddRoom = new javax.swing.JMenuItem();
+        mnuItemSearchRoom = new javax.swing.JMenuItem();
+        mnuItemUpdateRoom = new javax.swing.JMenuItem();
+        mnuItemDeleteRoom = new javax.swing.JMenuItem();
+        mnuPayment = new javax.swing.JMenu();
+        mnuItemAddPayment = new javax.swing.JMenuItem();
+        mnuItemSearchPayment = new javax.swing.JMenuItem();
+        mnuItemUpdatePayment = new javax.swing.JMenuItem();
+        mnuItemDeletePayment = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hotel System");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        parentPanel.setBackground(java.awt.Color.white);
-
-        javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
-        parentPanel.setLayout(parentPanelLayout);
-        parentPanelLayout.setHorizontalGroup(
-            parentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        parentPanelLayout.setVerticalGroup(
-            parentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 276, Short.MAX_VALUE)
-        );
+        lblBackgroundIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/HotelBackground.jpg"))); // NOI18N
+        lblBackgroundIMG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lblBackgroundIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(-380, 0, 2280, 1280));
 
         mnuFile.setText("File");
 
@@ -67,7 +94,23 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuFile);
 
-        mnuStaff.setText("Staff");
+        mnuUser.setText("User...");
+
+        mnuItemAddUser.setText("New User...");
+        mnuUser.add(mnuItemAddUser);
+
+        mnuItemSearchUser.setText("Search User...");
+        mnuUser.add(mnuItemSearchUser);
+
+        mnuItemUpdateUser.setText("Update User...");
+        mnuUser.add(mnuItemUpdateUser);
+
+        mnuItemDeleteUser.setText("Delete User...");
+        mnuUser.add(mnuItemDeleteUser);
+
+        jMenuBar1.add(mnuUser);
+
+        mnuGuest.setText("Guest...");
 
         mnuItemAddGuest.setText("New Guest...");
         mnuItemAddGuest.addActionListener(new java.awt.event.ActionListener() {
@@ -75,22 +118,115 @@ public class MainFrame extends javax.swing.JFrame {
                 mnuItemAddGuestActionPerformed(evt);
             }
         });
-        mnuStaff.add(mnuItemAddGuest);
+        mnuGuest.add(mnuItemAddGuest);
+
+        mnuItemSearchGuest.setText("Search Guest...");
+        mnuItemSearchGuest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemSearchGuestActionPerformed(evt);
+            }
+        });
+        mnuGuest.add(mnuItemSearchGuest);
+
+        mnuItemUpdateGuest.setText("Update Guest...");
+        mnuItemUpdateGuest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemUpdateGuestActionPerformed(evt);
+            }
+        });
+        mnuGuest.add(mnuItemUpdateGuest);
+
+        mnuItemDeleteGuest.setText("Delete Guest...");
+        mnuItemDeleteGuest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemDeleteGuestActionPerformed(evt);
+            }
+        });
+        mnuGuest.add(mnuItemDeleteGuest);
+
+        jMenuBar1.add(mnuGuest);
+
+        mnuStaff.setText("Staff...");
+
+        mnuItemAddStaff.setText("Add Staff...");
+        mnuStaff.add(mnuItemAddStaff);
+
+        mnuItemSearchStaff.setText("Search Staff...");
+        mnuStaff.add(mnuItemSearchStaff);
+
+        mnuItemUpdateStaff.setText("Update Staff...");
+        mnuStaff.add(mnuItemUpdateStaff);
+
+        mnuItemDeleteStaff.setText("Delete Staff...");
+        mnuStaff.add(mnuItemDeleteStaff);
 
         jMenuBar1.add(mnuStaff);
 
-        setJMenuBar(jMenuBar1);
+        mnuReservation.setText("Reservation...");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(parentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(parentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        mnuItemAddReservation.setText("New Reservation...");
+        mnuReservation.add(mnuItemAddReservation);
+
+        mnuItemSearchReservation.setText("Search Reservation...");
+        mnuReservation.add(mnuItemSearchReservation);
+
+        mnuItemUpdateReservation.setText("Update Reservation...");
+        mnuReservation.add(mnuItemUpdateReservation);
+
+        mnuItemDeleteReservation.setText("Delete Reservation...");
+        mnuReservation.add(mnuItemDeleteReservation);
+
+        jMenuBar1.add(mnuReservation);
+
+        mnuBooking.setText("Booking...");
+
+        mnuItemAddBooking.setText("New Booking...");
+        mnuBooking.add(mnuItemAddBooking);
+
+        mnuItemSearchBooking.setText("Search Booking...");
+        mnuBooking.add(mnuItemSearchBooking);
+
+        mnuItemUpdateBooking.setText("Update Booking...");
+        mnuBooking.add(mnuItemUpdateBooking);
+
+        mnuItemDeleteBooking.setText("Delete Booking...");
+        mnuBooking.add(mnuItemDeleteBooking);
+
+        jMenuBar1.add(mnuBooking);
+
+        mnuRooms.setText("Rooms...");
+
+        mnuItemAddRoom.setText("New Room...");
+        mnuRooms.add(mnuItemAddRoom);
+
+        mnuItemSearchRoom.setText("Search Rooms...");
+        mnuRooms.add(mnuItemSearchRoom);
+
+        mnuItemUpdateRoom.setText("Update Rooms...");
+        mnuRooms.add(mnuItemUpdateRoom);
+
+        mnuItemDeleteRoom.setText("Delete Room...");
+        mnuRooms.add(mnuItemDeleteRoom);
+
+        jMenuBar1.add(mnuRooms);
+
+        mnuPayment.setText("Payment...");
+
+        mnuItemAddPayment.setText("New Payment...");
+        mnuPayment.add(mnuItemAddPayment);
+
+        mnuItemSearchPayment.setText("Search Payment...");
+        mnuPayment.add(mnuItemSearchPayment);
+
+        mnuItemUpdatePayment.setText("Update Payment...");
+        mnuPayment.add(mnuItemUpdatePayment);
+
+        mnuItemDeletePayment.setText("Delete Payment...");
+        mnuPayment.add(mnuItemDeletePayment);
+
+        jMenuBar1.add(mnuPayment);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,12 +236,33 @@ public class MainFrame extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
+    private void mnuItemSearchGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchGuestActionPerformed
+        HotelGuestSearchView hotelGuestSearchView = new HotelGuestSearchView();
+        GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestSearchView, guestDAO);
+        hotelGuestSearchView.setVisible(true);
+    }//GEN-LAST:event_mnuItemSearchGuestActionPerformed
+
     private void mnuItemAddGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddGuestActionPerformed
-        HotelGuestRegistrationView hotelGuestRegistrationView = new HotelGuestRegistrationView();
-//        HotelDAO hotelDAO = new HotelDAO;
-//        HotelController hotelController = new HotelController(hotelGuestRegistrationView, hotelDAO);
-        hotelGuestRegistrationView.setVisible(true);
+         HotelGuestAddView hotelGuestAddView = new HotelGuestAddView();
+         GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelGuestAddView.setVisible(true);
     }//GEN-LAST:event_mnuItemAddGuestActionPerformed
+
+    private void mnuItemUpdateGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateGuestActionPerformed
+         HotelGuestUpdateView hotelGuestUpdateView = new HotelGuestUpdateView();
+         GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelGuestUpdateView.setVisible(true);
+    }//GEN-LAST:event_mnuItemUpdateGuestActionPerformed
+
+    private void mnuItemDeleteGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteGuestActionPerformed
+         HotelGuestDeleteView hotelGuestDeleteView = new HotelGuestDeleteView();
+         GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelGuestDeleteView.setVisible(true);
+    }//GEN-LAST:event_mnuItemDeleteGuestActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,10 +301,43 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem exitMenuItem;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel lblBackgroundIMG;
+    private javax.swing.JMenu mnuBooking;
     private javax.swing.JMenu mnuFile;
+    private javax.swing.JMenu mnuGuest;
+    private javax.swing.JMenuItem mnuItemAddBooking;
     private javax.swing.JMenuItem mnuItemAddGuest;
+    private javax.swing.JMenuItem mnuItemAddPayment;
+    private javax.swing.JMenuItem mnuItemAddReservation;
+    private javax.swing.JMenuItem mnuItemAddRoom;
+    private javax.swing.JMenuItem mnuItemAddStaff;
+    private javax.swing.JMenuItem mnuItemAddUser;
+    private javax.swing.JMenuItem mnuItemDeleteBooking;
+    private javax.swing.JMenuItem mnuItemDeleteGuest;
+    private javax.swing.JMenuItem mnuItemDeletePayment;
+    private javax.swing.JMenuItem mnuItemDeleteReservation;
+    private javax.swing.JMenuItem mnuItemDeleteRoom;
+    private javax.swing.JMenuItem mnuItemDeleteStaff;
+    private javax.swing.JMenuItem mnuItemDeleteUser;
+    private javax.swing.JMenuItem mnuItemSearchBooking;
+    private javax.swing.JMenuItem mnuItemSearchGuest;
+    private javax.swing.JMenuItem mnuItemSearchPayment;
+    private javax.swing.JMenuItem mnuItemSearchReservation;
+    private javax.swing.JMenuItem mnuItemSearchRoom;
+    private javax.swing.JMenuItem mnuItemSearchStaff;
+    private javax.swing.JMenuItem mnuItemSearchUser;
+    private javax.swing.JMenuItem mnuItemUpdateBooking;
+    private javax.swing.JMenuItem mnuItemUpdateGuest;
+    private javax.swing.JMenuItem mnuItemUpdatePayment;
+    private javax.swing.JMenuItem mnuItemUpdateReservation;
+    private javax.swing.JMenuItem mnuItemUpdateRoom;
+    private javax.swing.JMenuItem mnuItemUpdateStaff;
+    private javax.swing.JMenuItem mnuItemUpdateUser;
+    private javax.swing.JMenu mnuPayment;
+    private javax.swing.JMenu mnuReservation;
+    private javax.swing.JMenu mnuRooms;
     private javax.swing.JMenu mnuStaff;
+    private javax.swing.JMenu mnuUser;
     // End of variables declaration//GEN-END:variables
 }

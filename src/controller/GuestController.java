@@ -9,18 +9,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.Guest;
-import view.HotelGuestRegistrationView;
+import view.HotelGuestAddView;
 
 /**
  *
  *
  * @author kale
  */
-public class HotelController {
-    private HotelGuestRegistrationView hotelGuestRegistrationView;
+public class GuestController {
+    private HotelGuestAddView hotelGuestRegistrationView;
     private GuestDAO guestDAO;
 
-    public HotelController(HotelGuestRegistrationView hotelGuestRegistrationView, GuestDAO guestDAO) {
+    public GuestController(HotelGuestAddView hotelGuestRegistrationView, GuestDAO guestDAO) {
         this.hotelGuestRegistrationView = hotelGuestRegistrationView;
         this.guestDAO = guestDAO;
 
@@ -32,6 +32,7 @@ public class HotelController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            hotelGuestRegistrationView.getTxtFirstName().setText("");
             hotelGuestRegistrationView.getTxtFirstName().setText("");
             hotelGuestRegistrationView.getTxtLastName().setText("");
             hotelGuestRegistrationView.getTxtAddress().setText("");
@@ -54,7 +55,7 @@ public class HotelController {
             String email = hotelGuestRegistrationView.getTxtEmail().getText();
             String password = hotelGuestRegistrationView.getTxtPassword().getText();
 
-            Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password);
+            Guest newGuest = new Guest(firstName,lastName, email, phoneNumber, unitNumber, streetAddress, city, postalCode, country, userID, username, password, userType);
             boolean result = guestDAO.addGuestRecord(newGuest);
        //make this result once implemented)
             if (result) {
