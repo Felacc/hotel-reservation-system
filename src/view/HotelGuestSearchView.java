@@ -58,22 +58,19 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         txtSearchGuest = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Search User Account");
+        setTitle("Search Guest Account");
 
         parentPanel.setBackground(java.awt.Color.white);
 
         childPanel.setBackground(java.awt.Color.white);
 
         lblRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblRegister.setForeground(java.awt.Color.black);
         lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
         lblRegister.setText("Search for Guest");
         lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         tblGuest.setAutoCreateRowSorter(true);
-        tblGuest.setBackground(new java.awt.Color(255, 255, 255));
-        tblGuest.setForeground(new java.awt.Color(0, 0, 0));
         tblGuest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -89,7 +86,6 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblGuest);
 
         btnSeachGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachGuest.setForeground(new java.awt.Color(0, 0, 0));
         btnSeachGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
         btnSeachGuest.setText("Search By GuestID...");
         btnSeachGuest.addActionListener(new java.awt.event.ActionListener() {

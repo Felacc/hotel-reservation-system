@@ -55,6 +55,7 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Update Staff Account");
 
         childPanel.setBackground(java.awt.Color.white);
 

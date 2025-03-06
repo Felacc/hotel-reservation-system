@@ -133,48 +133,41 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         txtBillingAddress = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Register User Account");
+        setTitle("Register Guest Account");
 
         parentPanel.setBackground(java.awt.Color.white);
 
         childPanel.setBackground(java.awt.Color.white);
 
         lblRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblRegister.setForeground(java.awt.Color.black);
         lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/user.png"))); // NOI18N
         lblRegister.setText("Create Guest Account:");
         lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Information:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14), java.awt.Color.black)); // NOI18N
+        enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Information:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
 
         lblFirstName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblFirstName.setForeground(java.awt.Color.black);
         lblFirstName.setText("First Name:");
 
         lblLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblLastName.setForeground(java.awt.Color.black);
         lblLastName.setText("Last Name:");
 
         lblAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblAddress.setForeground(java.awt.Color.black);
         lblAddress.setText("Address:");
 
         lblPhone.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPhone.setForeground(java.awt.Color.black);
         lblPhone.setText("Phone Number:");
 
         txtPhone.setText("555-555-5555");
 
         lblEmail.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblEmail.setForeground(java.awt.Color.black);
         lblEmail.setText("Email:");
 
         txtEmail.setText("email@host.com");
 
         lblPassword.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPassword.setForeground(java.awt.Color.black);
         lblPassword.setText("Password");
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
@@ -183,12 +176,10 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         btnClear.setText("Clear");
 
         btnAddGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnAddGuest.setForeground(new java.awt.Color(0, 0, 0));
         btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
         btnAddGuest.setText("Register");
 
         lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblBillingAddress.setForeground(java.awt.Color.black);
         lblBillingAddress.setText("Billing Address:");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);

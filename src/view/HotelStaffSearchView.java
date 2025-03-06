@@ -34,6 +34,7 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
         txtSearchStaff = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Search Staff Account");
 
         childPanel.setBackground(java.awt.Color.white);
 

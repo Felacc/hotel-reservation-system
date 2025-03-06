@@ -39,6 +39,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Update User Account");
 
         childPanel.setBackground(java.awt.Color.white);
 

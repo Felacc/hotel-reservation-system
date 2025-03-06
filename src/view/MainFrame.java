@@ -205,15 +205,35 @@ public class MainFrame extends javax.swing.JFrame {
         mnuReservation.setText("Reservation...");
 
         mnuItemAddReservation.setText("New Reservation...");
+        mnuItemAddReservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemAddReservationActionPerformed(evt);
+            }
+        });
         mnuReservation.add(mnuItemAddReservation);
 
         mnuItemSearchReservation.setText("Search Reservation...");
+        mnuItemSearchReservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemSearchReservationActionPerformed(evt);
+            }
+        });
         mnuReservation.add(mnuItemSearchReservation);
 
         mnuItemUpdateReservation.setText("Update Reservation...");
+        mnuItemUpdateReservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemUpdateReservationActionPerformed(evt);
+            }
+        });
         mnuReservation.add(mnuItemUpdateReservation);
 
         mnuItemDeleteReservation.setText("Delete Reservation...");
+        mnuItemDeleteReservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemDeleteReservationActionPerformed(evt);
+            }
+        });
         mnuReservation.add(mnuItemDeleteReservation);
 
         jMenuBar1.add(mnuReservation);
@@ -359,6 +379,34 @@ public class MainFrame extends javax.swing.JFrame {
 //        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
          hotelUserDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteUserActionPerformed
+
+    private void mnuItemAddReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddReservationActionPerformed
+        HotelReservationAddView hotelReservationAddView = new HotelReservationAddView();
+         //StaffDAO staffDAO = new StaffDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelReservationAddView.setVisible(true);
+    }//GEN-LAST:event_mnuItemAddReservationActionPerformed
+
+    private void mnuItemSearchReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchReservationActionPerformed
+        HotelReservationSearchView hotelReservationSearchView = new HotelReservationSearchView();
+        //GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestSearchView, guestDAO);
+        hotelReservationSearchView.setVisible(true);
+    }//GEN-LAST:event_mnuItemSearchReservationActionPerformed
+
+    private void mnuItemUpdateReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateReservationActionPerformed
+        HotelReservationUpdateView hotelReservationUpdateView = new HotelReservationUpdateView();
+         //GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelReservationUpdateView.setVisible(true);
+    }//GEN-LAST:event_mnuItemUpdateReservationActionPerformed
+
+    private void mnuItemDeleteReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteReservationActionPerformed
+        HotelReservationDeleteView hotelReservationDeleteView = new HotelReservationDeleteView();
+         //GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelReservationDeleteView.setVisible(true);
+    }//GEN-LAST:event_mnuItemDeleteReservationActionPerformed
 
     /**
      * @param args the command line arguments

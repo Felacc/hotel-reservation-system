@@ -59,7 +59,7 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
         txtDeleteGuest = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Delete User Account");
+        setTitle("Delete Guest Account");
 
         parentPanel.setBackground(java.awt.Color.white);
 
@@ -72,7 +72,7 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
         lblRegister.setText("Delete Guest Account");
         lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by GuestID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14), java.awt.Color.black)); // NOI18N
+        enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by GuestID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
