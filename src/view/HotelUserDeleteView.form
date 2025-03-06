@@ -51,7 +51,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="enterInfoPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="lblStaffRegister" alignment="1" pref="388" max="32767" attributes="0"/>
+                      <Component id="lblRegister" alignment="1" pref="388" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -61,7 +61,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblStaffRegister" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblRegister" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="enterInfoPanel" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -70,7 +70,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblStaffRegister">
+        <Component class="javax.swing.JLabel" name="lblRegister">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="24" style="1"/>
@@ -82,7 +82,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/icons/clear.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Delete Staff Account"/>
+            <Property name="text" type="java.lang.String" value="Delete User Account"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true"/>
@@ -98,7 +98,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Search by Staff ID">
+                <TitledBorder title="Search by UserID">
                   <Font PropertyName="font" name="Helvetica Neue" size="14" style="1"/>
                 </TitledBorder>
               </Border>
@@ -106,7 +106,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Search by StaffID"/>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Search by UserID"/>
           </AccessibilityProperties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
@@ -124,7 +124,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtDeleteStaff" max="32767" attributes="0"/>
+                              <Component id="txtDeleteUser" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -135,7 +135,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtDeleteStaff" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtDeleteUser" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnClear" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="165" max="32767" attributes="0"/>
@@ -155,13 +155,13 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/view/icons/clear.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Delete Staff..."/>
+                <Property name="text" type="java.lang.String" value="Delete Guest..."/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtDeleteStaff">
+            <Component class="javax.swing.JTextField" name="txtDeleteUser">
               <Properties>
                 <Property name="text" type="java.lang.String" value="This cannot be undone..."/>
               </Properties>
