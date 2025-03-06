@@ -9,21 +9,28 @@ package model;
  * @author felix
  */
 public class Room {
-    private int roomNumber;
+    // Room info
+    private String roomNumber; // used string in case of rooms like "101A"
     private String roomType;
     private double pricePerNight;
+    private String status; // "booked" or "not booked"
+    private int updatedBy; // Reference to the employee who updates room info
     
-    public Room(int roomNumber, String roomType, double pricePerNight) {
+    // Constructor
+    public Room(String roomNumber, String roomType, double pricePerNight, String status, int updatedBy) {
         this.roomNumber = roomNumber;
         this.roomType = roomType;
         this.pricePerNight = pricePerNight;
+        this.status = status;
+        this.updatedBy = updatedBy;
     }
-
-    public int getRoomNumber() {
+    
+    // Getters and Setters
+    public String getRoomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(int roomNumber) {
+    public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
     }
 
@@ -42,6 +49,26 @@ public class Room {
     public void setPricePerNight(double pricePerNight) {
         this.pricePerNight = pricePerNight;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(int updatedBy) {
+        this.updatedBy = updatedBy;
+    }
     
     
+    
+    
+    
+     
 }

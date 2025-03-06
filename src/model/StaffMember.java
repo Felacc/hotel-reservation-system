@@ -8,7 +8,7 @@ package model;
  *
  * @author felix
  */
-public class Guest extends User {
+public class StaffMember extends User {
     // Name
     private String firstName;
     private String lastName;
@@ -21,15 +21,19 @@ public class Guest extends User {
     private String city;
     private String postalCode;
     private String country;
-    // User ID from the DB
-    private int userID;
-    
+    // Employment requirements
+    private int SIN;
+    private String citizenshipStatus;
+    // Other info
+    private int createdBy; // reference to employee who created the staff member record? if there is one? I think?
+    private int userID; // reference to staff member in the users table
+
     // Constructors
-    public Guest(String username, String password, String userType) {
+    public StaffMember(String username, String password, String userType) {
         super(username, password, userType);
     }
 
-    public Guest(String firstName, String lastName, String email, String phoneNumber, String unitNumber, String streetAddress, String city, String postalCode, String country, int userID, String username, String password, String userType) {
+    public StaffMember(String firstName, String lastName, String email, String phoneNumber, String unitNumber, String streetAddress, String city, String postalCode, String country, int SIN, String citizenshipStatus, int createdBy, int userID, String username, String password, String userType) {
         super(username, password, userType);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,6 +44,9 @@ public class Guest extends User {
         this.city = city;
         this.postalCode = postalCode;
         this.country = country;
+        this.SIN = SIN;
+        this.citizenshipStatus = citizenshipStatus;
+        this.createdBy = createdBy;
         this.userID = userID;
     }
     
@@ -117,6 +124,30 @@ public class Guest extends User {
         this.country = country;
     }
 
+    public int getSIN() {
+        return SIN;
+    }
+
+    public void setSIN(int SIN) {
+        this.SIN = SIN;
+    }
+
+    public String getCitizenshipStatus() {
+        return citizenshipStatus;
+    }
+
+    public void setCitizenshipStatus(String citizenshipStatus) {
+        this.citizenshipStatus = citizenshipStatus;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
     public int getUserID() {
         return userID;
     }
@@ -124,6 +155,7 @@ public class Guest extends User {
     public void setUserID(int userID) {
         this.userID = userID;
     }
+    
     
     
 }
