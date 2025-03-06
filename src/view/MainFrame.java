@@ -273,15 +273,35 @@ public class MainFrame extends javax.swing.JFrame {
         mnuPayment.setText("Payment...");
 
         mnuItemAddPayment.setText("New Payment...");
+        mnuItemAddPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemAddPaymentActionPerformed(evt);
+            }
+        });
         mnuPayment.add(mnuItemAddPayment);
 
         mnuItemSearchPayment.setText("Search Payment...");
+        mnuItemSearchPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemSearchPaymentActionPerformed(evt);
+            }
+        });
         mnuPayment.add(mnuItemSearchPayment);
 
         mnuItemUpdatePayment.setText("Update Payment...");
+        mnuItemUpdatePayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemUpdatePaymentActionPerformed(evt);
+            }
+        });
         mnuPayment.add(mnuItemUpdatePayment);
 
         mnuItemDeletePayment.setText("Delete Payment...");
+        mnuItemDeletePayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemDeletePaymentActionPerformed(evt);
+            }
+        });
         mnuPayment.add(mnuItemDeletePayment);
 
         jMenuBar1.add(mnuPayment);
@@ -407,6 +427,34 @@ public class MainFrame extends javax.swing.JFrame {
 //        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
          hotelReservationDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteReservationActionPerformed
+
+    private void mnuItemAddPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddPaymentActionPerformed
+        HotelPaymentAddView hotelPaymentAddView = new HotelPaymentAddView();
+         //StaffDAO staffDAO = new StaffDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelPaymentAddView.setVisible(true);
+    }//GEN-LAST:event_mnuItemAddPaymentActionPerformed
+
+    private void mnuItemSearchPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchPaymentActionPerformed
+        HotelPaymentSearchView hotelPaymentSearchView = new HotelPaymentSearchView();
+        //GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestSearchView, guestDAO);
+        hotelPaymentSearchView.setVisible(true);
+    }//GEN-LAST:event_mnuItemSearchPaymentActionPerformed
+
+    private void mnuItemUpdatePaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdatePaymentActionPerformed
+        HotelPaymentUpdateView hotelPaymentUpdateView = new HotelPaymentUpdateView();
+         //GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelPaymentUpdateView.setVisible(true);
+    }//GEN-LAST:event_mnuItemUpdatePaymentActionPerformed
+
+    private void mnuItemDeletePaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeletePaymentActionPerformed
+        HotelPaymentDeleteView hotelPaymentDeleteView = new HotelPaymentDeleteView();
+         //GuestDAO guestDAO = new GuestDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelPaymentDeleteView.setVisible(true);
+    }//GEN-LAST:event_mnuItemDeletePaymentActionPerformed
 
     /**
      * @param args the command line arguments
