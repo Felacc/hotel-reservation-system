@@ -47,11 +47,11 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="enterInfoPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="lblRegisterStaff" alignment="1" pref="388" max="32767" attributes="0"/>
+                      <Component id="enterInfoPanel" max="32767" attributes="0"/>
+                      <Component id="lblStaffRegister" alignment="0" pref="388" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -61,7 +61,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblRegisterStaff" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblStaffRegister" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="enterInfoPanel" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -70,27 +70,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblRegisterStaff">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Helvetica Neue" size="24" style="1"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Create Staff Account:"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder roundedCorners="true"/>
-              </Border>
-            </Property>
-          </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Create Staff Account:"/>
-          </AccessibilityProperties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
-          </AuxValues>
-        </Component>
         <Container class="javax.swing.JPanel" name="enterInfoPanel">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -128,7 +107,7 @@
                               <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
                               <Component id="btnAddStaff" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnStaff" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnClear" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="lblBillingAddress" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtUnitNumber" alignment="0" max="32767" attributes="0"/>
@@ -196,7 +175,7 @@
                       <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnAddStaff" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnStaff" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -242,9 +221,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Email:"/>
               </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Email:"/>
-              </AccessibilityProperties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
@@ -295,7 +271,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnStaff">
+            <Component class="javax.swing.JButton" name="btnClear">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
@@ -394,6 +370,27 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="lblStaffRegister">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Helvetica Neue" size="24" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/view/icons/user.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Create Staff Account:"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder roundedCorners="true"/>
+              </Border>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
