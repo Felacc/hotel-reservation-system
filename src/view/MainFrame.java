@@ -194,12 +194,27 @@ public class MainFrame extends javax.swing.JFrame {
         mnuBooking.add(mnuItemAddBooking);
 
         mnuItemSearchBooking.setText("Search Booking...");
+        mnuItemSearchBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemSearchBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemSearchBooking);
 
         mnuItemUpdateBooking.setText("Update Booking...");
+        mnuItemUpdateBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemUpdateBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemUpdateBooking);
 
         mnuItemDeleteBooking.setText("Delete Booking...");
+        mnuItemDeleteBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemDeleteBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemDeleteBooking);
 
         jMenuBar1.add(mnuBooking);
@@ -282,11 +297,26 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuItemAddStaffActionPerformed
 
     private void mnuItemAddBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddBookingActionPerformed
-        HotelBookingUpdateView hotelBookingUpdateView = new HotelBookingUpdateView();
+        HotelBookingAddView hotelBookingAddView = new HotelBookingAddView();
 //         StaffDAO staffDAO = new StaffDAO();
 //        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
-         hotelBookingUpdateView.setVisible(true);
+         hotelBookingAddView.setVisible(true);
     }//GEN-LAST:event_mnuItemAddBookingActionPerformed
+
+    private void mnuItemSearchBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchBookingActionPerformed
+        HotelBookingSearchView hotelBookingSearchView = new HotelBookingSearchView();
+        hotelBookingSearchView.setVisible(true);
+    }//GEN-LAST:event_mnuItemSearchBookingActionPerformed
+
+    private void mnuItemUpdateBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateBookingActionPerformed
+        HotelBookingUpdateView hotelBookingUpdateView = new HotelBookingUpdateView();
+        hotelBookingUpdateView.setVisible(true);
+    }//GEN-LAST:event_mnuItemUpdateBookingActionPerformed
+
+    private void mnuItemDeleteBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteBookingActionPerformed
+        HotelBookingDeleteView hotelBookingDeleteView = new HotelBookingDeleteView();
+        hotelBookingDeleteView.setVisible(true);
+    }//GEN-LAST:event_mnuItemDeleteBookingActionPerformed
 
     /**
      * @param args the command line arguments

@@ -22,21 +22,23 @@ public class HotelBookingDeleteView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnClear() {
+    public JButton getBtnClearBooking() {
         return btnClearBooking;
     }
 
-    public void setBtnClear(JButton btnClear) {
-        this.btnClearBooking = btnClear;
+    public void setBtnClearBooking(JButton btnClearBooking) {
+        this.btnClearBooking = btnClearBooking;
     }
 
-    public JTextField getjTextField1() {
+    public JTextField getTxtDeleteBooking() {
         return txtDeleteBooking;
     }
 
-    public void setjTextField1(JTextField jTextField1) {
-        this.txtDeleteBooking = jTextField1;
+    public void setTxtDeleteBooking(JTextField txtDeleteBooking) {
+        this.txtDeleteBooking = txtDeleteBooking;
     }
+
+    
 
     
 

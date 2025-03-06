@@ -22,44 +22,20 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnUpdateGuest() {
+    public JButton getBtnClearAll() {
+        return btnClearAll;
+    }
+
+    public void setBtnClearAll(JButton btnClearAll) {
+        this.btnClearAll = btnClearAll;
+    }
+
+    public JButton getBtnUpdateFields() {
         return btnUpdateFields;
     }
 
-    public void setBtnUpdateGuest(JButton btnUpdateGuest) {
-        this.btnUpdateFields = btnUpdateGuest;
-    }
-
-    public JTextField getTxtAddress() {
-        return txtPrice;
-    }
-
-    public void setTxtAddress(JTextField txtAddress) {
-        this.txtPrice = txtAddress;
-    }
-
-    public JTextField getTxtBillingAddress() {
-        return txtBillingAddress;
-    }
-
-    public void setTxtBillingAddress(JTextField txtBillingAddress) {
-        this.txtBillingAddress = txtBillingAddress;
-    }
-
-    public JTextField getTxtEmail() {
-        return txtEmail;
-    }
-
-    public void setTxtEmail(JTextField txtEmail) {
-        this.txtEmail = txtEmail;
-    }
-
-    public JTextField getTxtFirstName() {
-        return txtReservationId;
-    }
-
-    public void setTxtFirstName(JTextField txtFirstName) {
-        this.txtReservationId = txtFirstName;
+    public void setBtnUpdateFields(JButton btnUpdateFields) {
+        this.btnUpdateFields = btnUpdateFields;
     }
 
     public JTextField getTxtLastName() {
@@ -70,22 +46,23 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
         this.txtLastName = txtLastName;
     }
 
-    public JTextField getTxtPassword() {
-        return txtPassword;
+    public JTextField getTxtPrice() {
+        return txtPrice;
     }
 
-    public void setTxtPassword(JTextField txtPassword) {
-        this.txtPassword = txtPassword;
+    public void setTxtPrice(JTextField txtPrice) {
+        this.txtPrice = txtPrice;
     }
 
-    public JTextField getTxtPhone() {
-        return txtPhone;
+    public JTextField getTxtReservationId() {
+        return txtReservationId;
     }
 
-    public void setTxtPhone(JTextField txtPhone) {
-        this.txtPhone = txtPhone;
+    public void setTxtReservationId(JTextField txtReservationId) {
+        this.txtReservationId = txtReservationId;
     }
 
+   
     
   
     /**

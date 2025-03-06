@@ -6,6 +6,7 @@ package view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 
 /**
@@ -22,16 +23,49 @@ public class HotelBookingAddView extends javax.swing.JFrame {
         initComponents();
     }
 
-   
-    
-    public void addGuestBtnListener(ActionListener myActionListener){
-        btnAddBooking.addActionListener(myActionListener);
+    public JButton getBtnAddBooking() {
+        return btnAddBooking;
     }
-    
-    public void addClearAllBtnListener(ActionListener myActionListener){
-        btnClearBooking.addActionListener(myActionListener);
+
+    public void setBtnAddBooking(JButton btnAddBooking) {
+        this.btnAddBooking = btnAddBooking;
     }
-  
+
+    public JButton getBtnClearBooking() {
+        return btnClearBooking;
+    }
+
+    public void setBtnClearBooking(JButton btnClearBooking) {
+        this.btnClearBooking = btnClearBooking;
+    }
+
+    public JFormattedTextField getTxtDate() {
+        return txtDate;
+    }
+
+    public void setTxtDate(JFormattedTextField txtDate) {
+        this.txtDate = txtDate;
+    }
+
+    public JFormattedTextField getTxtFormatPrice() {
+        return txtFormatPrice;
+    }
+
+    public void setTxtFormatPrice(JFormattedTextField txtFormatPrice) {
+        this.txtFormatPrice = txtFormatPrice;
+    }
+
+    public JTextField getTxtReservationId() {
+        return txtReservationId;
+    }
+
+    public void setTxtReservationId(JTextField txtReservationId) {
+        this.txtReservationId = txtReservationId;
+    }
+
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

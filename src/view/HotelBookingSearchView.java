@@ -22,22 +22,23 @@ public class HotelBookingSearchView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnSeachGuest() {
+    public JButton getBtnSeachBooking() {
         return btnSeachBooking;
     }
 
-    public void setBtnSeachGuest(JButton btnSeachGuest) {
-        this.btnSeachBooking = btnSeachGuest;
+    public void setBtnSeachBooking(JButton btnSeachBooking) {
+        this.btnSeachBooking = btnSeachBooking;
     }
 
-    public JTextField getTxtSearchGuest() {
+    public JTextField getTxtSearchingBooking() {
         return txtSearchingBooking;
     }
 
-    public void setTxtSearchGuest(JTextField txtSearchGuest) {
-        this.txtSearchingBooking = txtSearchGuest;
+    public void setTxtSearchingBooking(JTextField txtSearchingBooking) {
+        this.txtSearchingBooking = txtSearchingBooking;
     }
 
+   
    
   
     /**

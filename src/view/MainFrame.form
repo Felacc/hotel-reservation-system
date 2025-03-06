@@ -159,16 +159,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search Booking..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemSearchBookingActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemUpdateBooking">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Booking..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemUpdateBookingActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemDeleteBooking">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Booking..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemDeleteBookingActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
