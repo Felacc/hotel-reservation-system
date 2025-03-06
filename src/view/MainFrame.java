@@ -204,9 +204,19 @@ public class MainFrame extends javax.swing.JFrame {
         mnuRooms.add(mnuItemAddRoom);
 
         mnuItemSearchRoom.setText("Search Rooms...");
+        mnuItemSearchRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemSearchRoomActionPerformed(evt);
+            }
+        });
         mnuRooms.add(mnuItemSearchRoom);
 
         mnuItemUpdateRoom.setText("Update Rooms...");
+        mnuItemUpdateRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemUpdateRoomActionPerformed(evt);
+            }
+        });
         mnuRooms.add(mnuItemUpdateRoom);
 
         mnuItemDeleteRoom.setText("Delete Room...");
@@ -275,17 +285,23 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void mnuItemAddRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddRoomActionPerformed
         HotelRoomAddView hotelRoomAddView = new HotelRoomAddView();
-//        GuestDAO guestDAO = new GuestDAO();
-//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
         hotelRoomAddView.setVisible(true);
     }//GEN-LAST:event_mnuItemAddRoomActionPerformed
 
     private void mnuItemDeleteRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteRoomActionPerformed
         HotelRoomDeleteView hotelRoomDeleteView = new HotelRoomDeleteView();
-        GuestDAO guestDAO = new GuestDAO();
-//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
         hotelRoomDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteRoomActionPerformed
+
+    private void mnuItemUpdateRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateRoomActionPerformed
+        HotelRoomUpdateView hotelRoomUpdateView = new HotelRoomUpdateView();
+        hotelRoomUpdateView.setVisible(true);
+    }//GEN-LAST:event_mnuItemUpdateRoomActionPerformed
+
+    private void mnuItemSearchRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchRoomActionPerformed
+        HotelRoomSearchView hotelRoomSearchView = new HotelRoomSearchView();
+        hotelRoomSearchView.setVisible(true);
+    }//GEN-LAST:event_mnuItemSearchRoomActionPerformed
 
     /**
      * @param args the command line arguments
