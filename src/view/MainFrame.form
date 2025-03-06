@@ -28,17 +28,11 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New User..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddUserActionPerformed"/>
-              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchUser">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search User..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemSearchUserActionPerformed"/>
-              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemUpdateUser">
               <Properties>
@@ -77,11 +71,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Guest..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemUpdateGuestActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemDeleteGuest">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Guest..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemDeleteGuestActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -94,9 +94,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Staff..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddStaffActionPerformed"/>
-              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchStaff">
               <Properties>
@@ -124,9 +121,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Reservation..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddReservationActionPerformed"/>
-              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchReservation">
               <Properties>
@@ -154,9 +148,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Booking..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddBookingActionPerformed"/>
-              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchBooking">
               <Properties>
@@ -180,18 +171,15 @@
             <Property name="text" type="java.lang.String" value="Rooms..."/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchRoom">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Search Rooms..."/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemAddRoom">
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Room..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddRoomActionPerformed"/>
-              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchRoom">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search Rooms..."/>
+              </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemUpdateRoom">
               <Properties>
@@ -214,9 +202,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Payment..."/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddPaymentActionPerformed"/>
-              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchPayment">
               <Properties>

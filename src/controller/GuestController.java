@@ -55,7 +55,7 @@ public class GuestController {
             String email = hotelGuestRegistrationView.getTxtEmail().getText();
             String password = hotelGuestRegistrationView.getTxtPassword().getText();
 
-            Guest newGuest = new Guest(firstName, lastName, address, billingAddress, phoneNumber, email, password);
+            Guest newGuest = new Guest(firstName,lastName, email, phoneNumber, unitNumber, streetAddress, city, postalCode, country, userID, username, password, userType);
             boolean result = guestDAO.addGuestRecord(newGuest);
        //make this result once implemented)
             if (result) {

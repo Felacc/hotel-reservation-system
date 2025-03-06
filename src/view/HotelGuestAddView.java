@@ -142,7 +142,7 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         lblRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblRegister.setForeground(java.awt.Color.black);
         lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/user.png"))); // NOI18N
+        lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/user.png"))); // NOI18N
         lblRegister.setText("Create Guest Account:");
         lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
@@ -179,12 +179,12 @@ public class HotelGuestAddView extends javax.swing.JFrame {
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/clear.png"))); // NOI18N
+        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
         btnClear.setText("Clear");
 
         btnAddGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnAddGuest.setForeground(new java.awt.Color(0, 0, 0));
-        btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/add.png"))); // NOI18N
+        btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
         btnAddGuest.setText("Register");
 
         lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
