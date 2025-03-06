@@ -58,7 +58,7 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         txtSearchGuest = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Register User Account");
+        setTitle("Search User Account");
 
         parentPanel.setBackground(java.awt.Color.white);
 
