@@ -145,21 +145,33 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Reservation..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddReservationActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchReservation">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search Reservation..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemSearchReservationActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemUpdateReservation">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Reservation..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemUpdateReservationActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemDeleteReservation">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Reservation..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemDeleteReservationActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

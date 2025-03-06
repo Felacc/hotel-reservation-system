@@ -27,21 +27,22 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
     private void initComponents() {
 
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblRegister = new javax.swing.JLabel();
+        javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         btnClear = new javax.swing.JButton();
         txtDeleteUser = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Delete User Account");
 
         childPanel.setBackground(java.awt.Color.white);
 
-        lblRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblRegister.setForeground(java.awt.Color.red);
-        lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        lblRegister.setText("Delete User Account");
-        lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lblUserRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblUserRegister.setForeground(java.awt.Color.red);
+        lblUserRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUserRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
+        lblUserRegister.setText("Delete User Account");
+        lblUserRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by UserID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
@@ -49,7 +50,7 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClear.setText("Delete Guest...");
+        btnClear.setText("Delete User...");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
@@ -90,20 +91,18 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                    .addComponent(lblUserRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblRegister)
+                .addComponent(lblUserRegister)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        enterInfoPanel.getAccessibleContext().setAccessibleName("Search by UserID");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

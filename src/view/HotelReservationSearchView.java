@@ -8,12 +8,12 @@ package view;
  *
  * @author JekKath
  */
-public class HotelUserSearchView extends javax.swing.JFrame {
+public class HotelReservationSearchView extends javax.swing.JFrame {
 
     /**
-     * Creates new form HotelUserSearchView
+     * Creates new form HotelReservationSearchView
      */
-    public HotelUserSearchView() {
+    public HotelReservationSearchView() {
         initComponents();
     }
 
@@ -27,51 +27,51 @@ public class HotelUserSearchView extends javax.swing.JFrame {
     private void initComponents() {
 
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
+        javax.swing.JLabel lblReservationRegister = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblUser = new javax.swing.JTable();
-        btnSeachUser = new javax.swing.JButton();
-        txtSearchUser = new javax.swing.JTextField();
+        tblReservation = new javax.swing.JTable();
+        btnSeachReservation = new javax.swing.JButton();
+        txtSearchReservation = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Search User Account");
+        setTitle("Search Reservation Account");
 
         childPanel.setBackground(java.awt.Color.white);
 
-        lblUserRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblUserRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblUserRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        lblUserRegister.setText("Search for User");
-        lblUserRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lblReservationRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblReservationRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblReservationRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        lblReservationRegister.setText("Search for Reservation");
+        lblReservationRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        tblUser.setAutoCreateRowSorter(true);
-        tblUser.setModel(new javax.swing.table.DefaultTableModel(
+        tblReservation.setAutoCreateRowSorter(true);
+        tblReservation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "User ID", "Username", "Password", "User Type"
+                "Reservation ID", "Customer ID", "Room ID", "Employee ID", "Check-In Date", "Check-Out Date", "Status"
             }
         ));
-        tblUser.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jScrollPane1.setViewportView(tblUser);
+        tblReservation.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jScrollPane1.setViewportView(tblReservation);
 
-        btnSeachUser.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        btnSeachUser.setText("Search By UserID...");
-        btnSeachUser.addActionListener(new java.awt.event.ActionListener() {
+        btnSeachReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSeachReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSeachReservation.setText("Search By ReservationID...");
+        btnSeachReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeachUserActionPerformed(evt);
+                btnSeachReservationActionPerformed(evt);
             }
         });
 
-        txtSearchUser.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        txtSearchUser.addActionListener(new java.awt.event.ActionListener() {
+        txtSearchReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        txtSearchReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSearchUserActionPerformed(evt);
+                txtSearchReservationActionPerformed(evt);
             }
         });
 
@@ -84,26 +84,26 @@ public class HotelUserSearchView extends javax.swing.JFrame {
                     .addGroup(childPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUserRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblReservationRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1)))
                     .addGroup(childPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSearchReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSeachUser, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSeachReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblUserRegister)
+                .addComponent(lblReservationRegister)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeachUser))
+                    .addComponent(txtSearchReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSeachReservation))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -121,13 +121,13 @@ public class HotelUserSearchView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSeachUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachUserActionPerformed
+    private void btnSeachReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachReservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSeachUserActionPerformed
+    }//GEN-LAST:event_btnSeachReservationActionPerformed
 
-    private void txtSearchUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchUserActionPerformed
+    private void txtSearchReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchReservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSearchUserActionPerformed
+    }//GEN-LAST:event_txtSearchReservationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,28 +146,28 @@ public class HotelUserSearchView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HotelUserSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelReservationSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HotelUserSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelReservationSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HotelUserSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelReservationSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HotelUserSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelReservationSearchView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HotelUserSearchView().setVisible(true);
+                new HotelReservationSearchView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSeachUser;
+    private javax.swing.JButton btnSeachReservation;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblUser;
-    private javax.swing.JTextField txtSearchUser;
+    private javax.swing.JTable tblReservation;
+    private javax.swing.JTextField txtSearchReservation;
     // End of variables declaration//GEN-END:variables
 }
