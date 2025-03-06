@@ -149,6 +149,11 @@ public class MainFrame extends javax.swing.JFrame {
         mnuStaff.setText("Staff...");
 
         mnuItemAddStaff.setText("Add Staff...");
+        mnuItemAddStaff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemAddStaffActionPerformed(evt);
+            }
+        });
         mnuStaff.add(mnuItemAddStaff);
 
         mnuItemSearchStaff.setText("Search Staff...");
@@ -263,6 +268,13 @@ public class MainFrame extends javax.swing.JFrame {
 //        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
          hotelGuestDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteGuestActionPerformed
+
+    private void mnuItemAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddStaffActionPerformed
+        HotelStaffAddView hotelStaffAddView = new HotelStaffAddView();
+//         StaffDAO staffDAO = new StaffDAO();
+//        GuestController guestController = new GuestController(hotelGuestAddView, guestDAO);
+         hotelStaffAddView.setVisible(true);
+    }//GEN-LAST:event_mnuItemAddStaffActionPerformed
 
     /**
      * @param args the command line arguments
