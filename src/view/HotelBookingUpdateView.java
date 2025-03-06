@@ -13,24 +13,80 @@ import javax.swing.JTextField;
  * @author kale
  */
 
-public class HotelBookingAddView extends javax.swing.JFrame {
+public class HotelBookingUpdateView extends javax.swing.JFrame {
 
     /**
      * Creates new form HotelStaffView
      */
-    public HotelBookingAddView() {
+    public HotelBookingUpdateView() {
         initComponents();
     }
 
-   
-    
-    public void addGuestBtnListener(ActionListener myActionListener){
-        btnAddBooking.addActionListener(myActionListener);
+    public JButton getBtnUpdateGuest() {
+        return btnUpdateFields;
     }
-    
-    public void addClearAllBtnListener(ActionListener myActionListener){
-        btnClearBooking.addActionListener(myActionListener);
+
+    public void setBtnUpdateGuest(JButton btnUpdateGuest) {
+        this.btnUpdateFields = btnUpdateGuest;
     }
+
+    public JTextField getTxtAddress() {
+        return txtPrice;
+    }
+
+    public void setTxtAddress(JTextField txtAddress) {
+        this.txtPrice = txtAddress;
+    }
+
+    public JTextField getTxtBillingAddress() {
+        return txtBillingAddress;
+    }
+
+    public void setTxtBillingAddress(JTextField txtBillingAddress) {
+        this.txtBillingAddress = txtBillingAddress;
+    }
+
+    public JTextField getTxtEmail() {
+        return txtEmail;
+    }
+
+    public void setTxtEmail(JTextField txtEmail) {
+        this.txtEmail = txtEmail;
+    }
+
+    public JTextField getTxtFirstName() {
+        return txtReservationId;
+    }
+
+    public void setTxtFirstName(JTextField txtFirstName) {
+        this.txtReservationId = txtFirstName;
+    }
+
+    public JTextField getTxtLastName() {
+        return txtLastName;
+    }
+
+    public void setTxtLastName(JTextField txtLastName) {
+        this.txtLastName = txtLastName;
+    }
+
+    public JTextField getTxtPassword() {
+        return txtPassword;
+    }
+
+    public void setTxtPassword(JTextField txtPassword) {
+        this.txtPassword = txtPassword;
+    }
+
+    public JTextField getTxtPhone() {
+        return txtPhone;
+    }
+
+    public void setTxtPhone(JTextField txtPhone) {
+        this.txtPhone = txtPhone;
+    }
+
+    
   
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,59 +99,66 @@ public class HotelBookingAddView extends javax.swing.JFrame {
 
         javax.swing.JPanel parentPanel = new javax.swing.JPanel();
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblAddBooking = new javax.swing.JLabel();
+        javax.swing.JLabel lblRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblReservationId = new javax.swing.JLabel();
         txtReservationId = new javax.swing.JTextField();
         javax.swing.JLabel lblBookingDate = new javax.swing.JLabel();
-        btnClearBooking = new javax.swing.JButton();
-        btnAddBooking = new javax.swing.JButton();
+        txtLastName = new javax.swing.JTextField();
         javax.swing.JLabel lblPrice = new javax.swing.JLabel();
-        txtFormatPrice = new javax.swing.JFormattedTextField();
-        txtDate = new javax.swing.JFormattedTextField();
+        txtPrice = new javax.swing.JTextField();
+        btnUpdateFields = new javax.swing.JButton();
+        btnClearAll = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Register Booking");
+        setTitle("Update Booking");
 
         parentPanel.setBackground(java.awt.Color.white);
 
         childPanel.setBackground(java.awt.Color.white);
 
-        lblAddBooking.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblAddBooking.setForeground(java.awt.Color.black);
-        lblAddBooking.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAddBooking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/sleeping.png"))); // NOI18N
-        lblAddBooking.setText("Create Booking Record");
-        lblAddBooking.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lblRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblRegister.setForeground(java.awt.Color.black);
+        lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        lblRegister.setText("Update Booking:");
+        lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Information:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14), java.awt.Color.black)); // NOI18N
         enterInfoPanel.setOpaque(false);
 
         lblReservationId.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblReservationId.setForeground(java.awt.Color.black);
-        lblReservationId.setText("Reservation ID");
+        lblReservationId.setText("Reservation ID:");
 
         lblBookingDate.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblBookingDate.setForeground(java.awt.Color.black);
-        lblBookingDate.setText("Set Booking Date");
-
-        btnClearBooking.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnClearBooking.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        btnClearBooking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClearBooking.setText("Clear");
-
-        btnAddBooking.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnAddBooking.setForeground(new java.awt.Color(0, 0, 0));
-        btnAddBooking.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
-        btnAddBooking.setText("Register");
+        lblBookingDate.setText("Booking Date:");
 
         lblPrice.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblPrice.setForeground(java.awt.Color.black);
-        lblPrice.setText("Price Set:");
+        lblPrice.setText("Price:");
 
-        txtFormatPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        btnUpdateFields.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateFields.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateFields.setForeground(new java.awt.Color(0, 0, 0));
+        btnUpdateFields.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateFields.setText("Update Filled Fields...");
+        btnUpdateFields.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateFieldsActionPerformed(evt);
+            }
+        });
 
-        txtDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        btnClearAll.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnClearAll.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        btnClearAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
+        btnClearAll.setText("Clear All...");
+        btnClearAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearAllActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -104,17 +167,17 @@ public class HotelBookingAddView extends javax.swing.JFrame {
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtFormatPrice)
-                    .addComponent(lblReservationId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPrice)
+                    .addComponent(txtLastName)
                     .addComponent(txtReservationId)
+                    .addComponent(lblReservationId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblBookingDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                        .addGap(0, 425, Short.MAX_VALUE)
-                        .addComponent(btnAddBooking)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnClearBooking))
                     .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtDate))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnUpdateFields, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnClearAll, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -127,20 +190,17 @@ public class HotelBookingAddView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblBookingDate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblPrice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtFormatPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAddBooking)
-                    .addComponent(btnClearBooking))
-                .addContainerGap())
+                .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnUpdateFields, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnClearAll)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
-
-        btnClearBooking.getAccessibleContext().setAccessibleParent(this);
-        btnAddBooking.getAccessibleContext().setAccessibleParent(this);
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
@@ -150,14 +210,14 @@ public class HotelBookingAddView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblAddBooking, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE))
+                    .addComponent(lblRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblAddBooking)
+                .addComponent(lblRegister)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -179,6 +239,14 @@ public class HotelBookingAddView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnUpdateFieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateFieldsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateFieldsActionPerformed
+
+    private void btnClearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearAllActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClearAllActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -186,16 +254,16 @@ public class HotelBookingAddView extends javax.swing.JFrame {
 /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HotelBookingAddView().setVisible(true);
+                new HotelBookingUpdateView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddBooking;
-    private javax.swing.JButton btnClearBooking;
-    private javax.swing.JFormattedTextField txtDate;
-    private javax.swing.JFormattedTextField txtFormatPrice;
+    private javax.swing.JButton btnClearAll;
+    private javax.swing.JButton btnUpdateFields;
+    private javax.swing.JTextField txtLastName;
+    private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtReservationId;
     // End of variables declaration//GEN-END:variables
 }
