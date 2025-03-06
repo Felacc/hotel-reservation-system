@@ -120,7 +120,6 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Search by GuestID">
                       <Font PropertyName="font" name="Helvetica Neue" size="14" style="1"/>
-                      <Color PropertyName="color" blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
                     </TitledBorder>
                   </Border>
                 </Property>

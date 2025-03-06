@@ -27,23 +27,22 @@ public class HotelStaffAddView extends javax.swing.JFrame {
     private void initComponents() {
 
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblRegisterStaff = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblFirstName = new javax.swing.JLabel();
+        javax.swing.JLabel lblStaffFirstName = new javax.swing.JLabel();
         txtStaffFirstName = new javax.swing.JTextField();
-        javax.swing.JLabel lblLastName = new javax.swing.JLabel();
+        javax.swing.JLabel lblStaffLastName = new javax.swing.JLabel();
         txtStaffLastName = new javax.swing.JTextField();
-        javax.swing.JLabel lblAddress = new javax.swing.JLabel();
+        javax.swing.JLabel lblStaffEmail = new javax.swing.JLabel();
         txtStaffEmail = new javax.swing.JTextField();
-        javax.swing.JLabel lblSIN = new javax.swing.JLabel();
+        javax.swing.JLabel lblStaffSIN = new javax.swing.JLabel();
         txtStaffSIN = new javax.swing.JTextField();
         javax.swing.JLabel lblStaffStatus = new javax.swing.JLabel();
         txtStaffStatus = new javax.swing.JTextField();
-        javax.swing.JLabel lblUnitNumber = new javax.swing.JLabel();
-        btnStaff = new javax.swing.JButton();
+        javax.swing.JLabel lblStaffUnitNumber = new javax.swing.JLabel();
+        btnClear = new javax.swing.JButton();
         btnAddStaff = new javax.swing.JButton();
-        javax.swing.JLabel lblBillingAddress = new javax.swing.JLabel();
-        txtUnitNumber = new javax.swing.JTextField();
+        javax.swing.JLabel lblStaffPhone = new javax.swing.JLabel();
+        txtStaffUnitNumber = new javax.swing.JTextField();
         txtStaffPhone = new javax.swing.JTextField();
         txtStaffCity = new javax.swing.JTextField();
         javax.swing.JLabel lblStaffAddress = new javax.swing.JLabel();
@@ -53,24 +52,21 @@ public class HotelStaffAddView extends javax.swing.JFrame {
         javax.swing.JLabel lblStaffCountry = new javax.swing.JLabel();
         txtStaffCountry = new javax.swing.JTextField();
         txtStaffPostalCode = new javax.swing.JTextField();
+        javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Create Staff Account");
 
         childPanel.setBackground(java.awt.Color.white);
-
-        lblRegisterStaff.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblRegisterStaff.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblRegisterStaff.setText("Create Staff Account:");
-        lblRegisterStaff.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Information:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
 
-        lblFirstName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblFirstName.setText("First Name:");
+        lblStaffFirstName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffFirstName.setText("First Name:");
 
-        lblLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblLastName.setText("Last Name:");
+        lblStaffLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffLastName.setText("Last Name:");
 
         txtStaffLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,8 +74,8 @@ public class HotelStaffAddView extends javax.swing.JFrame {
             }
         });
 
-        lblAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblAddress.setText("Email:");
+        lblStaffEmail.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffEmail.setText("Email:");
 
         txtStaffEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,24 +83,24 @@ public class HotelStaffAddView extends javax.swing.JFrame {
             }
         });
 
-        lblSIN.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblSIN.setText("SIN:");
+        lblStaffSIN.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffSIN.setText("SIN:");
 
         lblStaffStatus.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblStaffStatus.setText("Status:");
 
-        lblUnitNumber.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblUnitNumber.setText("Unit Number:");
+        lblStaffUnitNumber.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffUnitNumber.setText("Unit Number:");
 
-        btnStaff.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnStaff.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        btnStaff.setText("Clear");
+        btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        btnClear.setText("Clear");
 
         btnAddStaff.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnAddStaff.setText("Register");
 
-        lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblBillingAddress.setText("Phone:");
+        lblStaffPhone.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffPhone.setText("Phone:");
 
         lblStaffAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblStaffAddress.setText("Street Address:");
@@ -131,24 +127,24 @@ public class HotelStaffAddView extends javax.swing.JFrame {
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtStaffFirstName)
-                    .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtStaffLastName)
-                    .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtStaffEmail)
-                    .addComponent(lblSIN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffSIN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtStaffSIN)
                     .addComponent(lblStaffStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtStaffStatus)
-                    .addComponent(lblUnitNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffUnitNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 215, Short.MAX_VALUE)
                         .addComponent(btnAddStaff)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnStaff))
-                    .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtUnitNumber)
+                        .addComponent(btnClear))
+                    .addComponent(lblStaffPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtStaffUnitNumber)
                     .addComponent(txtStaffPhone)
                     .addComponent(txtStaffCity, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblStaffAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -164,23 +160,23 @@ public class HotelStaffAddView extends javax.swing.JFrame {
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFirstName)
+                .addComponent(lblStaffFirstName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblLastName)
+                .addComponent(lblStaffLastName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblAddress)
+                .addComponent(lblStaffEmail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblBillingAddress)
+                .addComponent(lblStaffPhone)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(lblSIN)
+                .addComponent(lblStaffSIN)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffSIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -188,9 +184,9 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblUnitNumber)
+                .addComponent(lblStaffUnitNumber)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUnitNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtStaffUnitNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblStaffAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -210,11 +206,15 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddStaff)
-                    .addComponent(btnStaff))
+                    .addComponent(btnClear))
                 .addContainerGap())
         );
 
-        lblAddress.getAccessibleContext().setAccessibleName("Email:");
+        lblStaffRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblStaffRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblStaffRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/user.png"))); // NOI18N
+        lblStaffRegister.setText("Create Staff Account:");
+        lblStaffRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
@@ -224,20 +224,18 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblRegisterStaff, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                    .addComponent(lblStaffRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblRegisterStaff)
+                .addComponent(lblStaffRegister)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        lblRegisterStaff.getAccessibleContext().setAccessibleName("Create Staff Account:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -302,7 +300,7 @@ public class HotelStaffAddView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddStaff;
-    private javax.swing.JButton btnStaff;
+    private javax.swing.JButton btnClear;
     private javax.swing.JTextField txtStaffAddress;
     private javax.swing.JTextField txtStaffCity;
     private javax.swing.JTextField txtStaffCountry;
@@ -313,6 +311,6 @@ public class HotelStaffAddView extends javax.swing.JFrame {
     private javax.swing.JTextField txtStaffPostalCode;
     private javax.swing.JTextField txtStaffSIN;
     private javax.swing.JTextField txtStaffStatus;
-    private javax.swing.JTextField txtUnitNumber;
+    private javax.swing.JTextField txtStaffUnitNumber;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,12 +8,12 @@ package view;
  *
  * @author JekKath
  */
-public class HotelStaffDeleteView extends javax.swing.JFrame {
+public class HotelUserDeleteView extends javax.swing.JFrame {
 
     /**
-     * Creates new form HotelStaffDeleteView
+     * Creates new form HotelUserDeleteView
      */
-    public HotelStaffDeleteView() {
+    public HotelUserDeleteView() {
         initComponents();
     }
 
@@ -27,37 +27,37 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
     private void initComponents() {
 
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
+        javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         btnClear = new javax.swing.JButton();
-        txtDeleteStaff = new javax.swing.JTextField();
+        txtDeleteUser = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Delete Staff Account");
+        setTitle("Delete User Account");
 
         childPanel.setBackground(java.awt.Color.white);
 
-        lblStaffRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblStaffRegister.setForeground(java.awt.Color.red);
-        lblStaffRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblStaffRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        lblStaffRegister.setText("Delete Staff Account");
-        lblStaffRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lblUserRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblUserRegister.setForeground(java.awt.Color.red);
+        lblUserRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUserRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
+        lblUserRegister.setText("Delete User Account");
+        lblUserRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by Staff ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
+        enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by UserID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClear.setText("Delete Staff...");
+        btnClear.setText("Delete User...");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
             }
         });
 
-        txtDeleteStaff.setText("This cannot be undone...");
+        txtDeleteUser.setText("This cannot be undone...");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -70,14 +70,14 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
                         .addComponent(btnClear))
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(txtDeleteStaff)))
+                        .addComponent(txtDeleteUser)))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtDeleteStaff, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDeleteUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnClear)
                 .addContainerGap(165, Short.MAX_VALUE))
@@ -91,20 +91,18 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStaffRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                    .addComponent(lblUserRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblStaffRegister)
+                .addComponent(lblUserRegister)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        enterInfoPanel.getAccessibleContext().setAccessibleName("Search by StaffID");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,26 +139,26 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HotelStaffDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelUserDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HotelStaffDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelUserDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HotelStaffDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelUserDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HotelStaffDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HotelUserDeleteView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HotelStaffDeleteView().setVisible(true);
+                new HotelUserDeleteView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
-    private javax.swing.JTextField txtDeleteStaff;
+    private javax.swing.JTextField txtDeleteUser;
     // End of variables declaration//GEN-END:variables
 }
