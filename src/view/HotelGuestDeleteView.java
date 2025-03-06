@@ -59,7 +59,7 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
         txtDeleteGuest = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Register User Account");
+        setTitle("Delete User Account");
 
         parentPanel.setBackground(java.awt.Color.white);
 

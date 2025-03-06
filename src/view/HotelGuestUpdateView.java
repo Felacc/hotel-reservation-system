@@ -119,7 +119,7 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         btnClear = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Register User Account");
+        setTitle("Update User Account");
 
         parentPanel.setBackground(java.awt.Color.white);
 
