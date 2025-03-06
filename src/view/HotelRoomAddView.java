@@ -22,12 +22,12 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnAddGuest() {
-        return btnAddGuest;
+    public JButton getBtnAddRoom() {
+        return btnAddRoom;
     }
 
-    public void setBtnAddGuest(JButton btnAddGuest) {
-        this.btnAddGuest = btnAddGuest;
+    public void setBtnAddRoom(JButton btnAddRoom) {
+        this.btnAddRoom = btnAddRoom;
     }
 
     public JButton getBtnClear() {
@@ -38,64 +38,49 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         this.btnClear = btnClear;
     }
 
-    public JTextField getTxtAddress() {
-        return txtAddress;
+    public JTextField getTxtPricePerNight() {
+        return txtPricePerNight;
     }
 
-    public void setTxtAddress(JTextField txtAddress) {
-        this.txtAddress = txtAddress;
+    public void setTxtPricePerNight(JTextField txtPricePerNight) {
+        this.txtPricePerNight = txtPricePerNight;
     }
 
-    public JTextField getTxtBillingAddress() {
-        return txtBillingAddress;
+    public JTextField getTxtRoomNumber() {
+        return txtRoomNumber;
     }
 
-    public void setTxtBillingAddress(JTextField txtBillingAddress1) {
-        this.txtBillingAddress = txtBillingAddress1;
+    public void setTxtRoomNumber(JTextField txtRoomNumber) {
+        this.txtRoomNumber = txtRoomNumber;
     }
 
-    public JTextField getTxtEmail() {
-        return txtEmail;
+    public JTextField getTxtRoomStatus() {
+        return txtRoomStatus;
     }
 
-    public void setTxtEmail(JTextField txtEmail) {
-        this.txtEmail = txtEmail;
+    public void setTxtRoomStatus(JTextField txtRoomStatus) {
+        this.txtRoomStatus = txtRoomStatus;
     }
 
-    public JTextField getTxtFirstName() {
-        return txtFirstName;
+    public JTextField getTxtRoomType() {
+        return txtRoomType;
     }
 
-    public void setTxtFirstName(JTextField txtFirstName) {
-        this.txtFirstName = txtFirstName;
+    public void setTxtRoomType(JTextField txtRoomType) {
+        this.txtRoomType = txtRoomType;
     }
 
-    public JTextField getTxtLastName() {
-        return txtLastName;
+    public JTextField getTxtUpdatedBy() {
+        return txtUpdatedBy;
     }
 
-    public void setTxtLastName(JTextField txtLastName) {
-        this.txtLastName = txtLastName;
+    public void setTxtUpdatedBy(JTextField txtUpdatedBy) {
+        this.txtUpdatedBy = txtUpdatedBy;
     }
 
-    public JTextField getTxtPassword() {
-        return txtPassword;
-    }
-
-    public void setTxtPassword(JTextField txtPassword) {
-        this.txtPassword = txtPassword;
-    }
-
-    public JTextField getTxtPhone() {
-        return txtPhone;
-    }
-
-    public void setTxtPhone(JTextField txtPhone) {
-        this.txtPhone = txtPhone;
-    }
     
     public void addGuestBtnListener(ActionListener myActionListener){
-        btnAddGuest.addActionListener(myActionListener);
+        btnAddRoom.addActionListener(myActionListener);
     }
     
     public void addClearAllBtnListener(ActionListener myActionListener){
@@ -113,24 +98,20 @@ public class HotelRoomAddView extends javax.swing.JFrame {
 
         javax.swing.JPanel parentPanel = new javax.swing.JPanel();
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblRegister = new javax.swing.JLabel();
+        javax.swing.JLabel lblCreateRoom = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
-        javax.swing.JLabel lblFirstName = new javax.swing.JLabel();
-        txtFirstName = new javax.swing.JTextField();
-        javax.swing.JLabel lblLastName = new javax.swing.JLabel();
-        txtLastName = new javax.swing.JTextField();
-        javax.swing.JLabel lblAddress = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
-        javax.swing.JLabel lblPhone = new javax.swing.JLabel();
-        txtPhone = new javax.swing.JTextField();
-        javax.swing.JLabel lblEmail = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
-        javax.swing.JLabel lblPassword = new javax.swing.JLabel();
+        javax.swing.JLabel lblRoomNumber = new javax.swing.JLabel();
+        txtRoomNumber = new javax.swing.JTextField();
+        javax.swing.JLabel lblRoomType = new javax.swing.JLabel();
+        txtRoomType = new javax.swing.JTextField();
+        javax.swing.JLabel lblPricePerNight = new javax.swing.JLabel();
+        txtPricePerNight = new javax.swing.JTextField();
+        javax.swing.JLabel lblUpdatedBy = new javax.swing.JLabel();
+        txtUpdatedBy = new javax.swing.JTextField();
         btnClear = new javax.swing.JButton();
-        btnAddGuest = new javax.swing.JButton();
-        javax.swing.JLabel lblBillingAddress = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JTextField();
-        txtBillingAddress = new javax.swing.JTextField();
+        btnAddRoom = new javax.swing.JButton();
+        javax.swing.JLabel lblRoomStatus = new javax.swing.JLabel();
+        txtRoomStatus = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register User Account");
@@ -139,57 +120,50 @@ public class HotelRoomAddView extends javax.swing.JFrame {
 
         childPanel.setBackground(java.awt.Color.white);
 
-        lblRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblRegister.setForeground(java.awt.Color.black);
-        lblRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/user.png"))); // NOI18N
-        lblRegister.setText("Create Guest Account:");
-        lblRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lblCreateRoom.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblCreateRoom.setForeground(java.awt.Color.black);
+        lblCreateRoom.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCreateRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/user.png"))); // NOI18N
+        lblCreateRoom.setText("Create Room:");
+        lblCreateRoom.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Information:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14), java.awt.Color.black)); // NOI18N
         enterInfoPanel.setOpaque(false);
 
-        lblFirstName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblFirstName.setForeground(java.awt.Color.black);
-        lblFirstName.setText("First Name:");
+        lblRoomNumber.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblRoomNumber.setForeground(java.awt.Color.black);
+        lblRoomNumber.setText("Room Number:");
 
-        lblLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblLastName.setForeground(java.awt.Color.black);
-        lblLastName.setText("Last Name:");
+        lblRoomType.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblRoomType.setForeground(java.awt.Color.black);
+        lblRoomType.setText("Room Type:");
 
-        lblAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblAddress.setForeground(java.awt.Color.black);
-        lblAddress.setText("Address:");
+        lblPricePerNight.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblPricePerNight.setForeground(java.awt.Color.black);
+        lblPricePerNight.setText("Price Per Night:");
 
-        lblPhone.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPhone.setForeground(java.awt.Color.black);
-        lblPhone.setText("Phone Number:");
-
-        txtPhone.setText("555-555-5555");
-
-        lblEmail.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblEmail.setForeground(java.awt.Color.black);
-        lblEmail.setText("Email:");
-
-        txtEmail.setText("email@host.com");
-
-        lblPassword.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPassword.setForeground(java.awt.Color.black);
-        lblPassword.setText("Password");
+        lblUpdatedBy.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblUpdatedBy.setForeground(java.awt.Color.black);
+        lblUpdatedBy.setText("Updated By (enter staff_id):");
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
         btnClear.setText("Clear");
 
-        btnAddGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnAddGuest.setForeground(new java.awt.Color(0, 0, 0));
-        btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
-        btnAddGuest.setText("Register");
+        btnAddRoom.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnAddRoom.setForeground(new java.awt.Color(0, 0, 0));
+        btnAddRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
+        btnAddRoom.setText("Add Room");
+        btnAddRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddRoomActionPerformed(evt);
+            }
+        });
 
-        lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblBillingAddress.setForeground(java.awt.Color.black);
-        lblBillingAddress.setText("Billing Address:");
+        lblRoomStatus.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblRoomStatus.setForeground(java.awt.Color.black);
+        lblRoomStatus.setText("Room Status:");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -198,67 +172,57 @@ public class HotelRoomAddView extends javax.swing.JFrame {
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtFirstName)
-                    .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtLastName)
-                    .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtAddress)
-                    .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtPhone)
-                    .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtEmail)
-                    .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnAddGuest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnClear))
-                    .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtPassword)
-                    .addComponent(txtBillingAddress))
+                    .addComponent(lblRoomNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtRoomNumber)
+                    .addComponent(lblRoomType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtRoomType)
+                    .addComponent(lblPricePerNight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPricePerNight)
+                    .addComponent(lblUpdatedBy, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+                    .addComponent(txtUpdatedBy)
+                    .addComponent(lblRoomStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtRoomStatus))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAddRoom)
+                .addGap(18, 18, 18)
+                .addComponent(btnClear)
+                .addGap(4, 4, 4))
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblFirstName)
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(lblRoomNumber)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtRoomNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblLastName)
+                .addComponent(lblRoomType)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtRoomType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblAddress)
+                .addComponent(lblPricePerNight)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPricePerNight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblBillingAddress)
+                .addComponent(lblRoomStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtBillingAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtRoomStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(lblPhone)
+                .addComponent(lblUpdatedBy)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblEmail)
+                .addComponent(txtUpdatedBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblPassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAddGuest)
-                    .addComponent(btnClear))
-                .addContainerGap())
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnClear)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(btnAddRoom)
+                        .addContainerGap())))
         );
 
         btnClear.getAccessibleContext().setAccessibleParent(this);
-        btnAddGuest.getAccessibleContext().setAccessibleParent(this);
+        btnAddRoom.getAccessibleContext().setAccessibleParent(this);
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
@@ -267,17 +231,17 @@ public class HotelRoomAddView extends javax.swing.JFrame {
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE))
+                    .addComponent(lblCreateRoom, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+                    .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblRegister)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblCreateRoom)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(enterInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -289,13 +253,19 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         );
         parentPanelLayout.setVerticalGroup(
             parentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(parentPanelLayout.createSequentialGroup()
+                .addComponent(childPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         getContentPane().add(parentPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAddRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRoomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddRoomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -310,14 +280,12 @@ public class HotelRoomAddView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddGuest;
+    private javax.swing.JButton btnAddRoom;
     private javax.swing.JButton btnClear;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtBillingAddress;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtFirstName;
-    private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtPassword;
-    private javax.swing.JTextField txtPhone;
+    private javax.swing.JTextField txtPricePerNight;
+    private javax.swing.JTextField txtRoomNumber;
+    private javax.swing.JTextField txtRoomStatus;
+    private javax.swing.JTextField txtRoomType;
+    private javax.swing.JTextField txtUpdatedBy;
     // End of variables declaration//GEN-END:variables
 }

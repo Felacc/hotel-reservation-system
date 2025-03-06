@@ -175,6 +175,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Room..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddRoomActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchRoom">
               <Properties>
@@ -190,6 +193,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Room..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemDeleteRoomActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
