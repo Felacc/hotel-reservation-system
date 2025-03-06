@@ -9,18 +9,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.Guest;
-import view.HotelGuestRegistrationView;
+import view.HotelGuestAddView;
 
 /**
  *
  *
  * @author kale
  */
-public class HotelController {
-    private HotelGuestRegistrationView hotelGuestRegistrationView;
+public class GuestController {
+    private HotelGuestAddView hotelGuestRegistrationView;
     private GuestDAO guestDAO;
 
-    public HotelController(HotelGuestRegistrationView hotelGuestRegistrationView, GuestDAO guestDAO) {
+    public GuestController(HotelGuestAddView hotelGuestRegistrationView, GuestDAO guestDAO) {
         this.hotelGuestRegistrationView = hotelGuestRegistrationView;
         this.guestDAO = guestDAO;
 
@@ -32,6 +32,7 @@ public class HotelController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            hotelGuestRegistrationView.getTxtFirstName().setText("");
             hotelGuestRegistrationView.getTxtFirstName().setText("");
             hotelGuestRegistrationView.getTxtLastName().setText("");
             hotelGuestRegistrationView.getTxtAddress().setText("");
