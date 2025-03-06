@@ -9,16 +9,19 @@ package model;
  * @author felix
  */
 public class User {
+    // Basic login info
     private String username;
     private String password;
     private String userType;
     
+    // Constructor
     public User(String username, String password, String userType) {
         this.username = username;
         this.password = password;
         this.userType = userType;
     }
-
+    
+    // Getters and Setters
     public String getUsername() {
         return username;
     }
