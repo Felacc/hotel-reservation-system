@@ -24,9 +24,9 @@ public class StaffMember extends User {
     // Employment requirements
     private int SIN;
     private String citizenshipStatus;
-    // Not sure what createdBy is yet, but userID will be used from DB
-    private int createdBy;
-    private int userID;
+    // Other info
+    private int createdBy; // reference to employee who created the staff member record? if there is one? I think?
+    private int userID; // reference to staff member in the users table
 
     // Constructors
     public StaffMember(String username, String password, String userType) {
