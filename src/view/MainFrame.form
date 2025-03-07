@@ -211,21 +211,33 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Room..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddRoomActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchRoom">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search Rooms..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemSearchRoomActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemUpdateRoom">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Rooms..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemUpdateRoomActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemDeleteRoom">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Room..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemDeleteRoomActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
