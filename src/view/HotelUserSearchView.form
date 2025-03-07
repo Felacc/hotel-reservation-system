@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Search Staff Account"/>
+    <Property name="title" type="java.lang.String" value="Search User Account"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -53,15 +53,15 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblStaffRegister" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblUserRegister" alignment="0" max="32767" attributes="0"/>
                               <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="txtSearchStaff" min="-2" pref="278" max="-2" attributes="0"/>
+                          <Component id="txtSearchUser" min="-2" pref="278" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnSeachStaff" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="btnSeachUser" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -72,13 +72,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblStaffRegister" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUserRegister" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="433" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtSearchStaff" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSeachStaff" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSearchUser" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSeachUser" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -86,7 +86,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblStaffRegister">
+        <Component class="javax.swing.JLabel" name="lblUserRegister">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="24" style="1"/>
@@ -95,7 +95,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/icons/search.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Search for Staff"/>
+            <Property name="text" type="java.lang.String" value="Search for User"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true"/>
@@ -114,68 +114,20 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tblStaff">
+            <Component class="javax.swing.JTable" name="tblUser">
               <Properties>
                 <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="12" rowCount="4">
-                    <Column editable="true" title="Employee ID" type="java.lang.Object"/>
-                    <Column editable="true" title="First Name" type="java.lang.Object"/>
-                    <Column editable="true" title="Last Name" type="java.lang.Object"/>
-                    <Column editable="true" title="Email" type="java.lang.Object"/>
-                    <Column editable="true" title="Phone" type="java.lang.Object"/>
-                    <Column editable="true" title="SIN" type="java.lang.Object"/>
-                    <Column editable="true" title="Status" type="java.lang.Object"/>
-                    <Column editable="true" title="Unit Number" type="java.lang.Object"/>
-                    <Column editable="true" title="Street Address" type="java.lang.Object"/>
-                    <Column editable="true" title="City" type="java.lang.Object"/>
-                    <Column editable="true" title="Postal Code" type="java.lang.Object"/>
-                    <Column editable="true" title="Country" type="java.lang.Object"/>
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="User ID" type="java.lang.Object"/>
+                    <Column editable="true" title="Username" type="java.lang.Object"/>
+                    <Column editable="true" title="Password" type="java.lang.Object"/>
+                    <Column editable="true" title="User Type" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="autoResizeMode" type="int" value="4"/>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
-                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -205,7 +157,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="btnSeachStaff">
+        <Component class="javax.swing.JButton" name="btnSeachUser">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
@@ -213,20 +165,20 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/icons/search.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Search By StaffID..."/>
+            <Property name="text" type="java.lang.String" value="Search By UserID..."/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSeachStaffActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSeachUserActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtSearchStaff">
+        <Component class="javax.swing.JTextField" name="txtSearchUser">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSearchStaffActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSearchUserActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

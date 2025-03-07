@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
-    <Property name="title" type="java.lang.String" value="Delete User Account"/>
+    <Property name="title" type="java.lang.String" value="Delete Guest Account"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -120,7 +120,6 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Search by GuestID">
                       <Font PropertyName="font" name="Helvetica Neue" size="14" style="1"/>
-                      <Color PropertyName="color" blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
                     </TitledBorder>
                   </Border>
                 </Property>

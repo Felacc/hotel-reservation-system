@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Create Staff Account"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -47,11 +48,11 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="enterInfoPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="lblRegisterStaff" alignment="1" pref="388" max="32767" attributes="0"/>
+                      <Component id="enterInfoPanel" max="32767" attributes="0"/>
+                      <Component id="lblStaffRegister" alignment="0" pref="388" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -61,7 +62,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblRegisterStaff" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblStaffRegister" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="enterInfoPanel" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -70,27 +71,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblRegisterStaff">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Helvetica Neue" size="24" style="1"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Create Staff Account:"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder roundedCorners="true"/>
-              </Border>
-            </Property>
-          </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Create Staff Account:"/>
-          </AccessibilityProperties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
-          </AuxValues>
-        </Component>
         <Container class="javax.swing.JPanel" name="enterInfoPanel">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -113,25 +93,25 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblFirstName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffFirstName" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffFirstName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblLastName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffLastName" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffLastName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblAddress" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffEmail" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffEmail" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblSIN" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffSIN" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffSIN" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblStaffStatus" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffStatus" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblUnitNumber" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffUnitNumber" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
                               <Component id="btnAddStaff" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnStaff" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnClear" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="lblBillingAddress" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtUnitNumber" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffPhone" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtStaffUnitNumber" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffPhone" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffCity" alignment="1" max="32767" attributes="0"/>
                           <Component id="lblStaffAddress" alignment="0" max="32767" attributes="0"/>
@@ -150,23 +130,23 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lblFirstName" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblStaffFirstName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffFirstName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lblLastName" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblStaffLastName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffLastName" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lblAddress" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblStaffEmail" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffEmail" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lblBillingAddress" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblStaffPhone" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffPhone" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="lblSIN" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblStaffSIN" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffSIN" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -174,9 +154,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffStatus" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lblUnitNumber" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblStaffUnitNumber" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtUnitNumber" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtStaffUnitNumber" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lblStaffAddress" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -196,7 +176,7 @@
                       <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnAddStaff" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnStaff" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -204,7 +184,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblFirstName">
+            <Component class="javax.swing.JLabel" name="lblStaffFirstName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="14" style="0"/>
@@ -218,7 +198,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtStaffFirstName">
             </Component>
-            <Component class="javax.swing.JLabel" name="lblLastName">
+            <Component class="javax.swing.JLabel" name="lblStaffLastName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="14" style="0"/>
@@ -235,16 +215,13 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStaffLastNameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblAddress">
+            <Component class="javax.swing.JLabel" name="lblStaffEmail">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="14" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Email:"/>
               </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Email:"/>
-              </AccessibilityProperties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
@@ -255,7 +232,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStaffEmailActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblSIN">
+            <Component class="javax.swing.JLabel" name="lblStaffSIN">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="14" style="0"/>
@@ -283,7 +260,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtStaffStatus">
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUnitNumber">
+            <Component class="javax.swing.JLabel" name="lblStaffUnitNumber">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="14" style="0"/>
@@ -295,7 +272,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnStaff">
+            <Component class="javax.swing.JButton" name="btnClear">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
@@ -317,7 +294,7 @@
                 <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="HotelGuestRegistrationView_btnAddGuest"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblBillingAddress">
+            <Component class="javax.swing.JLabel" name="lblStaffPhone">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Helvetica Neue" size="14" style="0"/>
@@ -329,7 +306,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtUnitNumber">
+            <Component class="javax.swing.JTextField" name="txtStaffUnitNumber">
             </Component>
             <Component class="javax.swing.JTextField" name="txtStaffPhone">
             </Component>
@@ -394,6 +371,27 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="lblStaffRegister">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Helvetica Neue" size="24" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/view/icons/user.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Create Staff Account:"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder roundedCorners="true"/>
+              </Border>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
