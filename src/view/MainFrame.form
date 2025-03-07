@@ -238,21 +238,33 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Payment..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemAddPaymentActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemSearchPayment">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search Payment..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemSearchPaymentActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemUpdatePayment">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Payment..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemUpdatePaymentActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuItemDeletePayment">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Payment..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuItemDeletePaymentActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
