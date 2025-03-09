@@ -44,7 +44,7 @@ public class HotelReservationAddView extends javax.swing.JFrame {
         javax.swing.JLabel lblRegistrationCheckInDate = new javax.swing.JLabel();
         txtReservationCheckInDate = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create Reservation Account");
 
         childPanel.setBackground(java.awt.Color.white);

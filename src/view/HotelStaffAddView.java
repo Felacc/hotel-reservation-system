@@ -54,7 +54,7 @@ public class HotelStaffAddView extends javax.swing.JFrame {
         txtStaffPostalCode = new javax.swing.JTextField();
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create Staff Account");
 
         childPanel.setBackground(java.awt.Color.white);
