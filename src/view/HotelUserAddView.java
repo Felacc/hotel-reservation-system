@@ -38,7 +38,7 @@ public class HotelUserAddView extends javax.swing.JFrame {
         javax.swing.JLabel lblUserPassword1 = new javax.swing.JLabel();
         txtUserType = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create User Account");
 
         childPanel.setBackground(java.awt.Color.white);

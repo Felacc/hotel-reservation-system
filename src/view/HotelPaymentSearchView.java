@@ -33,7 +33,7 @@ public class HotelPaymentSearchView extends javax.swing.JFrame {
         btnSeachPayment = new javax.swing.JButton();
         txtSearchPayment = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search Payment Account");
 
         childPanel.setBackground(java.awt.Color.white);

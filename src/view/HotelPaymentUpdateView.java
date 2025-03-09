@@ -44,7 +44,7 @@ public class HotelPaymentUpdateView extends javax.swing.JFrame {
         btnClear = new javax.swing.JButton();
         javax.swing.JLabel lblRegister = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Update Payment Account");
 
         childPanel.setBackground(java.awt.Color.white);

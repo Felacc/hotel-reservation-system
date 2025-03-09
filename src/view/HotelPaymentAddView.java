@@ -44,7 +44,7 @@ public class HotelPaymentAddView extends javax.swing.JFrame {
         javax.swing.JLabel lblPaymentAmount = new javax.swing.JLabel();
         txtPaymentAmount = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create Payment Account");
 
         childPanel.setBackground(java.awt.Color.white);
