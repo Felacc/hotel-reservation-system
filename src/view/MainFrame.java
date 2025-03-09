@@ -240,15 +240,35 @@ public class MainFrame extends javax.swing.JFrame {
         mnuBooking.setText("Booking...");
 
         mnuItemAddBooking.setText("New Booking...");
+        mnuItemAddBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemAddBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemAddBooking);
 
         mnuItemSearchBooking.setText("Search Booking...");
+        mnuItemSearchBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemSearchBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemSearchBooking);
 
         mnuItemUpdateBooking.setText("Update Booking...");
+        mnuItemUpdateBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemUpdateBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemUpdateBooking);
 
         mnuItemDeleteBooking.setText("Delete Booking...");
+        mnuItemDeleteBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemDeleteBookingActionPerformed(evt);
+            }
+        });
         mnuBooking.add(mnuItemDeleteBooking);
 
         jMenuBar1.add(mnuBooking);
