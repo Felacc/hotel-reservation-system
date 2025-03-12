@@ -15,7 +15,7 @@ import util.dbConnection;
  */
 
 public class GuestDAO {
-    //This course DAO will be interacting the model
+    //This Guest DAO will be interacting the model
     private Guest guest;
 
     public GuestDAO() {
@@ -25,7 +25,7 @@ public class GuestDAO {
         this.guest = guest;
     }
 
-    public Guest getCourse() {
+    public Guest getGuest() {
         return guest;
     }
 
@@ -35,16 +35,24 @@ public class GuestDAO {
     
     
     public boolean addGuestRecord(Guest guest){
-        //The ?, ? values are nhote known yet
-        String query = "INSERT INTO coursemanagement.course (name,credit) VALUES (?, ?)";
+        //The ?, ? values are not known yet
+        String query = "INSERT INTO hotelReservationDB.guests (first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         //Connect to database
         try(Connection connection = dbConnection.getConnection();
         //Preparse statement for query
             PreparedStatement preparedStatement = connection.prepareStatement(query)){
-            preparedStatement.setString(1,guest.getFirstName()); //Our First Question mark is for the name type sting by calling the getter
-            preparedStatement.setString(2, guest.getLastName()); //Our second question makr is for the type int calling the get credit
-            //... and so on
+            
+            preparedStatement.setString(1,guest.getFirstName()); // first question mark - first name
+            preparedStatement.setString(2, guest.getLastName()); // second question mark - last name
+            preparedStatement.setString(3, guest.getEmail());
+            preparedStatement.setString(4, guest.getPhoneNumber());
+            preparedStatement.setString(5, guest.getUnitNumber());
+            preparedStatement.setString(6, guest.getStreetAddress());
+            preparedStatement.setString(7, guest.getCity());
+            preparedStatement.setString(8, guest.getPostalCode());
+            preparedStatement.setString(9, guest.getCountry());
+            preparedStatement.setInt(10, guest.getUserID());
             
             return preparedStatement.executeUpdate() > 0; //successful insertion
         }
