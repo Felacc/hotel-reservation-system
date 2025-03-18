@@ -4,6 +4,11 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -16,6 +21,55 @@ public class HotelUserAddView extends javax.swing.JFrame {
     public HotelUserAddView() {
         initComponents();
     }
+
+    public JButton getBtnAddUser() {
+        return btnAddUser;
+    }
+
+    public void setBtnAddUser(JButton btnAddUser) {
+        this.btnAddUser = btnAddUser;
+    }
+
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JTextField getTxtUserName() {
+        return txtUsername;
+    }
+
+    public void setTxtUserName(JTextField txtUserName) {
+        this.txtUsername = txtUserName;
+    }
+
+    public JTextField getTxtUserPassword() {
+        return txtUserPassword;
+    }
+
+    public void setTxtUserPassword(JTextField txtUserPassword) {
+        this.txtUserPassword = txtUserPassword;
+    }
+
+    public JComboBox<String> getBoxUserType() {
+        return boxUserType;
+    }
+
+    public void setBoxUserType(JComboBox<String> boxUserType) {
+        this.boxUserType = boxUserType;
+    }
+
+    public void addUserBtnListener(ActionListener myActionListener){
+        btnAddUser.addActionListener(myActionListener);
+    }
+    
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,13 +84,13 @@ public class HotelUserAddView extends javax.swing.JFrame {
         javax.swing.JLabel lblRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblUserName = new javax.swing.JLabel();
-        txtUserName = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
         javax.swing.JLabel lblUserType = new javax.swing.JLabel();
         btnClear = new javax.swing.JButton();
         btnAddUser = new javax.swing.JButton();
         txtUserPassword = new javax.swing.JTextField();
         javax.swing.JLabel lblUserPassword1 = new javax.swing.JLabel();
-        txtUserType = new javax.swing.JTextField();
+        boxUserType = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create User Account");
@@ -55,9 +109,9 @@ public class HotelUserAddView extends javax.swing.JFrame {
         lblUserName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblUserName.setText("Username:");
 
-        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserNameActionPerformed(evt);
+                txtUsernameActionPerformed(evt);
             }
         });
 
@@ -76,6 +130,13 @@ public class HotelUserAddView extends javax.swing.JFrame {
         lblUserPassword1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblUserPassword1.setText("Password:");
 
+        boxUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guest", "Staff" }));
+        boxUserType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxUserTypeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
@@ -84,7 +145,7 @@ public class HotelUserAddView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtUserName)
+                    .addComponent(txtUsername)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 190, Short.MAX_VALUE)
                         .addComponent(btnAddUser)
@@ -93,7 +154,7 @@ public class HotelUserAddView extends javax.swing.JFrame {
                     .addComponent(lblUserType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtUserPassword)
                     .addComponent(lblUserPassword1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtUserType))
+                    .addComponent(boxUserType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -102,16 +163,16 @@ public class HotelUserAddView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblUserName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblUserPassword1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblUserType)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddUser)
                     .addComponent(btnClear))
@@ -153,9 +214,13 @@ public class HotelUserAddView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserNameActionPerformed
+    }//GEN-LAST:event_txtUsernameActionPerformed
+
+    private void boxUserTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxUserTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxUserTypeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,10 +258,10 @@ public class HotelUserAddView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> boxUserType;
     private javax.swing.JButton btnAddUser;
     private javax.swing.JButton btnClear;
-    private javax.swing.JTextField txtUserName;
     private javax.swing.JTextField txtUserPassword;
-    private javax.swing.JTextField txtUserType;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

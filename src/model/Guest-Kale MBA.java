@@ -29,24 +29,9 @@ public class Guest extends User {
     public Guest(String username, String password, String userType) {
         super(username, password, userType);
     }
-
+ 
     public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country, int guestId, String username, String password, String userType) {
         super(username, password, userType);
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.unit = unit;
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.postalCode = postalCode;
-        this.country = country;
-        this.guestId = guestId;
-    }
- 
-    
-    
-    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -136,4 +121,11 @@ public class Guest extends User {
         this.country = country;
     }
 
+    public int getGuestId() {
+        return guestId;
+    }
+
+    public void setGuestId(int guestId) {
+        this.guestId = guestId;
+    }
 }

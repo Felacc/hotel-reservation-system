@@ -8,7 +8,7 @@ import model.Guest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
-import util.dbConnection;
+import util.DBConnection;
 
 /**
  *
@@ -48,21 +48,19 @@ public class GuestDAO {
         String query = "INSERT INTO hotelReservationDB.guests (first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         //Connect to database
-        try(Connection connection = dbConnection.getConnection();
+        try(Connection connection = DBConnection.getConnection();
         //Preparse statement for query
             PreparedStatement preparedStatement = connection.prepareStatement(query)){
-            
             preparedStatement.setString(1,guest.getFirstName()); // first question mark - first name
             preparedStatement.setString(2, guest.getLastName()); // second question mark - last name
             preparedStatement.setString(3, guest.getEmail());
             preparedStatement.setString(4, guest.getPhoneNumber());
-            preparedStatement.setString(5, guest.getUnitNumber());
+            preparedStatement.setString(5, guest.getUnit());
             preparedStatement.setString(6, guest.getStreetAddress());
             preparedStatement.setString(7, guest.getCity());
             preparedStatement.setString(8, guest.getPostalCode());
             preparedStatement.setString(9, guest.getCountry());
-            preparedStatement.setInt(10, guest.getUserID());
-            
+            preparedStatement.setInt(10, guest.getGuestId());
             return preparedStatement.executeUpdate() > 0; //successful insertion
         }
         catch(Exception ex){
@@ -73,8 +71,6 @@ public class GuestDAO {
     
 
     public Guest fetchGuestByIdForDelete(int guestId) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
 }
