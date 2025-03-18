@@ -4,7 +4,7 @@
  */
 package view;
 
-import controller.AddGuestController;
+import controller.guest.AddGuestController;
 import dao.GuestDAO;
 
 /**

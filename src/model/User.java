@@ -10,9 +10,9 @@ package model;
  */
 public class User {
     // Basic login info
-    private String username;
-    private String password;
-    private String userType;
+    String username;
+    String password;
+    String userType;
     
     // Constructor
     public User(String username, String password, String userType) {
@@ -44,7 +44,5 @@ public class User {
 
     public void setUserType(String userType) {
         this.userType = userType;
-    }
-    
-    
+    }  
 }

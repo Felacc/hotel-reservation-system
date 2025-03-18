@@ -38,20 +38,28 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         this.btnClear = btnClear;
     }
 
-    public JTextField getTxtAddress() {
-        return txtAddress;
+    public JTextField getTxtUnit() {
+        return txtUnit;
     }
 
-    public void setTxtAddress(JTextField txtAddress) {
-        this.txtAddress = txtAddress;
+    public void setTxtUnit(JTextField txtUnit) {
+        this.txtUnit = txtUnit;
     }
 
-    public JTextField getTxtBillingAddress() {
-        return txtBillingAddress;
+    public JTextField getTxtCity() {
+        return txtCity;
     }
 
-    public void setTxtBillingAddress(JTextField txtBillingAddress1) {
-        this.txtBillingAddress = txtBillingAddress1;
+    public void setTxtCity(JTextField txtCity) {
+        this.txtCity = txtCity;
+    }
+
+    public JTextField getTxtCountry() {
+        return txtCountry;
+    }
+
+    public void setTxtCountry(JTextField txtCountry) {
+        this.txtCountry = txtCountry;
     }
 
     public JTextField getTxtEmail() {
@@ -78,14 +86,6 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         this.txtLastName = txtLastName;
     }
 
-    public JTextField getTxtPassword() {
-        return txtPassword;
-    }
-
-    public void setTxtPassword(JTextField txtPassword) {
-        this.txtPassword = txtPassword;
-    }
-
     public JTextField getTxtPhone() {
         return txtPhone;
     }
@@ -93,7 +93,23 @@ public class HotelGuestAddView extends javax.swing.JFrame {
     public void setTxtPhone(JTextField txtPhone) {
         this.txtPhone = txtPhone;
     }
-    
+
+    public JTextField getTxtPostalCode() {
+        return txtPostalCode;
+    }
+
+    public void setTxtPostalCode(JTextField txtPostalCode) {
+        this.txtPostalCode = txtPostalCode;
+    }
+
+    public JTextField getTxtStreetAddress() {
+        return txtStreetAddress;
+    }
+
+    public void setTxtStreetAddress(JTextField txtStreetAddress) {
+        this.txtStreetAddress = txtStreetAddress;
+    }
+
     public void addGuestBtnListener(ActionListener myActionListener){
         btnAddGuest.addActionListener(myActionListener);
     }
@@ -120,18 +136,22 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         txtFirstName = new javax.swing.JTextField();
         javax.swing.JLabel lblLastName = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
-        javax.swing.JLabel lblAddress = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
+        javax.swing.JLabel lblUnit = new javax.swing.JLabel();
+        txtUnit = new javax.swing.JTextField();
         javax.swing.JLabel lblPhone = new javax.swing.JLabel();
         txtPhone = new javax.swing.JTextField();
         javax.swing.JLabel lblEmail = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
-        javax.swing.JLabel lblPassword = new javax.swing.JLabel();
         btnClear = new javax.swing.JButton();
         btnAddGuest = new javax.swing.JButton();
-        javax.swing.JLabel lblBillingAddress = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JTextField();
-        txtBillingAddress = new javax.swing.JTextField();
+        javax.swing.JLabel lblStreetAddress = new javax.swing.JLabel();
+        txtStreetAddress = new javax.swing.JTextField();
+        javax.swing.JLabel lblCity = new javax.swing.JLabel();
+        txtCity = new javax.swing.JTextField();
+        txtPostalCode = new javax.swing.JTextField();
+        javax.swing.JLabel lblPostalCode = new javax.swing.JLabel();
+        txtCountry = new javax.swing.JTextField();
+        javax.swing.JLabel lblCountry = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register Guest Account");
@@ -155,8 +175,8 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         lblLastName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblLastName.setText("Last Name:");
 
-        lblAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblAddress.setText("Address:");
+        lblUnit.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblUnit.setText("Unit:");
 
         lblPhone.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblPhone.setText("Phone Number:");
@@ -168,9 +188,6 @@ public class HotelGuestAddView extends javax.swing.JFrame {
 
         txtEmail.setText("email@host.com");
 
-        lblPassword.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPassword.setText("Password");
-
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
@@ -180,8 +197,17 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         btnAddGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
         btnAddGuest.setText("Register");
 
-        lblBillingAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblBillingAddress.setText("Billing Address:");
+        lblStreetAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStreetAddress.setText("Street Address:");
+
+        lblCity.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblCity.setText("City:");
+
+        lblPostalCode.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblPostalCode.setText("Postal Code:");
+
+        lblCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblCountry.setText("Country:");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -194,21 +220,25 @@ public class HotelGuestAddView extends javax.swing.JFrame {
                     .addComponent(txtFirstName)
                     .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtLastName)
-                    .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtAddress)
+                    .addComponent(lblUnit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtUnit)
                     .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtPhone)
                     .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtEmail)
-                    .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 425, Short.MAX_VALUE)
                         .addComponent(btnAddGuest)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnClear))
-                    .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtPassword)
-                    .addComponent(txtBillingAddress))
+                    .addComponent(lblStreetAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtStreetAddress)
+                    .addComponent(lblCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCity)
+                    .addComponent(lblPostalCode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPostalCode)
+                    .addComponent(lblCountry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCountry))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -223,14 +253,26 @@ public class HotelGuestAddView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblAddress)
+                .addComponent(lblUnit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblBillingAddress)
+                .addComponent(lblStreetAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtBillingAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addComponent(txtStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblCity)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblPostalCode)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblCountry)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lblPhone)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -238,11 +280,7 @@ public class HotelGuestAddView extends javax.swing.JFrame {
                 .addComponent(lblEmail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblPassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddGuest)
                     .addComponent(btnClear))
@@ -304,12 +342,14 @@ public class HotelGuestAddView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddGuest;
     private javax.swing.JButton btnClear;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtBillingAddress;
+    private javax.swing.JTextField txtCity;
+    private javax.swing.JTextField txtCountry;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtLastName;
-    private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtPhone;
+    private javax.swing.JTextField txtPostalCode;
+    private javax.swing.JTextField txtStreetAddress;
+    private javax.swing.JTextField txtUnit;
     // End of variables declaration//GEN-END:variables
 }

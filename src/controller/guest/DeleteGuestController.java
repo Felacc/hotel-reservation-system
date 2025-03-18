@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controller;
+package controller.guest;
 
 import dao.GuestDAO;
 import java.awt.event.ActionEvent;
@@ -18,11 +18,11 @@ import view.HotelGuestDeleteView;
  * @author kale
  */
 public class DeleteGuestController {
-    private HotelGuestDeleteView deleteHotelGuestView;
+    private HotelGuestDeleteView hotelGuestDeleteView;
     private GuestDAO guestDAO;
 
     public DeleteGuestController(HotelGuestDeleteView deleteHotelGuestView, GuestDAO guestDAO) {
-        this.deleteHotelGuestView = deleteHotelGuestView;
+        this.hotelGuestDeleteView = hotelGuestDeleteView;
         this.guestDAO = guestDAO;
 
         deleteHotelGuestView.deleteGuestBtnListener(new DeleteGuestRecord());
@@ -31,7 +31,7 @@ public class DeleteGuestController {
     private class DeleteGuestRecord implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            int guestId = Integer.parseInt(deleteHotelGuestView.getTxtDeleteGuest().getText());
+            int guestId = Integer.parseInt(hotelGuestDeleteView.getTxtDeleteGuest().getText());
             
             Guest guestObject = null;
            
