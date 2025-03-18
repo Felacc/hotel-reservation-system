@@ -7,6 +7,7 @@ package controller.guest;
 import dao.GuestDAO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import model.Guest;
 import view.HotelGuestDeleteView;
 
@@ -32,12 +33,12 @@ public class DeleteGuestController {
         @Override
         public void actionPerformed(ActionEvent e) {
             int guestId = Integer.parseInt(hotelGuestDeleteView.getTxtDeleteGuest().getText());
-            
-            Guest guestObject = null;
-           
-            if(guestId != 0){
-                guestObject = guestDAO.fetchGuestByIdForDelete(guestId);
-            }
+            boolean result = GuestDAO.deleteGuestRecord(guestId);
+            if (result) {
+                    JOptionPane.showMessageDialog(null, "Successfully removed user");
+                } else {
+                    JOptionPane.showMessageDialog(null, "User ID does not exist");
+                }
         }
     } 
 }

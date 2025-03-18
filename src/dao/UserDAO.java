@@ -18,6 +18,14 @@ import util.DBConnection;
 
 public class UserDAO {
 
+    public static List<User> fetchAllUserRecords() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public static User fetchUserByIdForTable(int guestID) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     //This user DAO will be interacting the model
     private User user;
 
@@ -69,4 +77,6 @@ public class UserDAO {
         }
         return false;
     }
+    
+    
 }
