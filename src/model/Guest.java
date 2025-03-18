@@ -16,32 +16,36 @@ public class Guest extends User {
     private String email;
     private String phoneNumber;
     // Address 
-    private String unitNumber;
+    private String unit;
     private String streetAddress;
     private String city;
     private String postalCode;
     private String country;
     // User ID from the DB
-    private int userID;
+    private int guestId;
     
     // Constructors
+
     public Guest(String username, String password, String userType) {
         super(username, password, userType);
     }
-
-    public Guest(String firstName, String lastName, String email, String phoneNumber, String unitNumber, String streetAddress, String city, String postalCode, String country, int userID, String username, String password, String userType) {
+ 
+    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country, int guestId, String username, String password, String userType) {
         super(username, password, userType);
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.unitNumber = unitNumber;
+        this.unit = unit;
         this.streetAddress = streetAddress;
         this.city = city;
         this.postalCode = postalCode;
         this.country = country;
-        this.userID = userID;
+        this.guestId = guestId;
     }
+    
+
+    
     
     // Getters and Setters
 
@@ -77,12 +81,12 @@ public class Guest extends User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getUnitNumber() {
-        return unitNumber;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setUnitNumber(String unitNumber) {
-        this.unitNumber = unitNumber;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public String getStreetAddress() {
@@ -117,13 +121,11 @@ public class Guest extends User {
         this.country = country;
     }
 
-    public int getUserID() {
-        return userID;
+    public int getGuestId() {
+        return guestId;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setGuestId(int guestId) {
+        this.guestId = guestId;
     }
-    
-    
 }

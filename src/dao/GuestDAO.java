@@ -7,6 +7,7 @@ package dao;
 import model.Guest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.List;
 import util.dbConnection;
 
 /**
@@ -15,7 +16,15 @@ import util.dbConnection;
  */
 
 public class GuestDAO {
-    //This Guest DAO will be interacting the model
+
+    public static List<Guest> fetchAllGuestRecords() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public static Guest fetchGuestByIdForTable(int guestID) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    //This course DAO will be interacting the model
     private Guest guest;
 
     public GuestDAO() {
@@ -61,4 +70,11 @@ public class GuestDAO {
         }
         return false;
     }
+    
+
+    public Guest fetchGuestByIdForDelete(int guestId) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
 }

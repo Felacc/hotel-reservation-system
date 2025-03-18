@@ -6,6 +6,7 @@ package view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -22,13 +23,30 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnSeachGuest() {
-        return btnSeachGuest;
+    public JButton getBtnSearchGuestAll() {
+        return btnSearchGuestAll;
     }
 
-    public void setBtnSeachGuest(JButton btnSeachGuest) {
-        this.btnSeachGuest = btnSeachGuest;
+    public void setBtnSearchGuestAll(JButton btnSearchGuestAll) {
+        this.btnSearchGuestAll = btnSearchGuestAll;
     }
+
+    public JButton getBtnSearchGuestId() {
+        return btnSearchGuestId;
+    }
+
+    public void setBtnSearchGuestId(JButton btnSearchGuestId) {
+        this.btnSearchGuestId = btnSearchGuestId;
+    }
+
+    public JTable getTblGuest() {
+        return tblGuest;
+    }
+
+    public void setTblGuest(JTable tblGuest) {
+        this.tblGuest = tblGuest;
+    }
+
 
     public JTextField getTxtSearchGuest() {
         return txtSearchGuest;
@@ -38,7 +56,13 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         this.txtSearchGuest = txtSearchGuest;
     }
 
+   public void searchGuestIdBtnListener(ActionListener myActionListener){
+        btnSearchGuestId.addActionListener(myActionListener);
+    }
    
+    public void searchGuestAllBtnListener(ActionListener myActionListener){
+        btnSearchGuestAll.addActionListener(myActionListener);
+    }
   
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,8 +78,9 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         javax.swing.JLabel lblRegister = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblGuest = new javax.swing.JTable();
-        btnSeachGuest = new javax.swing.JButton();
+        btnSearchGuestId = new javax.swing.JButton();
         txtSearchGuest = new javax.swing.JTextField();
+        btnSearchGuestAll = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search Guest Account");
@@ -85,38 +110,32 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         tblGuest.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jScrollPane1.setViewportView(tblGuest);
 
-        btnSeachGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        btnSeachGuest.setText("Search By GuestID...");
-        btnSeachGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeachGuestActionPerformed(evt);
-            }
-        });
+        btnSearchGuestId.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchGuestId.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchGuestId.setText("Search By GuestID...");
 
         txtSearchGuest.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        txtSearchGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSearchGuestActionPerformed(evt);
-            }
-        });
+
+        btnSearchGuestAll.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchGuestAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchGuestAll.setText("Search All Guests...");
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
         childPanelLayout.setHorizontalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(childPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 1211, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
-                    .addGroup(childPanelLayout.createSequentialGroup()
+                    .addComponent(lblRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 1211, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, childPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(txtSearchGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSeachGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSearchGuestId, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSearchGuestAll, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -129,8 +148,9 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSearchGuest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeachGuest))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(btnSearchGuestId)
+                    .addComponent(btnSearchGuestAll))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
@@ -149,14 +169,6 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchGuestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSearchGuestActionPerformed
-
-    private void btnSeachGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachGuestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSeachGuestActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -170,7 +182,8 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSeachGuest;
+    private javax.swing.JButton btnSearchGuestAll;
+    private javax.swing.JButton btnSearchGuestId;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblGuest;
     private javax.swing.JTextField txtSearchGuest;
