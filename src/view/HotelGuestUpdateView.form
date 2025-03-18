@@ -317,9 +317,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Update Filled Fields..."/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateGuestActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnClear">
                   <Properties>
@@ -334,9 +331,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Clear All..."/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>

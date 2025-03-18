@@ -98,9 +98,10 @@ public class HotelGuestAddView extends javax.swing.JFrame {
         btnAddGuest.addActionListener(myActionListener);
     }
     
-    public void addClearAllBtnListener(ActionListener myActionListener){
+    public void clearAllBtnListener(ActionListener myActionListener){
         btnClear.addActionListener(myActionListener);
     }
+    
   
     /**
      * This method is called from within the constructor to initialize the form.

@@ -30,17 +30,17 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
         this.btnClear = btnClear;
     }
 
-    public JTextField getjTextField1() {
+    public JTextField getTxtDeleteGuest() {
         return txtDeleteGuest;
     }
 
-    public void setjTextField1(JTextField jTextField1) {
-        this.txtDeleteGuest = jTextField1;
+    public void setTxtDeleteGuest(JTextField txtDeleteGuest) {
+        this.txtDeleteGuest = txtDeleteGuest;
     }
-
-    
-
-    
+ 
+     public void deleteGuestBtnListener (ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
   
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,11 +79,6 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
         btnClear.setText("Delete Guest...");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
 
         txtDeleteGuest.setText("This cannot be undone...");
 
@@ -147,10 +142,6 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClearActionPerformed
 
     /**
      * @param args the command line arguments

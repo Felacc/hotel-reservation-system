@@ -86,7 +86,13 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         this.txtPhone = txtPhone;
     }
 
+     public void updateGuestBtnListener(ActionListener myActionListener){
+        btnUpdateGuest.addActionListener(myActionListener);
+    }
     
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
   
     /**
      * This method is called from within the constructor to initialize the form.
@@ -163,21 +169,11 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         btnUpdateGuest.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnUpdateGuest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
         btnUpdateGuest.setText("Update Filled Fields...");
-        btnUpdateGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateGuestActionPerformed(evt);
-            }
-        });
 
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
         btnClear.setText("Clear All...");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -242,7 +238,7 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
                 .addComponent(btnUpdateGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnClear)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
@@ -281,14 +277,6 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnUpdateGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateGuestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateGuestActionPerformed
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClearActionPerformed
 
     /**
      * @param args the command line arguments

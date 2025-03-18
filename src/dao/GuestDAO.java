@@ -25,7 +25,7 @@ public class GuestDAO {
         this.guest = guest;
     }
 
-    public Guest getCourse() {
+    public Guest getGuest() {
         return guest;
     }
 
@@ -53,4 +53,14 @@ public class GuestDAO {
         }
         return false;
     }
+    
+    public boolean deleteGuestRecord(Guest guest){
+        
+    }
+
+    public Guest fetchGuestByIdForDelete(int guestId) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
 }
