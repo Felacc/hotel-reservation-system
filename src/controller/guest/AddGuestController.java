@@ -58,7 +58,7 @@ public class AddGuestController {
             String phone = hotelGuestAddView.getTxtPhone().getText();
           
 
-            Guest newGuest = new Guest(firstName,lastName, email, phone, unit, address, city, postal, country, email, "null", "guest");
+            Guest newGuest = new Guest(firstName,lastName, email, phone, unit, address, city, postal, country);
             boolean result = guestDAO.addGuestRecord(newGuest);
             if (result) {
                 JOptionPane.showMessageDialog(null, "Successfully added a new guest");

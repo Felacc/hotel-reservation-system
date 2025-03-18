@@ -39,14 +39,16 @@ public class SearchGuestController {
             DefaultTableModel model = (DefaultTableModel)hotelGuestSearchView.getTblGuest().getModel();
             model.setRowCount(0);
 
-            List<Guest> guestList = GuestDAO.fetchAllGuestRecords();
+            List<Guest> guestList = guestDAO.fetchAllGuestRecords();
             for(Guest guestObject : guestList){
                 Object[] row = {
+                guestObject.getGuestId(),
                 guestObject.getFirstName(),
                 guestObject.getLastName(),
                 guestObject.getEmail(),
                 guestObject.getPhoneNumber(),
                 guestObject.getUnit(),
+                guestObject.getStreetAddress(),
                 guestObject.getCity(),
                 guestObject.getPostalCode(),
                 guestObject.getCountry()
@@ -68,13 +70,15 @@ public class SearchGuestController {
             model.setRowCount(0);
             
             if(guestID != 0){
-               guestObject = GuestDAO.fetchGuestByIdForTable(guestID);
+               guestObject = (Guest) guestDAO.fetchGuestByIdForTable(guestID);
                 Object[] row = {
+                    guestObject.getGuestId(),
                     guestObject.getFirstName(),
                     guestObject.getLastName(),
                     guestObject.getEmail(),
                     guestObject.getPhoneNumber(),
                     guestObject.getUnit(),
+                    guestObject.getStreetAddress(),
                     guestObject.getCity(),
                     guestObject.getPostalCode(),
                     guestObject.getCountry()
