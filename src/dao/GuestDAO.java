@@ -78,59 +78,47 @@ public class GuestDAO {
         return false;
     }
     
-     public List<Guest> fetchGuestByIdForTable(int id){
+     public static Guest fetchGuestByIdForTable(int guestId){
         Guest guestObject = null;
         String query = """
-            SELECT class.class_id, class.building, class.number,               
-                   course.course_id, course.name, course.credit, course.campus
-            FROM   class
-            JOIN   course ON class.course_id = course.course_id
-            WHERE  class.class_id = ?
-        """;
+            SELECT guest_id, first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country
+            FROM   hotelreservationdb.guests
+            WHERE  guest_id = ?
+             """;
         
         try(Connection connection = DBConnection.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query)){
             
-            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(1, guestId);
             
             ResultSet resultSet = preparedStatement.executeQuery();
             
             if(resultSet.next()){
-                Class classObject = new Class(
-                    resultSet.getString("building"),
-                    resultSet.getString("number"),
-                    resultSet.getInt("course_id")
+                 guestObject = new Guest(
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("email"),
+                    resultSet.getString("phone_number"),
+                    resultSet.getString("unit_number"),
+                    resultSet.getString("street_address"),
+                    resultSet.getString("city"),
+                    resultSet.getString("postal_code"),
+                    resultSet.getString("country")
                 );
-                
-                classObject.setClassID(resultSet.getInt("class_id"));
-                
-                Course courseObject = new Course(
-                    resultSet.getString("name"),
-                    resultSet.getInt("credit")
-                );
-                
-                courseObject.setCampus(resultSet.getString("campus"));
-                courseObject.setCourseID(resultSet.getInt("course_id"));
-                
-                courseAndClassObject = new CourseAndClass(classObject, courseObject);
+                guestObject.setGuestId(resultSet.getInt("guest_id"));
             }
-            
         } catch(SQLException ex){
             ex.printStackTrace();
         }
-     
-        return courseAndClassObject;
+        return guestObject;
     }
 
-    public List<CourseAndClass> fetchAllClassRecords(){
-        CourseAndClass courseAndClassObject = null;
-        List<CourseAndClass> courseAndClassList = new ArrayList<CourseAndClass>();
+    public static List<Guest> fetchAllGuestRecords(){
+        List<Guest> guestList = new ArrayList<Guest>();
         String query = """
-            SELECT class.class_id, class.building, class.number,               
-                   course.course_id, course.name, course.credit, course.campus
-            FROM   class
-            JOIN   course ON class.course_id = course.course_id
-        """;
+           SELECT guest_id, first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country
+           FROM   hotelreservationdb.guests
+                       """;
         
         try(Connection connection = DBConnection.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query)){
@@ -138,32 +126,26 @@ public class GuestDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             
             while(resultSet.next()){
-                Class classObject = new Class(
-                    resultSet.getString("building"),
-                    resultSet.getString("number"),
-                    resultSet.getInt("course_id")
+                 Guest guestObject = new Guest(
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("email"),
+                    resultSet.getString("phone_number"),
+                    resultSet.getString("unit_number"),
+                    resultSet.getString("street_address"),
+                    resultSet.getString("city"),
+                    resultSet.getString("postal_code"),
+                    resultSet.getString("country")
                 );
-                
-                classObject.setClassID(resultSet.getInt("class_id"));
-                
-                Course courseObject = new Course(
-                    resultSet.getString("name"),
-                    resultSet.getInt("credit")
-                );
-                
-                courseObject.setCampus(resultSet.getString("campus"));
-                courseObject.setCourseID(resultSet.getInt("course_id"));
-                
-                courseAndClassObject = new CourseAndClass(classObject, courseObject);
-                
-                courseAndClassList.add(courseAndClassObject);
+                guestObject.setGuestId(resultSet.getInt("guest_id"));
+                guestList.add(guestObject);
             }
             
         } catch(SQLException ex){
             ex.printStackTrace();
         }
      
-        return courseAndClassList;
+        return guestList;
     }
 
 }
