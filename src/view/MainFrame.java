@@ -6,6 +6,7 @@ package view;
 
 import controller.guest.AddGuestController;
 import controller.user.AddUserController;
+import controller.user.DeleteUserController;
 import dao.GuestDAO;
 import dao.UserDAO;
 
@@ -437,7 +438,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void mnuItemAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddUserActionPerformed
         HotelUserAddView hotelUserAddView = new HotelUserAddView();
         UserDAO userDAO = new UserDAO();
-        AddUserController userController = new AddUserController(hotelUserAddView, userDAO);
+        AddUserController addUserController = new AddUserController(hotelUserAddView, userDAO);
          hotelUserAddView.setVisible(true);
     }//GEN-LAST:event_mnuItemAddUserActionPerformed
 
@@ -457,9 +458,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void mnuItemDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteUserActionPerformed
         HotelUserDeleteView hotelUserDeleteView = new HotelUserDeleteView();
-         //GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
-         hotelUserDeleteView.setVisible(true);
+        UserDAO userDAO = new UserDAO();
+        DeleteUserController deleteUserController = new DeleteUserController(hotelUserDeleteView, userDAO);
+        hotelUserDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteUserActionPerformed
 
     private void mnuItemAddReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddReservationActionPerformed

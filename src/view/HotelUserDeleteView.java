@@ -4,12 +4,37 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
  */
 public class HotelUserDeleteView extends javax.swing.JFrame {
 
+    public JButton getBtnDelete() {
+        return btnDelete;
+    }
+
+    public void setBtnDelete(JButton btnDelete) {
+        this.btnDelete = btnDelete;
+    }
+
+    public JTextField getTxtDeleteUser() {
+        return txtDeleteUser;
+    }
+
+    public void setTxtDeleteUser(JTextField txtDeleteUser) {
+        this.txtDeleteUser = txtDeleteUser;
+    }
+
+    public void deleteUserBtnListener(ActionListener myActionListener){
+        btnDelete.addActionListener(myActionListener);
+    }
+    
+    
     /**
      * Creates new form HotelUserDeleteView
      */
@@ -17,6 +42,8 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
         initComponents();
     }
 
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,7 +56,7 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
-        btnClear = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
         txtDeleteUser = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -47,15 +74,10 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by UserID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
 
-        btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClear.setText("Delete User...");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
+        btnDelete.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnDelete.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
+        btnDelete.setText("Delete User...");
 
         txtDeleteUser.setText("This cannot be undone...");
 
@@ -67,7 +89,7 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnClear))
+                        .addComponent(btnDelete))
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(txtDeleteUser)))
@@ -79,7 +101,7 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(txtDeleteUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnClear)
+                .addComponent(btnDelete)
                 .addContainerGap(165, Short.MAX_VALUE))
         );
 
@@ -118,10 +140,6 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClearActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -158,7 +176,7 @@ public class HotelUserDeleteView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JTextField txtDeleteUser;
     // End of variables declaration//GEN-END:variables
 }
