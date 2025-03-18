@@ -4,28 +4,22 @@
  */
 package dao;
 
-import model.Guest;
+import util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
-import util.DBConnection;
+import model.Guest;
+
 
 /**
  *
  * @author C0522047
  */
 
-public class GuestDAO {
-
-    public static List<Guest> fetchAllGuestRecords() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public static Guest fetchGuestByIdForTable(int guestID) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    
+public class GuestDAO {  
     //This course DAO will be interacting the model
     private Guest guest;
 
@@ -84,4 +78,92 @@ public class GuestDAO {
         return false;
     }
     
+     public List<Guest> fetchGuestByIdForTable(int id){
+        Guest guestObject = null;
+        String query = """
+            SELECT class.class_id, class.building, class.number,               
+                   course.course_id, course.name, course.credit, course.campus
+            FROM   class
+            JOIN   course ON class.course_id = course.course_id
+            WHERE  class.class_id = ?
+        """;
+        
+        try(Connection connection = DBConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            
+            preparedStatement.setInt(1, id);
+            
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            if(resultSet.next()){
+                Class classObject = new Class(
+                    resultSet.getString("building"),
+                    resultSet.getString("number"),
+                    resultSet.getInt("course_id")
+                );
+                
+                classObject.setClassID(resultSet.getInt("class_id"));
+                
+                Course courseObject = new Course(
+                    resultSet.getString("name"),
+                    resultSet.getInt("credit")
+                );
+                
+                courseObject.setCampus(resultSet.getString("campus"));
+                courseObject.setCourseID(resultSet.getInt("course_id"));
+                
+                courseAndClassObject = new CourseAndClass(classObject, courseObject);
+            }
+            
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+     
+        return courseAndClassObject;
+    }
+
+    public List<CourseAndClass> fetchAllClassRecords(){
+        CourseAndClass courseAndClassObject = null;
+        List<CourseAndClass> courseAndClassList = new ArrayList<CourseAndClass>();
+        String query = """
+            SELECT class.class_id, class.building, class.number,               
+                   course.course_id, course.name, course.credit, course.campus
+            FROM   class
+            JOIN   course ON class.course_id = course.course_id
+        """;
+        
+        try(Connection connection = DBConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            while(resultSet.next()){
+                Class classObject = new Class(
+                    resultSet.getString("building"),
+                    resultSet.getString("number"),
+                    resultSet.getInt("course_id")
+                );
+                
+                classObject.setClassID(resultSet.getInt("class_id"));
+                
+                Course courseObject = new Course(
+                    resultSet.getString("name"),
+                    resultSet.getInt("credit")
+                );
+                
+                courseObject.setCampus(resultSet.getString("campus"));
+                courseObject.setCourseID(resultSet.getInt("course_id"));
+                
+                courseAndClassObject = new CourseAndClass(classObject, courseObject);
+                
+                courseAndClassList.add(courseAndClassObject);
+            }
+            
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+     
+        return courseAndClassList;
+    }
+
 }
