@@ -56,4 +56,17 @@ public class UserDAO {
         return false;
     }
     
+    public static boolean deleteUserRecord(int userId){
+        String query = "DELETE from hotelreservationdb.users where user_id = (?)";
+        try(Connection connection = DBConnection.getConnection();
+        //Preparse statement for query
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            preparedStatement.setInt(1, userId);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return false;
+    }
 }
