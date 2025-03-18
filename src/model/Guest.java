@@ -21,8 +21,7 @@ public class Guest extends User {
     private String city;
     private String postalCode;
     private String country;
-    // User ID from the DB
-    private int guestId;
+
     
     // Constructors
 
@@ -30,7 +29,7 @@ public class Guest extends User {
         super(username, password, userType);
     }
 
-    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country, int guestId, String username, String password, String userType) {
+    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country, String username, String password, String userType) {
         super(username, password, userType);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -41,25 +40,7 @@ public class Guest extends User {
         this.city = city;
         this.postalCode = postalCode;
         this.country = country;
-        this.guestId = guestId;
     }
- 
-    
-    
-    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.unit = unit;
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.postalCode = postalCode;
-        this.country = country;
-        this.guestId = guestId;
-    }
-    
-
     
     
     // Getters and Setters

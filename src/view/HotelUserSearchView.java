@@ -4,6 +4,11 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -17,6 +22,46 @@ public class HotelUserSearchView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnSearchUserAll() {
+        return btnSearchUserAll;
+    }
+
+    public void setBtnSearchUserAll(JButton btnSearchUserAll) {
+        this.btnSearchUserAll = btnSearchUserAll;
+    }
+
+    public JButton getBtnSearchUserId() {
+        return btnSearchUserId;
+    }
+
+    public void setBtnSearchUserId(JButton btnSearchUserId) {
+        this.btnSearchUserId = btnSearchUserId;
+    }
+
+    public JTable getTblUser() {
+        return tblUser;
+    }
+
+    public void setTblUser(JTable tblUser) {
+        this.tblUser = tblUser;
+    }
+
+    public JTextField getTxtSearchUser() {
+        return txtSearchUser;
+    }
+
+    public void setTxtSearchUser(JTextField txtSearchUser) {
+        this.txtSearchUser = txtSearchUser;
+    }
+
+     public void searchUserIdBtnListener(ActionListener myActionListener){
+        btnSearchUserId.addActionListener(myActionListener);
+    }
+    public void searchUserAllBtnListener(ActionListener myActionListener){
+        btnSearchUserAll.addActionListener(myActionListener);
+    }
+ 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,8 +75,9 @@ public class HotelUserSearchView extends javax.swing.JFrame {
         javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblUser = new javax.swing.JTable();
-        btnSeachUser = new javax.swing.JButton();
+        btnSearchUserAll = new javax.swing.JButton();
         txtSearchUser = new javax.swing.JTextField();
+        btnSearchUserId = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search User Account");
@@ -59,12 +105,12 @@ public class HotelUserSearchView extends javax.swing.JFrame {
         tblUser.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jScrollPane1.setViewportView(tblUser);
 
-        btnSeachUser.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        btnSeachUser.setText("Search By UserID...");
-        btnSeachUser.addActionListener(new java.awt.event.ActionListener() {
+        btnSearchUserAll.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchUserAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchUserAll.setText("Search All Users...");
+        btnSearchUserAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeachUserActionPerformed(evt);
+                btnSearchUserAllActionPerformed(evt);
             }
         });
 
@@ -75,22 +121,31 @@ public class HotelUserSearchView extends javax.swing.JFrame {
             }
         });
 
+        btnSearchUserId.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchUserId.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchUserId.setText("Search By UserID...");
+        btnSearchUserId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchUserIdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
         childPanelLayout.setHorizontalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(childPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUserRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
+                    .addComponent(lblUserRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 799, Short.MAX_VALUE)
                     .addGroup(childPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSeachUser, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSearchUserId, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSearchUserAll, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -100,11 +155,12 @@ public class HotelUserSearchView extends javax.swing.JFrame {
                 .addComponent(lblUserRegister)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeachUser))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSearchUserAll)
+                    .addComponent(btnSearchUserId)
+                    .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -121,13 +177,17 @@ public class HotelUserSearchView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSeachUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachUserActionPerformed
+    private void btnSearchUserAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchUserAllActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSeachUserActionPerformed
+    }//GEN-LAST:event_btnSearchUserAllActionPerformed
 
     private void txtSearchUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchUserActionPerformed
+
+    private void btnSearchUserIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchUserIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchUserIdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,7 +225,8 @@ public class HotelUserSearchView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSeachUser;
+    private javax.swing.JButton btnSearchUserAll;
+    private javax.swing.JButton btnSearchUserId;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblUser;
     private javax.swing.JTextField txtSearchUser;

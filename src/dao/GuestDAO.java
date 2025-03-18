@@ -24,6 +24,8 @@ public class GuestDAO {
     public static Guest fetchGuestByIdForTable(int guestID) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
     //This course DAO will be interacting the model
     private Guest guest;
 
@@ -45,7 +47,7 @@ public class GuestDAO {
     
     public boolean addGuestRecord(Guest guest){
         //The ?, ? values are not known yet
-        String query = "INSERT INTO hotelReservationDB.guests (first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO hotelReservationDB.guests (first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         //Connect to database
         try(Connection connection = DBConnection.getConnection();
@@ -60,7 +62,6 @@ public class GuestDAO {
             preparedStatement.setString(7, guest.getCity());
             preparedStatement.setString(8, guest.getPostalCode());
             preparedStatement.setString(9, guest.getCountry());
-            preparedStatement.setInt(10, guest.getGuestId());
             return preparedStatement.executeUpdate() > 0; //successful insertion
         }
         catch(Exception ex){
@@ -69,8 +70,18 @@ public class GuestDAO {
         return false;
     }
     
-
-    public Guest fetchGuestByIdForDelete(int guestId) {
-     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public static boolean deleteGuestRecord(int guestId){
+        String query = "DELETE from hotelreservationdb.guests where guest_id = (?)";
+        try(Connection connection = DBConnection.getConnection();
+        //Preparse statement for query
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            preparedStatement.setInt(1, guestId);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return false;
     }
+    
 }

@@ -43,7 +43,7 @@ public class AddUserController {
         public void actionPerformed(ActionEvent e) {
             String username = hotelUserAddView.getTxtUserName().getText();
             String password = hotelUserAddView.getTxtUserPassword().getText();
-            String userType = hotelUserAddView.getBoxUserType().getSelectedItem().toString().toLowerCase().trim();
+            String userType = hotelUserAddView.getBoxUserType().getSelectedItem().toString().toLowerCase();
             System.out.println(userType);
             
             

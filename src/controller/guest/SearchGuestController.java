@@ -19,7 +19,7 @@ import view.HotelGuestSearchView;
 /**
  *
  *
- * @author kale
+ * @author Caleb Irvine
  */
 public class SearchGuestController {
     private HotelGuestSearchView hotelGuestSearchView;
@@ -42,7 +42,6 @@ public class SearchGuestController {
             List<Guest> guestList = GuestDAO.fetchAllGuestRecords();
             for(Guest guestObject : guestList){
                 Object[] row = {
-                guestObject.getGuestId(),
                 guestObject.getFirstName(),
                 guestObject.getLastName(),
                 guestObject.getEmail(),
@@ -71,7 +70,6 @@ public class SearchGuestController {
             if(guestID != 0){
                guestObject = GuestDAO.fetchGuestByIdForTable(guestID);
                 Object[] row = {
-                    guestObject.getGuestId(),
                     guestObject.getFirstName(),
                     guestObject.getLastName(),
                     guestObject.getEmail(),
