@@ -22,6 +22,14 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTextField getTxtGuestId() {
+        return txtGuestId;
+    }
+
+    public void setTxtGuestId(JTextField txtGuestId) {
+        this.txtGuestId = txtGuestId;
+    }  
+
     public JButton getBtnClear() {
         return btnClear;
     }
@@ -238,7 +246,7 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         javax.swing.JLabel lblRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblFirstName = new javax.swing.JLabel();
-        txtFirstName = new javax.swing.JTextField();
+        txtGuestId = new javax.swing.JTextField();
         javax.swing.JLabel lblLastName = new javax.swing.JLabel();
         txtLastName = new javax.swing.JTextField();
         javax.swing.JLabel lblPhone = new javax.swing.JLabel();
@@ -265,6 +273,8 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         btnUpdateEmail = new javax.swing.JButton();
         btnUpdateFirstName = new javax.swing.JButton();
         btnUpdateLastName = new javax.swing.JButton();
+        txtFirstName = new javax.swing.JTextField();
+        javax.swing.JLabel lblFirstName1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Update Guest Account");
@@ -363,6 +373,10 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
         btnUpdateLastName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
         btnUpdateLastName.setText("Update...");
 
+        lblFirstName1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblFirstName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFirstName1.setText("Guest ID:");
+
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
@@ -422,15 +436,24 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
                                 .addComponent(txtPostal, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdatePostal, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(lblFirstName1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(txtGuestId, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFirstName)
+                .addComponent(lblFirstName1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtGuestId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblFirstName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUpdateFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -482,7 +505,7 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUpdateCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnClear)
                 .addContainerGap())
         );
@@ -551,6 +574,7 @@ public class HotelGuestUpdateView extends javax.swing.JFrame {
     private javax.swing.JTextField txtCountry;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
+    private javax.swing.JTextField txtGuestId;
     private javax.swing.JTextField txtLastName;
     private javax.swing.JTextField txtPhone;
     private javax.swing.JTextField txtPostal;
