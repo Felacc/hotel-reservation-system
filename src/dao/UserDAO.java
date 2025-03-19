@@ -4,9 +4,11 @@
  */
 package dao;
 
-import model.Guest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import model.User;
 import util.DBConnection;
@@ -18,29 +20,21 @@ import util.DBConnection;
 
 public class UserDAO {
 
-    public static List<User> fetchAllUserRecords() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public static User fetchUserByIdForTable(int guestID) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     //This user DAO will be interacting the model
     private User user;
 
     public UserDAO() {
     }
 
-    public UserDAO(Guest guest) {
+    public UserDAO(User user) {
         this.user = user;
     }
 
-    public User getGuest() {
+    public User getUser() {
         return user;
     }
 
-    public void setGuest(User user) {
+    public void setUser(User user) {
         this.user = user;
     }
     
@@ -77,6 +71,80 @@ public class UserDAO {
         }
         return false;
     }
+
+    public boolean updateUserRecord(int userId, String value, String column) {
+        String query = """
+                       UPDATE users
+                       SET ? = ?
+                       WHERE userId = ?;
+                       """;
+         try(Connection connection = DBConnection.getConnection();
+        //Preparse statement for query
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            preparedStatement.setString(1, column); // second question mark - last name
+            preparedStatement.setString(2, value);
+            preparedStatement.setInt(3, userId); // first question mark - first name
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return false;
+    }
     
-    
+    public static User fetchUserByIdForTable(int userId) {
+        User userObject = null;
+        String query
+                = """
+            SELECT user_id, username, password, user_type
+            FROM   users
+            WHERE  user_id = ?
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, userId);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                userObject = new User(
+                        resultSet.getString("username"),
+                        resultSet.getString("password"),
+                        resultSet.getString("user_type")
+                );
+                userObject.setUserId(resultSet.getInt("user_id"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return userObject;
+    }
+
+    public static List<User> fetchAllUserRecords() {
+        List<User> userList = new ArrayList<User>();
+        String query
+                = """
+           SELECT user_id, username, password, user_type
+           FROM   users
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                 User userObject = new User(
+                        resultSet.getString("username"),
+                        resultSet.getString("password"),
+                        resultSet.getString("user_type")
+                );
+                userObject.setUserId(resultSet.getInt("user_id"));
+                userList.add(userObject);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return userList;
+    }
 }

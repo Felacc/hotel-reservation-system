@@ -42,6 +42,7 @@ public class SearchUserController {
             List<User> userList = UserDAO.fetchAllUserRecords();
             for(User userObject : userList){
                 Object[] row = {
+                userObject.getUserId(),
                 userObject.getUsername(),
                 userObject.getPassword(),
                 userObject.getUserType(),
@@ -65,6 +66,7 @@ public class SearchUserController {
             if(userID != 0){
                userObject = UserDAO.fetchUserByIdForTable(userID);
                 Object[] row = {
+                    userObject.getUserId(),
                     userObject.getUsername(),
                     userObject.getPassword(),
                     userObject.getUserType()

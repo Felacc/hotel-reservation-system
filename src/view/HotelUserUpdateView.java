@@ -54,12 +54,20 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         this.comboUserType = comboUserType;
     }
 
+    public JTextField getTxtUserId() {
+        return txtUserId;
+    }
+
+    public void setTxtUserId(JTextField txtUserId) {
+        this.txtUserId = txtUserId;
+    }
+    
     public JTextField getTxtUserName() {
-        return txtUserName;
+        return txtUserId;
     }
 
     public void setTxtUserName(JTextField txtUserName) {
-        this.txtUserName = txtUserName;
+        this.txtUserId = txtUserName;
     }
 
     public JTextField getTxtUserPassword() {
@@ -98,7 +106,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblUserName = new javax.swing.JLabel();
-        txtUserName = new javax.swing.JTextField();
+        txtUserId = new javax.swing.JTextField();
         javax.swing.JLabel lblUserType = new javax.swing.JLabel();
         txtUserPassword = new javax.swing.JTextField();
         javax.swing.JLabel lblUserPassword = new javax.swing.JLabel();
@@ -106,6 +114,8 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         btnUpdateUserType = new javax.swing.JButton();
         btnUpdateUsername = new javax.swing.JButton();
         comboUserType = new javax.swing.JComboBox<>();
+        txtUserName = new javax.swing.JTextField();
+        javax.swing.JLabel lblUserId = new javax.swing.JLabel();
         javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -119,9 +129,9 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         lblUserName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblUserName.setText("Username:");
 
-        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+        txtUserId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserNameActionPerformed(evt);
+                txtUserIdActionPerformed(evt);
             }
         });
 
@@ -135,86 +145,89 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         btnUpdatePassword.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnUpdatePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
         btnUpdatePassword.setText("Update");
-        btnUpdatePassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdatePasswordActionPerformed(evt);
-            }
-        });
 
         btnUpdateUserType.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnUpdateUserType.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnUpdateUserType.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
         btnUpdateUserType.setText("Update");
-        btnUpdateUserType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateUserTypeActionPerformed(evt);
-            }
-        });
 
         btnUpdateUsername.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnUpdateUsername.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnUpdateUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
         btnUpdateUsername.setText("Update");
-        btnUpdateUsername.addActionListener(new java.awt.event.ActionListener() {
+
+        comboUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guest", "Staff", "Cleaner" }));
+
+        txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateUsernameActionPerformed(evt);
+                txtUserNameActionPerformed(evt);
             }
         });
 
-        comboUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guest", "Staff", "Cleaner" }));
+        lblUserId.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblUserId.setForeground(new java.awt.Color(0, 0, 0));
+        lblUserId.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUserId.setText("User ID:");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblUserType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(comboUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnUpdateUserType)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUserId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtUserId))
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnUpdateUsername)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(lblUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblUserType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblUserPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                                .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnUpdateUsername))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                                .addComponent(comboUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnUpdateUserType))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                                .addComponent(txtUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnUpdatePassword)))
+                        .addComponent(txtUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnUpdatePassword)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblUserName)
+                .addComponent(lblUserId)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(txtUserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblUserName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUpdateUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(lblUserPassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUpdatePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
+                .addGap(18, 18, 18)
                 .addComponent(lblUserType)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdateUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdateUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         lblUserRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblUserRegister.setForeground(new java.awt.Color(0, 0, 0));
         lblUserRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUserRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
         lblUserRegister.setText("Update User Account:");
@@ -228,7 +241,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblUserRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE))
+                    .addComponent(lblUserRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -255,21 +268,13 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtUserIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUserIdActionPerformed
+
     private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUserNameActionPerformed
-
-    private void btnUpdatePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdatePasswordActionPerformed
-
-    private void btnUpdateUserTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUserTypeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateUserTypeActionPerformed
-
-    private void btnUpdateUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUsernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateUsernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -311,6 +316,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdateUserType;
     private javax.swing.JButton btnUpdateUsername;
     private javax.swing.JComboBox<String> comboUserType;
+    private javax.swing.JTextField txtUserId;
     private javax.swing.JTextField txtUserName;
     private javax.swing.JTextField txtUserPassword;
     // End of variables declaration//GEN-END:variables

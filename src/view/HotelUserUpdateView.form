@@ -52,7 +52,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="enterInfoPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="lblUserRegister" alignment="1" pref="429" max="32767" attributes="0"/>
+                      <Component id="lblUserRegister" alignment="1" pref="616" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -90,30 +90,32 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Component id="lblUserType" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="comboUserType" min="-2" pref="250" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnUpdateUserType" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblUserName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblUserType" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblUserPassword" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblUserId" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="txtUserName" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnUpdateUsername" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="comboUserType" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnUpdateUserType" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txtUserPassword" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnUpdatePassword" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtUserId" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtUserName" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnUpdateUsername" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="lblUserName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblUserPassword" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtUserPassword" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnUpdatePassword" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -124,28 +126,31 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <Component id="lblUserId" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtUserId" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblUserName" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtUserName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnUpdateUsername" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtUserName" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnUpdateUsername" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblUserPassword" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtUserPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnUpdatePassword" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblUserType" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnUpdateUserType" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                          <Component id="comboUserType" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="comboUserType" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnUpdateUserType" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="58" max="32767" attributes="0"/>
+                      <EmptySpace pref="114" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -163,9 +168,9 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtUserName">
+            <Component class="javax.swing.JTextField" name="txtUserId">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUserNameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUserIdActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblUserType">
@@ -207,9 +212,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdatePasswordActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnUpdateUserType">
               <Properties>
@@ -224,9 +226,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateUserTypeActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnUpdateUsername">
               <Properties>
@@ -241,9 +240,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateUsernameActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="comboUserType">
               <Properties>
@@ -259,12 +255,36 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
+            <Component class="javax.swing.JTextField" name="txtUserName">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUserNameActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblUserId">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="User ID:"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="lblUserRegister">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">

@@ -9,6 +9,7 @@ import controller.guest.SearchGuestController;
 import controller.user.AddUserController;
 import controller.user.DeleteUserController;
 import controller.user.SearchUserController;
+import controller.user.UpdateUserController;
 import dao.GuestDAO;
 import dao.UserDAO;
 
@@ -377,7 +378,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void mnuItemUpdateGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateGuestActionPerformed
         HotelGuestUpdateView hotelGuestUpdateView = new HotelGuestUpdateView();
         GuestDAO guestDAO = new GuestDAO();
-//        UpdateGuestController updateGuestController = new UpdateGuestController(hotelGuestUpdateView, guestDAO);
+        // UpdateGuestController updateGuestController = new UpdateGuestController(hotelGuestUpdateView, guestDAO);
         hotelGuestUpdateView.setVisible(true);
     }//GEN-LAST:event_mnuItemUpdateGuestActionPerformed
 
@@ -454,7 +455,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void mnuItemUpdateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateUserActionPerformed
         HotelUserUpdateView hotelUserUpdateView = new HotelUserUpdateView();
         UserDAO userDAO = new UserDAO();
-//        UpdateUserController updateUserController = new UpdateUserController(hotelUserUpdateView, userDAO);
+        UpdateUserController updateUserController = new UpdateUserController(hotelUserUpdateView, userDAO);
         hotelUserUpdateView.setVisible(true);
     }//GEN-LAST:event_mnuItemUpdateUserActionPerformed
 
