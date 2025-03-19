@@ -61,15 +61,15 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
     public void setTxtUserId(JTextField txtUserId) {
         this.txtUserId = txtUserId;
     }
+
+    public JTextField getTxtUsername() {
+        return txtUsername;
+    }
+
+    public void setTxtUsername(JTextField txtUsername) {
+        this.txtUsername = txtUsername;
+    }
     
-    public JTextField getTxtUserName() {
-        return txtUserId;
-    }
-
-    public void setTxtUserName(JTextField txtUserName) {
-        this.txtUserId = txtUserName;
-    }
-
     public JTextField getTxtUserPassword() {
         return txtUserPassword;
     }
@@ -114,7 +114,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         btnUpdateUserType = new javax.swing.JButton();
         btnUpdateUsername = new javax.swing.JButton();
         comboUserType = new javax.swing.JComboBox<>();
-        txtUserName = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
         javax.swing.JLabel lblUserId = new javax.swing.JLabel();
         javax.swing.JLabel lblUserRegister = new javax.swing.JLabel();
 
@@ -158,9 +158,9 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
 
         comboUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guest", "Staff", "Cleaner" }));
 
-        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserNameActionPerformed(evt);
+                txtUsernameActionPerformed(evt);
             }
         });
 
@@ -186,10 +186,9 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(txtUserId))
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                        .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnUpdateUsername)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnUpdateUsername))
                     .addComponent(lblUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblUserPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
@@ -209,7 +208,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
                 .addComponent(lblUserName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnUpdateUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(lblUserPassword)
@@ -272,9 +271,9 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUserIdActionPerformed
 
-    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserNameActionPerformed
+    }//GEN-LAST:event_txtUsernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,7 +316,7 @@ public class HotelUserUpdateView extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdateUsername;
     private javax.swing.JComboBox<String> comboUserType;
     private javax.swing.JTextField txtUserId;
-    private javax.swing.JTextField txtUserName;
     private javax.swing.JTextField txtUserPassword;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }

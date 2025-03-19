@@ -20,7 +20,7 @@ public class UpdateUserController {
     private HotelUserUpdateView hotelUserUpdateView;
     private UserDAO userDAO;
 
-    public UpdateUserController(HotelUserUpdateView hotelUserUpdateView, UserDAO UserDAO) {
+    public UpdateUserController(HotelUserUpdateView hotelUserUpdateView, UserDAO userDAO) {
         this.hotelUserUpdateView = hotelUserUpdateView;
         this.userDAO = userDAO;
         
@@ -33,9 +33,10 @@ public class UpdateUserController {
         @Override
         public void actionPerformed(ActionEvent e) {
             int userId = Integer.parseInt(hotelUserUpdateView.getTxtUserId().getText());
-            String username = hotelUserUpdateView.getTxtUserName().getText();
+            String username = hotelUserUpdateView.getTxtUsername().getText();
+            String column = "username";
             
-            boolean result = userDAO.updateUserRecord(userId, username, "username");
+            boolean result = userDAO.updateUserRecord(userId, column, username);
             if (result) {
                 JOptionPane.showMessageDialog(null, "Successfully updated user");
             } else {
@@ -49,8 +50,9 @@ public class UpdateUserController {
         public void actionPerformed(ActionEvent e) {
             int userId = Integer.parseInt(hotelUserUpdateView.getTxtUserId().getText());
             String password = hotelUserUpdateView.getTxtUserPassword().getText();
+            String column = "password";
             
-            boolean result = userDAO.updateUserRecord(userId, password, "password");
+            boolean result = userDAO.updateUserRecord(userId, column, password);
             if (result) {
                 JOptionPane.showMessageDialog(null, "Successfully updated user");
             } else {
@@ -65,8 +67,9 @@ public class UpdateUserController {
         public void actionPerformed(ActionEvent e) {
             int userId = Integer.parseInt(hotelUserUpdateView.getTxtUserId().getText());
             String userType = hotelUserUpdateView.getComboUserType().getSelectedItem().toString().toLowerCase();
+            String column = "user_type";
             
-            boolean result = userDAO.updateUserRecord(userId, userType, "user_type");
+            boolean result = userDAO.updateUserRecord(userId, column, userType);
             if (result) {
                 JOptionPane.showMessageDialog(null, "Successfully updated user");
             } else {
