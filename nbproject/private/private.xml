@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/felix/repos/ics125/hotel-reservation-system/src/view/HotelReservationDeleteView.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/model/Guest.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/dao/UserDAO.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/dao/GuestDAO.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/controller/guest/SearchGuestController.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/controller/user/AddUserController.java</file>
+            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/controller/guest/AddGuestController.java</file>
         </group>
     </open-files>
 </project-private>
