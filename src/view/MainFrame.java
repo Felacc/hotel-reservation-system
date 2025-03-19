@@ -8,11 +8,13 @@ import controller.guest.AddGuestController;
 import controller.guest.DeleteGuestController;
 import controller.guest.SearchGuestController;
 import controller.guest.UpdateGuestController;
+import controller.staff.AddStaffMemberController;
 import controller.user.AddUserController;
 import controller.user.DeleteUserController;
 import controller.user.SearchUserController;
 import controller.user.UpdateUserController;
 import dao.GuestDAO;
+import dao.StaffMemberDAO;
 import dao.UserDAO;
 
 /**
@@ -414,8 +416,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void mnuItemAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddStaffActionPerformed
         HotelStaffAddView hotelStaffAddView = new HotelStaffAddView();
-         //StaffDAO staffDAO = new StaffDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
+         StaffMemberDAO staffMemberDAO = new StaffMemberDAO();
+         AddStaffMemberController addStaffMemberController = new AddStaffMemberController(hotelStaffAddView, staffMemberDAO);
          hotelStaffAddView.setVisible(true);
     }//GEN-LAST:event_mnuItemAddStaffActionPerformed
 

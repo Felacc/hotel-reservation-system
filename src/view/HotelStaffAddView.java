@@ -4,6 +4,10 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -17,6 +21,128 @@ public class HotelStaffAddView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnAddStaff() {
+        return btnAddStaff;
+    }
+
+    public void setBtnAddStaff(JButton btnAddStaff) {
+        this.btnAddStaff = btnAddStaff;
+    }
+
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JTextField getTxtStaffAddress() {
+        return txtStaffAddress;
+    }
+
+    public void setTxtStaffAddress(JTextField txtStaffAddress) {
+        this.txtStaffAddress = txtStaffAddress;
+    }
+
+    public JTextField getTxtStaffCity() {
+        return txtStaffCity;
+    }
+
+    public void setTxtStaffCity(JTextField txtStaffCity) {
+        this.txtStaffCity = txtStaffCity;
+    }
+
+    public JTextField getTxtStaffCountry() {
+        return txtStaffCountry;
+    }
+
+    public void setTxtStaffCountry(JTextField txtStaffCountry) {
+        this.txtStaffCountry = txtStaffCountry;
+    }
+
+    public JTextField getTxtStaffEmail() {
+        return txtStaffEmail;
+    }
+
+    public void setTxtStaffEmail(JTextField txtStaffEmail) {
+        this.txtStaffEmail = txtStaffEmail;
+    }
+
+    public JTextField getTxtStaffFirstName() {
+        return txtStaffFirstName;
+    }
+
+    public void setTxtStaffFirstName(JTextField txtStaffFirstName) {
+        this.txtStaffFirstName = txtStaffFirstName;
+    }
+
+    public JTextField getTxtStaffLastName() {
+        return txtStaffLastName;
+    }
+
+    public void setTxtStaffLastName(JTextField txtStaffLastName) {
+        this.txtStaffLastName = txtStaffLastName;
+    }
+
+    public JTextField getTxtStaffPhone() {
+        return txtStaffPhone;
+    }
+
+    public void setTxtStaffPhone(JTextField txtStaffPhone) {
+        this.txtStaffPhone = txtStaffPhone;
+    }
+
+    public JTextField getTxtStaffPostalCode() {
+        return txtStaffPostalCode;
+    }
+
+    public void setTxtStaffPostalCode(JTextField txtStaffPostalCode) {
+        this.txtStaffPostalCode = txtStaffPostalCode;
+    }
+
+    public JTextField getTxtStaffSIN() {
+        return txtStaffSIN;
+    }
+
+    public void setTxtStaffSIN(JTextField txtStaffSIN) {
+        this.txtStaffSIN = txtStaffSIN;
+    }
+
+    public JTextField getTxtStaffStatus() {
+        return txtStaffStatus;
+    }
+
+    public void setTxtStaffStatus(JTextField txtStaffStatus) {
+        this.txtStaffStatus = txtStaffStatus;
+    }
+
+    public JTextField getTxtStaffUnitNumber() {
+        return txtStaffUnitNumber;
+    }
+
+    public void setTxtStaffUnitNumber(JTextField txtStaffUnitNumber) {
+        this.txtStaffUnitNumber = txtStaffUnitNumber;
+    }
+
+    public JTextField getTxtStaffCreatedBy() {
+        return txtStaffCreatedBy;
+    }
+
+    public void setTxtStaffCreatedBy(JTextField txtStaffCreatedBy) {
+        this.txtStaffCreatedBy = txtStaffCreatedBy;
+    }
+    
+    
+     public void addStaffBtnListener(ActionListener myActionListener){
+        btnAddStaff.addActionListener(myActionListener);
+    }
+    
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,6 +178,8 @@ public class HotelStaffAddView extends javax.swing.JFrame {
         javax.swing.JLabel lblStaffCountry = new javax.swing.JLabel();
         txtStaffCountry = new javax.swing.JTextField();
         txtStaffPostalCode = new javax.swing.JTextField();
+        txtStaffCreatedBy = new javax.swing.JTextField();
+        javax.swing.JLabel lblStaffCreatedBy = new javax.swing.JLabel();
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -120,6 +248,15 @@ public class HotelStaffAddView extends javax.swing.JFrame {
             }
         });
 
+        txtStaffCreatedBy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStaffCreatedByActionPerformed(evt);
+            }
+        });
+
+        lblStaffCreatedBy.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblStaffCreatedBy.setText("Created by UserID:");
+
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
@@ -139,7 +276,7 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                     .addComponent(txtStaffStatus)
                     .addComponent(lblStaffUnitNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                        .addGap(0, 215, Short.MAX_VALUE)
+                        .addGap(0, 243, Short.MAX_VALUE)
                         .addComponent(btnAddStaff)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnClear))
@@ -153,7 +290,9 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                     .addComponent(lblStaffCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblStaffCountry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtStaffCountry, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtStaffCreatedBy)
+                    .addComponent(lblStaffCreatedBy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -203,7 +342,11 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                 .addComponent(lblStaffCountry)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtStaffCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblStaffCreatedBy)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtStaffCreatedBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddStaff)
                     .addComponent(btnClear))
@@ -224,7 +367,7 @@ public class HotelStaffAddView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStaffRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                    .addComponent(lblStaffRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -262,6 +405,10 @@ public class HotelStaffAddView extends javax.swing.JFrame {
     private void txtStaffCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStaffCountryActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStaffCountryActionPerformed
+
+    private void txtStaffCreatedByActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStaffCreatedByActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStaffCreatedByActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,6 +451,7 @@ public class HotelStaffAddView extends javax.swing.JFrame {
     private javax.swing.JTextField txtStaffAddress;
     private javax.swing.JTextField txtStaffCity;
     private javax.swing.JTextField txtStaffCountry;
+    private javax.swing.JTextField txtStaffCreatedBy;
     private javax.swing.JTextField txtStaffEmail;
     private javax.swing.JTextField txtStaffFirstName;
     private javax.swing.JTextField txtStaffLastName;

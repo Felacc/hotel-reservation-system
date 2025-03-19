@@ -8,7 +8,7 @@ package model;
  *
  * @author felix
  */
-public class StaffMember extends User {
+public class StaffMember{
     // Name
     private String firstName;
     private String lastName;
@@ -29,27 +29,22 @@ public class StaffMember extends User {
     private int userID; // reference to staff member in the users table
 
     // Constructors
-    public StaffMember(String username, String password, String userType) {
-        super(username, password, userType);
-    }
-
-    public StaffMember(String firstName, String lastName, String email, String phoneNumber, String unitNumber, String streetAddress, String city, String postalCode, String country, int SIN, String citizenshipStatus, int createdBy, int userID, String username, String password, String userType) {
-        super(username, password, userType);
+    public StaffMember(String firstName, String lastName, String email, String phoneNumber, int SIN, String citizenshipStatus, String unitNumber, String streetAddress, String city, String postalCode, String country, int createdBy) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.SIN = SIN;
+        this.citizenshipStatus = citizenshipStatus;
         this.unitNumber = unitNumber;
         this.streetAddress = streetAddress;
         this.city = city;
         this.postalCode = postalCode;
         this.country = country;
-        this.SIN = SIN;
-        this.citizenshipStatus = citizenshipStatus;
         this.createdBy = createdBy;
-        this.userID = userID;
     }
-    
+
+   
     // Getters and Setters
 
     public String getFirstName() {
