@@ -5,7 +5,9 @@
 package view;
 
 import controller.guest.AddGuestController;
+import controller.guest.DeleteGuestController;
 import controller.guest.SearchGuestController;
+import controller.guest.UpdateGuestController;
 import controller.user.AddUserController;
 import controller.user.DeleteUserController;
 import controller.user.SearchUserController;
@@ -378,14 +380,14 @@ public class MainFrame extends javax.swing.JFrame {
     private void mnuItemUpdateGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateGuestActionPerformed
         HotelGuestUpdateView hotelGuestUpdateView = new HotelGuestUpdateView();
         GuestDAO guestDAO = new GuestDAO();
-        // UpdateGuestController updateGuestController = new UpdateGuestController(hotelGuestUpdateView, guestDAO);
+        UpdateGuestController updateGuestController = new UpdateGuestController(hotelGuestUpdateView, guestDAO);
         hotelGuestUpdateView.setVisible(true);
     }//GEN-LAST:event_mnuItemUpdateGuestActionPerformed
 
     private void mnuItemDeleteGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteGuestActionPerformed
         HotelGuestDeleteView hotelGuestDeleteView = new HotelGuestDeleteView();
-//        GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
+        GuestDAO guestDAO = new GuestDAO();
+        DeleteGuestController deleteGuestController = new DeleteGuestController(hotelGuestDeleteView, guestDAO);
         hotelGuestDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteGuestActionPerformed
 

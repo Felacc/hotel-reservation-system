@@ -71,6 +71,21 @@ public class GuestDAO {
         }
         return false;
     }
+    
+    public boolean updateGuestRecord(int guestId, String column, String value) {
+        String query = "UPDATE guests SET " + column + " = ? WHERE guest_id = ?";
+         try(Connection connection = DBConnection.getConnection();
+        //Preparse statement for query
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            preparedStatement.setString(1, value);
+            preparedStatement.setInt(2, guestId);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return false;
+    }
 
     public static Guest fetchGuestByIdForTable(int guestId) {
         Guest guestObject = null;
@@ -141,5 +156,6 @@ public class GuestDAO {
 
         return guestList;
     }
+
 
 }
