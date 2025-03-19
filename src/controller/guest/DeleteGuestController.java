@@ -37,7 +37,7 @@ public class DeleteGuestController {
             if (result) {
                     JOptionPane.showMessageDialog(null, "Successfully removed user");
                 } else {
-                    JOptionPane.showMessageDialog(null, "User ID does not exist");
+                    JOptionPane.showMessageDialog(null, "Guest ID does not exist");
                 }
         }
     } 

@@ -72,18 +72,13 @@ public class UserDAO {
         return false;
     }
 
-    public boolean updateUserRecord(int userId, String value, String column) {
-        String query = """
-                       UPDATE users
-                       SET ? = ?
-                       WHERE userId = ?;
-                       """;
+    public boolean updateUserRecord(int userId, String column, String value) {
+        String query = "UPDATE users SET " + column + " = ? WHERE user_id = ?";
          try(Connection connection = DBConnection.getConnection();
         //Preparse statement for query
             PreparedStatement preparedStatement = connection.prepareStatement(query)){
-            preparedStatement.setString(1, column); // second question mark - last name
-            preparedStatement.setString(2, value);
-            preparedStatement.setInt(3, userId); // first question mark - first name
+            preparedStatement.setString(1, value);
+            preparedStatement.setInt(2, userId); 
             return preparedStatement.executeUpdate() > 0; //successful insertion
         }
         catch(Exception ex){

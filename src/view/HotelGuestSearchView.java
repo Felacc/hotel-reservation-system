@@ -104,7 +104,7 @@ public class HotelGuestSearchView extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Customer ID", "First Name", "Last Name", "Email", "Phone", "Unit", "Street Address", "City", "Postal Code", "Country"
+                "Guest ID", "First Name", "Last Name", "Email", "Phone", "Unit", "Street Address", "City", "Postal Code", "Country"
             }
         ));
         tblGuest.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
