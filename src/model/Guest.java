@@ -8,7 +8,7 @@ package model;
  *
  * @author felix
  */
-public class Guest extends User {
+public class Guest {
     // Name
     private String firstName;
     private String lastName;
@@ -21,17 +21,11 @@ public class Guest extends User {
     private String city;
     private String postalCode;
     private String country;
-    // User ID from the DB
     private int guestId;
+
     
     // Constructors
-
-    public Guest(String username, String password, String userType) {
-        super(username, password, userType);
-    }
- 
-    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country, int guestId, String username, String password, String userType) {
-        super(username, password, userType);
+    public Guest(String firstName, String lastName, String email, String phoneNumber, String unit, String streetAddress, String city, String postalCode, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -41,14 +35,17 @@ public class Guest extends User {
         this.city = city;
         this.postalCode = postalCode;
         this.country = country;
+    }
+    
+    // Getters and Setters
+    public int getGuestId() {
+        return guestId;
+    }
+
+    public void setGuestId(int guestId) {
         this.guestId = guestId;
     }
     
-
-    
-    
-    // Getters and Setters
-
     public String getFirstName() {
         return firstName;
     }
@@ -119,13 +116,5 @@ public class Guest extends User {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public int getGuestId() {
-        return guestId;
-    }
-
-    public void setGuestId(int guestId) {
-        this.guestId = guestId;
     }
 }

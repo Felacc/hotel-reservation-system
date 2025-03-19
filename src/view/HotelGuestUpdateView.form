@@ -19,7 +19,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,61,0,0,2,24"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-68,0,0,2,47"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -67,11 +67,11 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="enterInfoPanel" max="32767" attributes="0"/>
-                          <Component id="lblRegister" alignment="1" pref="524" max="32767" attributes="0"/>
+                          <Component id="lblRegister" pref="547" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -133,26 +133,71 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtPassword" alignment="1" max="32767" attributes="0"/>
-                              <Component id="txtEmail" max="32767" attributes="0"/>
-                              <Component id="txtPhone" max="32767" attributes="0"/>
-                              <Component id="txtBillingAddress" max="32767" attributes="0"/>
-                              <Component id="txtAddress" max="32767" attributes="0"/>
-                              <Component id="txtLastName" max="32767" attributes="0"/>
-                              <Component id="txtFirstName" max="32767" attributes="0"/>
                               <Component id="lblFirstName" max="32767" attributes="0"/>
-                              <Component id="lblLastName" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblAddress" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblPhone" alignment="0" max="32767" attributes="0"/>
                               <Component id="lblEmail" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblPassword" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblBillingAddress" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblPhone" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblLastName" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblUnit" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblStreetAddress" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblCity" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="lblPostal" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lblCountry" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btnUpdateGuest" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="btnClear" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtFirstName" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateFirstName" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtEmail" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateEmail" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtPhone" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdatePhone" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtLastName" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateLastName" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtUnit" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateUnit" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtStreetAddress" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateStreetAddress" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtCity" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateCity" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtCountry" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdateCountry" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtPostal" min="-2" pref="250" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnUpdatePostal" min="-2" pref="175" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -165,36 +210,69 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblFirstName" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtFirstName" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateFirstName" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="lblLastName" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtLastName" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="lblAddress" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtAddress" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="lblBillingAddress" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtBillingAddress" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateLastName" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="lblPhone" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtPhone" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="lblEmail" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateEmail" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="lblPassword" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPhone" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtPassword" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdatePhone" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnUpdateGuest" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="lblUnit" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtUnit" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateUnit" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lblStreetAddress" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtStreetAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateStreetAddress" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lblCity" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateCity" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lblPostal" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtPostal" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdatePostal" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lblCountry" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtCountry" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdateCountry" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="47" max="32767" attributes="0"/>
                           <Component id="btnClear" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -227,20 +305,6 @@
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtLastName">
-                </Component>
-                <Component class="javax.swing.JLabel" name="lblAddress">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Helvetica Neue" size="14" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Address:"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtAddress">
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblPhone">
                   <Properties>
@@ -276,35 +340,7 @@
                     <Property name="text" type="java.lang.String" value="email@host.com"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblPassword">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Helvetica Neue" size="14" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Password"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lblBillingAddress">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Helvetica Neue" size="14" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Billing Address:"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtPassword">
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtBillingAddress">
-                </Component>
-                <Component class="javax.swing.JButton" name="btnUpdateGuest">
+                <Component class="javax.swing.JButton" name="btnUpdateCountry">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
@@ -315,7 +351,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/view/icons/update.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Update Filled Fields..."/>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnClear">
@@ -330,6 +366,188 @@
                       <Image iconType="3" name="/view/icons/clear.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Clear All..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtUnit">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblUnit">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Unit:"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtStreetAddress">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblStreetAddress">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Street Address:"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtCity">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCity">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="City:"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblPostal">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Postal Code:"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtPostal">
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtCountry">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCountry">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Country:"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdatePhone">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdatePostal">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdateCity">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdateStreetAddress">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdateUnit">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdateEmail">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdateFirstName">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnUpdateLastName">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Helvetica Neue" size="18" style="0"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/icons/update.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Update..."/>
                   </Properties>
                 </Component>
               </SubComponents>

@@ -5,7 +5,13 @@
 package view;
 
 import controller.guest.AddGuestController;
+import controller.guest.SearchGuestController;
+import controller.user.AddUserController;
+import controller.user.DeleteUserController;
+import controller.user.SearchUserController;
+import controller.user.UpdateUserController;
 import dao.GuestDAO;
+import dao.UserDAO;
 
 /**
  *
@@ -357,8 +363,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void mnuItemSearchGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchGuestActionPerformed
         HotelGuestSearchView hotelGuestSearchView = new HotelGuestSearchView();
-//        GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestSearchView, guestDAO);
+        GuestDAO guestDAO = new GuestDAO();
+        SearchGuestController searchGuestController = new SearchGuestController(hotelGuestSearchView, guestDAO);
         hotelGuestSearchView.setVisible(true);
     }//GEN-LAST:event_mnuItemSearchGuestActionPerformed
 
@@ -371,8 +377,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void mnuItemUpdateGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateGuestActionPerformed
         HotelGuestUpdateView hotelGuestUpdateView = new HotelGuestUpdateView();
-//        GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
+        GuestDAO guestDAO = new GuestDAO();
+        // UpdateGuestController updateGuestController = new UpdateGuestController(hotelGuestUpdateView, guestDAO);
         hotelGuestUpdateView.setVisible(true);
     }//GEN-LAST:event_mnuItemUpdateGuestActionPerformed
 
@@ -434,30 +440,30 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void mnuItemAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddUserActionPerformed
         HotelUserAddView hotelUserAddView = new HotelUserAddView();
-         //StaffDAO staffDAO = new StaffDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
+        UserDAO userDAO = new UserDAO();
+        AddUserController addUserController = new AddUserController(hotelUserAddView, userDAO);
          hotelUserAddView.setVisible(true);
     }//GEN-LAST:event_mnuItemAddUserActionPerformed
 
     private void mnuItemSearchUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemSearchUserActionPerformed
         HotelUserSearchView hotelUserSearchView = new HotelUserSearchView();
-        //GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestSearchView, guestDAO);
+        UserDAO userDAO = new UserDAO();
+        SearchUserController searchUserController = new SearchUserController(hotelUserSearchView, userDAO);
         hotelUserSearchView.setVisible(true);
     }//GEN-LAST:event_mnuItemSearchUserActionPerformed
 
     private void mnuItemUpdateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemUpdateUserActionPerformed
         HotelUserUpdateView hotelUserUpdateView = new HotelUserUpdateView();
-         //GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
-         hotelUserUpdateView.setVisible(true);
+        UserDAO userDAO = new UserDAO();
+        UpdateUserController updateUserController = new UpdateUserController(hotelUserUpdateView, userDAO);
+        hotelUserUpdateView.setVisible(true);
     }//GEN-LAST:event_mnuItemUpdateUserActionPerformed
 
     private void mnuItemDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemDeleteUserActionPerformed
         HotelUserDeleteView hotelUserDeleteView = new HotelUserDeleteView();
-         //GuestDAO guestDAO = new GuestDAO();
-//        AddGuestController guestController = new AddGuestController(hotelGuestAddView, guestDAO);
-         hotelUserDeleteView.setVisible(true);
+        UserDAO userDAO = new UserDAO();
+        DeleteUserController deleteUserController = new DeleteUserController(hotelUserDeleteView, userDAO);
+        hotelUserDeleteView.setVisible(true);
     }//GEN-LAST:event_mnuItemDeleteUserActionPerformed
 
     private void mnuItemAddReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemAddReservationActionPerformed

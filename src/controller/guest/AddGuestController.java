@@ -4,7 +4,6 @@
  */
 package controller.guest;
 
-import controller.guest.*;
 import dao.GuestDAO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +40,7 @@ public class AddGuestController {
             hotelGuestAddView.getTxtCity().setText("");
             hotelGuestAddView.getTxtPostalCode().setText("");
             hotelGuestAddView.getTxtEmail().setText("");
+            hotelGuestAddView.getTxtPhone().setText("");
             hotelGuestAddView.getTxtCountry().setText("");
         }
     }
@@ -58,12 +58,12 @@ public class AddGuestController {
             String phone = hotelGuestAddView.getTxtPhone().getText();
           
 
-            Guest newGuest = new Guest(firstName,lastName, email, phone, unit, address, city, postal, country, 0, "null","null","null");
+            Guest newGuest = new Guest(firstName,lastName, email, phone, unit, address, city, postal, country);
             boolean result = guestDAO.addGuestRecord(newGuest);
             if (result) {
-                JOptionPane.showMessageDialog(null, "Successfully added a new course");
+                JOptionPane.showMessageDialog(null, "Successfully added a new guest");
             } else {
-                JOptionPane.showMessageDialog(null, "Was not able to add a new course record");
+                JOptionPane.showMessageDialog(null, "Was not able to add a new guest record");
             }
         }
     } 
