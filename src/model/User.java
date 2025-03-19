@@ -13,6 +13,7 @@ public class User {
     String username;
     String password;
     String userType;
+    int userId;
     
     // Constructor
     public User(String username, String password, String userType) {
@@ -22,6 +23,15 @@ public class User {
     }
     
     // Getters and Setters
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+    
     public String getUsername() {
         return username;
     }
@@ -45,4 +55,6 @@ public class User {
     public void setUserType(String userType) {
         this.userType = userType;
     }  
+    
+    
 }
