@@ -62,6 +62,14 @@ public class HotelBookingAddView extends javax.swing.JFrame {
     public void setTxtReservationId(JTextField txtReservationId) {
         this.txtReservationId = txtReservationId;
     }
+    
+    public void addBookingBtnListener(ActionListener myActionListener){
+        btnAddBooking.addActionListener(myActionListener);
+    }
+    
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClearBooking.addActionListener(myActionListener);
+    }
 
     
     
