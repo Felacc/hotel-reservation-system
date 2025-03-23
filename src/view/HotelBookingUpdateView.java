@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package view;
 
 import java.awt.event.ActionListener;
@@ -11,7 +7,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author kale
+ * @author kale and felix
  */
 
 public class HotelBookingUpdateView extends javax.swing.JFrame {
@@ -59,8 +55,30 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
         return txtReservationId;
     }
 
+    public JTextField getTxtBookingID() {
+        return txtBookingID;
+    }
+
+    public void setTxtBookingID(JTextField txtBookingID) {
+        this.txtBookingID = txtBookingID;
+    }
+    
+    
+
     public void setTxtReservationId(JTextField txtReservationId) {
         this.txtReservationId = txtReservationId;
+    }
+    
+    public void updateBookingBtnListener(ActionListener myActionListener){
+        btnUpdateFields.addActionListener(myActionListener);
+    }
+   
+    public void getBookingInfoBtnListener(ActionListener myActionListener){
+        btnGetBookingInfo.addActionListener(myActionListener);
+    }
+    
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClearAll.addActionListener(myActionListener);
     }
 
    

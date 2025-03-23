@@ -47,8 +47,6 @@ public class HotelBookingSearchView extends javax.swing.JFrame {
         this.tblBooking = tblBooking;
     }
     
-    
-    
     public void searchBookingIDBtnListener(ActionListener myActionListener){
         btnSearchBookingByID.addActionListener(myActionListener);
     }
