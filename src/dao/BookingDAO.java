@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import model.Booking;
@@ -40,7 +39,7 @@ public class BookingDAO {
         return false;
     }
 
-    public boolean deleteBookingRecord(int bookingID){
+    public boolean deleteBookingRecord(int bookingID) {
         String query = "DELETE FROM hotelReservationDB.bookings WHERE booking_id = (?)";
         try (Connection connection = DBConnection.getConnection(); //Prepared statement for query
                  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -52,7 +51,18 @@ public class BookingDAO {
         return false;
     }
 
-    public boolean updateBookingRecord(int reservationID, LocalDate bookingDate, double totalPrice) {
+    public boolean updateBookingRecord(int bookingID, int reservationID, String bookingDate, double totalPrice) {
+        String query = "UPDATE bookings SET reservation_id = ?, booking_date = ?, total_price = ? WHERE booking_id = ?";
+        try (Connection connection = DBConnection.getConnection(); 
+                PreparedStatement preparedStatement = connection.prepareStatement(query)) { //Prepared statement for query
+            preparedStatement.setInt(1, reservationID);
+            preparedStatement.setString(2, bookingDate);
+            preparedStatement.setDouble(3, totalPrice);
+            preparedStatement.setInt(4, bookingID);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         return false;
     }
 
@@ -79,13 +89,13 @@ public class BookingDAO {
                 );
                 booking.setBookingID(resultSet.getInt("booking_id"));
             }
-            
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
         return booking;
     }
-    
+
     public List<Booking> fetchAllBookings() {
         List<Booking> bookingList = new ArrayList<>();
         String query
@@ -103,7 +113,6 @@ public class BookingDAO {
                         resultSet.getInt("reservation_id"),
                         resultSet.getString("booking_date"),
                         resultSet.getDouble("total_price")
-                        
                 );
                 booking.setBookingID(resultSet.getInt("booking_id"));
                 bookingList.add(booking);
