@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Booking;
-import model.Guest;
 import util.DBConnection;
 
 /**
@@ -15,11 +14,9 @@ import util.DBConnection;
  * @author felix
  */
 public class BookingDAO {
-
-    private Booking booking;
-
-    public BookingDAO(Booking booking) {
-        this.booking = booking;
+    
+    public BookingDAO() {
+        
     }
 
     public boolean addBookingRecord(Booking booking) {
