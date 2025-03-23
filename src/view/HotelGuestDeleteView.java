@@ -38,7 +38,7 @@ public class HotelGuestDeleteView extends javax.swing.JFrame {
         this.txtDeleteGuest = txtDeleteGuest;
     }
  
-     public void deleteGuestBtnListener (ActionListener myActionListener){
+    public void deleteGuestBtnListener (ActionListener myActionListener){
         btnClear.addActionListener(myActionListener);
     }
   
