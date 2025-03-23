@@ -2,8 +2,13 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import model.Booking;
+import model.Guest;
 import util.DBConnection;
 
 /**
@@ -35,11 +40,11 @@ public class BookingDAO {
         return false;
     }
 
-    public boolean deleteBookingRecord(int reservationID) {
-        String query = "DELETE FROM hotelReservationDB.bookings WHERE guest_id = (?)";
+    public boolean deleteBookingRecord(int bookingID){
+        String query = "DELETE FROM hotelReservationDB.bookings WHERE booking_id = (?)";
         try (Connection connection = DBConnection.getConnection(); //Prepared statement for query
                  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, reservationID);
+            preparedStatement.setInt(1, bookingID);
             return preparedStatement.executeUpdate() > 0; //successful insertion
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -51,7 +56,63 @@ public class BookingDAO {
         return false;
     }
 
-    public Booking searchBookingByReservationID(int reservationID) {
-        return null;
+    public Booking fetchBookingByBookingID(int bookingID) {
+        Booking booking = null;
+        String query
+                = """
+            SELECT booking_id, reservation_id, booking_date, total_price
+            FROM   hotelreservationdb.bookings
+            WHERE  booking_id = ?
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, bookingID);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                booking = new Booking(
+                        resultSet.getInt("reservation_id"),
+                        resultSet.getString("booking_date"),
+                        resultSet.getDouble("total_price")
+                );
+                booking.setBookingID(resultSet.getInt("booking_id"));
+            }
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return booking;
+    }
+    
+    public List<Booking> fetchAllBookings() {
+        List<Booking> bookingList = new ArrayList<>();
+        String query
+                = """
+           SELECT *
+           FROM  bookings
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                Booking booking = new Booking(
+                        resultSet.getInt("reservation_id"),
+                        resultSet.getString("booking_date"),
+                        resultSet.getDouble("total_price")
+                        
+                );
+                booking.setBookingID(resultSet.getInt("booking_id"));
+                bookingList.add(booking);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return bookingList;
     }
 }

@@ -6,19 +6,20 @@ package model;
  */
 public class Booking {
     // Booking info
+    private int bookingID;
     private int reservationID;
     private String bookingDate;
     private double totalPrice;
 
     // Constructor
     public Booking(int reservationID, String bookingDate, double totalPrice) {
+        this.bookingID = -1;
         this.reservationID = reservationID;
         this.bookingDate = bookingDate;
         this.totalPrice = totalPrice;
     }
     
     // Getters and Setters
-
     public int getReservationID() {
         return reservationID;
     }
@@ -41,6 +42,14 @@ public class Booking {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+    
+    public int getBookingID() {
+        return bookingID;
+    }
+
+    public void setBookingID(int bookingID) {
+        this.bookingID = bookingID;
     }
 
 }

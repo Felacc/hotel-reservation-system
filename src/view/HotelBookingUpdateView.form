@@ -319,7 +319,7 @@
                               <Component id="txtBookingID" alignment="0" max="32767" attributes="0"/>
                               <Component id="lblBookingID" alignment="0" pref="502" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="btnGetUserInfo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnGetBookingInfo" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -335,7 +335,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="txtBookingID" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="12" max="32767" attributes="0"/>
-                          <Component id="btnGetUserInfo" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGetBookingInfo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -359,23 +359,23 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtBookingID">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnGetUserInfo">
+                <Component class="javax.swing.JButton" name="btnGetBookingInfo">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
                       <FontInfo relative="true">
-                        <Font component="btnGetUserInfo" property="font" relativeSize="true" size="0"/>
+                        <Font component="btnGetBookingInfo" property="font" relativeSize="true" size="0"/>
                       </FontInfo>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Get User Info"/>
+                    <Property name="text" type="java.lang.String" value="Get Booking Info"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGetUserInfoActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGetBookingInfoActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

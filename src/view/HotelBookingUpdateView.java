@@ -90,7 +90,7 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
         javax.swing.JPanel getBookingInfo = new javax.swing.JPanel();
         javax.swing.JLabel lblBookingID = new javax.swing.JLabel();
         txtBookingID = new javax.swing.JTextField();
-        btnGetUserInfo = new javax.swing.JButton();
+        btnGetBookingInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Update Booking");
@@ -199,13 +199,13 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
         lblBookingID.setForeground(java.awt.Color.black);
         lblBookingID.setText("Booking ID:");
 
-        btnGetUserInfo.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnGetUserInfo.setFont(btnGetUserInfo.getFont());
-        btnGetUserInfo.setForeground(new java.awt.Color(0, 0, 0));
-        btnGetUserInfo.setText("Get User Info");
-        btnGetUserInfo.addActionListener(new java.awt.event.ActionListener() {
+        btnGetBookingInfo.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnGetBookingInfo.setFont(btnGetBookingInfo.getFont());
+        btnGetBookingInfo.setForeground(new java.awt.Color(0, 0, 0));
+        btnGetBookingInfo.setText("Get Booking Info");
+        btnGetBookingInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGetUserInfoActionPerformed(evt);
+                btnGetBookingInfoActionPerformed(evt);
             }
         });
 
@@ -219,7 +219,7 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
                     .addComponent(txtBookingID)
                     .addComponent(lblBookingID, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
                     .addGroup(getBookingInfoLayout.createSequentialGroup()
-                        .addComponent(btnGetUserInfo)
+                        .addComponent(btnGetBookingInfo)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -231,7 +231,7 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtBookingID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(btnGetUserInfo)
+                .addComponent(btnGetBookingInfo)
                 .addContainerGap())
         );
 
@@ -290,9 +290,9 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDateActionPerformed
 
-    private void btnGetUserInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetUserInfoActionPerformed
+    private void btnGetBookingInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetBookingInfoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGetUserInfoActionPerformed
+    }//GEN-LAST:event_btnGetBookingInfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -308,7 +308,7 @@ public class HotelBookingUpdateView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClearAll;
-    private javax.swing.JButton btnGetUserInfo;
+    private javax.swing.JButton btnGetBookingInfo;
     private javax.swing.JButton btnUpdateFields;
     private javax.swing.JTextField txtBookingID;
     private javax.swing.JFormattedTextField txtDate;
