@@ -115,11 +115,11 @@ public class HotelBookingAddView extends javax.swing.JFrame {
 
         lblReservationId.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblReservationId.setForeground(java.awt.Color.black);
-        lblReservationId.setText("Reservation ID");
+        lblReservationId.setText("Reservation ID:");
 
         lblBookingDate.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblBookingDate.setForeground(java.awt.Color.black);
-        lblBookingDate.setText("Set Booking Date");
+        lblBookingDate.setText("Set Booking Date:");
 
         btnClearBooking.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClearBooking.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
