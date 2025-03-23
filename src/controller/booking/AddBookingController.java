@@ -45,7 +45,9 @@ public class AddBookingController {
     private class ClearAllTextFields implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            hotelBookingAddView.getTxtReservationId().setText("");
+            hotelBookingAddView.getTxtDate().setText("");
+            hotelBookingAddView.getTxtFormatPrice().setText("");
         }
     }
     
