@@ -11,12 +11,13 @@ import util.DBConnection;
  * @author felix
  */
 public class BookingDAO {
+
     private Booking booking;
-    
+
     public BookingDAO(Booking booking) {
         this.booking = booking;
     }
-    
+
     public boolean addBookingRecord(Booking booking) {
         //The ?, ? values are not known yet
         String query = "INSERT INTO hotelReservationDB.bookings (reservation_id, booking_date, total_price) VALUES (?, ?, ?)";
@@ -33,15 +34,23 @@ public class BookingDAO {
         }
         return false;
     }
-    
+
     public boolean deleteBookingRecord(int reservationID) {
+        String query = "DELETE FROM hotelReservationDB.bookings WHERE guest_id = (?)";
+        try (Connection connection = DBConnection.getConnection(); //Prepared statement for query
+                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, reservationID);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         return false;
     }
-    
-    public boolean updateBookingRecord (int reservationID, LocalDate bookingDate, double totalPrice) {
+
+    public boolean updateBookingRecord(int reservationID, LocalDate bookingDate, double totalPrice) {
         return false;
     }
-    
+
     public Booking searchBookingByReservationID(int reservationID) {
         return null;
     }
