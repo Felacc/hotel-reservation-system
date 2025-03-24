@@ -4,6 +4,9 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -15,6 +18,77 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
      */
     public HotelReservationUpdateView() {
         initComponents();
+    }
+
+    public JTextField getTxtReservationCheckInDate() {
+        return txtReservationCheckInDate;
+    }
+
+    public void setTxtReservationCheckInDate(JTextField txtReservationCheckInDate) {
+        this.txtReservationCheckInDate = txtReservationCheckInDate;
+    }
+
+    public JTextField getTxtReservationCheckOutDate() {
+        return txtReservationCheckOutDate;
+    }
+
+    public void setTxtReservationCheckOutDate(JTextField txtReservationCheckOutDate) {
+        this.txtReservationCheckOutDate = txtReservationCheckOutDate;
+    }
+
+    public JTextField getTxtReservationCustomerID() {
+        return txtReservationCustomerID;
+    }
+
+    public void setTxtReservationCustomerID(JTextField txtReservationCustomerID) {
+        this.txtReservationCustomerID = txtReservationCustomerID;
+    }
+
+    public JTextField getTxtReservationID() {
+        return txtReservationID;
+    }
+
+    public void setTxtReservationID(JTextField txtReservationID) {
+        this.txtReservationID = txtReservationID;
+    }
+
+
+    public JTextField getTxtReservationEmployeeID() {
+        return txtReservationEmployeeID;
+    }
+
+    public void setTxtReservationEmployeeID(JTextField txtReservationEmployeeID) {
+        this.txtReservationEmployeeID = txtReservationEmployeeID;
+    }
+
+    public JTextField getTxtReservationRoomID() {
+        return txtReservationRoomID;
+    }
+
+    public void setTxtReservationRoomID(JTextField txtReservationRoomID) {
+        this.txtReservationRoomID = txtReservationRoomID;
+    }
+
+    public JTextField getTxtReservationStatus() {
+        return txtReservationStatus;
+    }
+
+    public void setTxtReservationStatus(JTextField txtReservationStatus) {
+        this.txtReservationStatus = txtReservationStatus;
+    }
+    
+    
+    
+    public void updateReservationBtnListener(ActionListener myActionListener){
+        btnUpdateReservation.addActionListener(myActionListener);
+    }
+   
+    public void getReservationInfoBtnListener(ActionListener myActionListener){
+        btnGetReservationInfo.addActionListener(myActionListener);
+    }
+    
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
     }
 
     /**
@@ -43,6 +117,10 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
         btnUpdateReservation = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         javax.swing.JLabel lblUpdateReservation = new javax.swing.JLabel();
+        getReservationInfoPanel = new javax.swing.JPanel();
+        lblRegistrationCustomerID1 = new javax.swing.JLabel();
+        txtReservationID = new javax.swing.JTextField();
+        btnGetReservationInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Update Reservation Account");
@@ -83,9 +161,10 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
         lblBillingAddress.setText("Check-In Date:");
 
         btnUpdateReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnUpdateReservation.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateReservation.setFont(btnUpdateReservation.getFont());
         btnUpdateReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
-        btnUpdateReservation.setText("Update Filled Fields...");
+        btnUpdateReservation.setText("Update");
+        btnUpdateReservation.setPreferredSize(new java.awt.Dimension(112, 24));
         btnUpdateReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateReservationActionPerformed(evt);
@@ -95,7 +174,7 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClear.setText("Clear All...");
+        btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
@@ -115,23 +194,22 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
                     .addComponent(txtReservationRoomID)
                     .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtReservationEmployeeID)
-                    .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
+                    .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtReservationCheckOutDate)
                     .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtReservationStatus)
                     .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtReservationCheckInDate)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnUpdateReservation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnClear, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(btnUpdateReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnClear)))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblRegistrationCustomerID)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtReservationCustomerID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,11 +233,10 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
                 .addComponent(lblEmail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtReservationStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(btnUpdateReservation)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnClear)
-                .addGap(18, 18, 18))
+                .addGap(18, 18, 18)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpdateReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnClear)))
         );
 
         lblUpdateReservation.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -168,6 +245,48 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
         lblUpdateReservation.setText("Update Reservation Account:");
         lblUpdateReservation.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        getReservationInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Get Reservation Info:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
+        getReservationInfoPanel.setOpaque(false);
+
+        lblRegistrationCustomerID1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblRegistrationCustomerID1.setText("Reservation ID:");
+
+        btnGetReservationInfo.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnGetReservationInfo.setFont(btnGetReservationInfo.getFont());
+        btnGetReservationInfo.setText("Get Info");
+        btnGetReservationInfo.setRolloverEnabled(false);
+        btnGetReservationInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGetReservationInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout getReservationInfoPanelLayout = new javax.swing.GroupLayout(getReservationInfoPanel);
+        getReservationInfoPanel.setLayout(getReservationInfoPanelLayout);
+        getReservationInfoPanelLayout.setHorizontalGroup(
+            getReservationInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(getReservationInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(getReservationInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRegistrationCustomerID1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtReservationID)
+                    .addGroup(getReservationInfoPanelLayout.createSequentialGroup()
+                        .addComponent(btnGetReservationInfo)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        getReservationInfoPanelLayout.setVerticalGroup(
+            getReservationInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(getReservationInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblRegistrationCustomerID1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtReservationID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGetReservationInfo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
         childPanel.setLayout(childPanelLayout);
         childPanelLayout.setHorizontalGroup(
@@ -175,8 +294,9 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblUpdateReservation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                    .addComponent(lblUpdateReservation, javax.swing.GroupLayout.DEFAULT_SIZE, 779, Short.MAX_VALUE)
+                    .addComponent(getReservationInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -184,9 +304,11 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblUpdateReservation)
+                .addGap(18, 18, 18)
+                .addComponent(getReservationInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(enterInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,7 +319,7 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(childPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -218,6 +340,10 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnGetReservationInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetReservationInfoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGetReservationInfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,11 +382,15 @@ public class HotelReservationUpdateView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnGetReservationInfo;
     private javax.swing.JButton btnUpdateReservation;
+    private javax.swing.JPanel getReservationInfoPanel;
+    private javax.swing.JLabel lblRegistrationCustomerID1;
     private javax.swing.JTextField txtReservationCheckInDate;
     private javax.swing.JTextField txtReservationCheckOutDate;
     private javax.swing.JTextField txtReservationCustomerID;
     private javax.swing.JTextField txtReservationEmployeeID;
+    private javax.swing.JTextField txtReservationID;
     private javax.swing.JTextField txtReservationRoomID;
     private javax.swing.JTextField txtReservationStatus;
     // End of variables declaration//GEN-END:variables

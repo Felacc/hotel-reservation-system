@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package view;
+
+import java.awt.event.ActionListener;
 
 /**
  *
- * @author JekKath
+ * @author JekKath and felix
  */
 public class HotelReservationDeleteView extends javax.swing.JFrame {
 
@@ -15,6 +13,10 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
      */
     public HotelReservationDeleteView() {
         initComponents();
+    }
+    
+    public void deleteReservationBtnListener(ActionListener myActionListener){
+        btnDeleteReservation.addActionListener(myActionListener);
     }
 
     /**
@@ -29,7 +31,7 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblRegistrationRegister = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
-        btnClear = new javax.swing.JButton();
+        btnDeleteReservation = new javax.swing.JButton();
         txtDeleteReservation = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -41,19 +43,19 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
         lblRegistrationRegister.setForeground(java.awt.Color.red);
         lblRegistrationRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRegistrationRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        lblRegistrationRegister.setText("Delete Reservation Account");
+        lblRegistrationRegister.setText("Delete Reservation");
         lblRegistrationRegister.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         enterInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search by RegistrationID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14))); // NOI18N
         enterInfoPanel.setOpaque(false);
 
-        btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClear.setText("Delete Reservation...");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnDeleteReservation.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        btnDeleteReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
+        btnDeleteReservation.setText("Delete Reservation...");
+        btnDeleteReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
+                btnDeleteReservationActionPerformed(evt);
             }
         });
 
@@ -67,7 +69,7 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnClear))
+                        .addComponent(btnDeleteReservation))
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(txtDeleteReservation)))
@@ -79,7 +81,7 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(txtDeleteReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnClear)
+                .addComponent(btnDeleteReservation)
                 .addContainerGap(165, Short.MAX_VALUE))
         );
 
@@ -118,9 +120,9 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+    private void btnDeleteReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteReservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnClearActionPerformed
+    }//GEN-LAST:event_btnDeleteReservationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,7 +160,7 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnDeleteReservation;
     private javax.swing.JTextField txtDeleteReservation;
     // End of variables declaration//GEN-END:variables
 }

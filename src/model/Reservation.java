@@ -1,34 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
-
-import java.time.LocalDate;
 
 /**
  *
  * @author felix
  */
 public class Reservation {
+    // Primary Key - auto incremented
+    private int reservationID;
     // Customer that booked, room that they booked, and employee that helped
     private int customerID;
     private int roomID;
     private int employeeID;
     // Check in and check out date
-    private LocalDate checkInDate;
-    private LocalDate checkOutDate;
+    private String checkInDate;
+    private String checkOutDate;
     // no clue what this is
     private String status;
 
     // Constructor
-    public Reservation(int customerID, int roomID, int employeeID, LocalDate checkInDate, LocalDate checkOutDate, String status) {
+    public Reservation(int customerID, int roomID, int employeeID, String checkInDate, String checkOutDate, String status) {
         this.customerID = customerID;
         this.roomID = roomID;
         this.employeeID = employeeID;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.status = status;
+        
+        this.reservationID = -1;
     }
     
     // Getters and Setters
@@ -56,19 +54,19 @@ public class Reservation {
         this.employeeID = employeeID;
     }
 
-    public LocalDate getCheckInDate() {
+    public String getCheckInDate() {
         return checkInDate;
     }
 
-    public void setCheckInDate(LocalDate checkInDate) {
+    public void setCheckInDate(String checkInDate) {
         this.checkInDate = checkInDate;
     }
 
-    public LocalDate getCheckOutDate() {
+    public String getCheckOutDate() {
         return checkOutDate;
     }
 
-    public void setCheckOutDate(LocalDate checkOutDate) {
+    public void setCheckOutDate(String checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
 
@@ -79,6 +77,16 @@ public class Reservation {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public int getReservationID() {
+        return reservationID;
+    }
+
+    public void setReservationID(int reservationID) {
+        this.reservationID = reservationID;
+    }
+    
+    
     
     
     

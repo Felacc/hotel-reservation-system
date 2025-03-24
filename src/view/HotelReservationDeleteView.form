@@ -83,7 +83,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/view/icons/clear.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Delete Reservation Account"/>
+            <Property name="text" type="java.lang.String" value="Delete Reservation"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder roundedCorners="true"/>
@@ -118,7 +118,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDeleteReservation" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -135,14 +135,14 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtDeleteReservation" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDeleteReservation" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="165" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnClear">
+            <Component class="javax.swing.JButton" name="btnDeleteReservation">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="b3" green="b1" id="Actions.Grey" palette="3" red="af" type="palette"/>
@@ -156,7 +156,7 @@
                 <Property name="text" type="java.lang.String" value="Delete Reservation..."/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteReservationActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDeleteReservation">
