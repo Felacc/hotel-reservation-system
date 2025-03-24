@@ -51,6 +51,24 @@ public class RoomDAO {
     }
     
     
+    public boolean updateRoomRecord(String roomNumber, String roomType, double pricePerNight, String roomStatus, int updatedBy) {
+        String query = "UPDATE rooms SET room_number = ?, room_type = ?, price_per_night = ?, room_status = ?, updated_by = ?"
+                + " WHERE room_id = ?";
+        try (Connection connection = DBConnection.getConnection(); 
+                PreparedStatement preparedStatement = connection.prepareStatement(query)) { //Prepared statement for query
+            preparedStatement.setString(1, roomNumber);
+            preparedStatement.setString(2, roomType);
+            preparedStatement.setDouble(3, pricePerNight);
+            preparedStatement.setString(4, roomStatus);
+            preparedStatement.setInt(5, updatedBy);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
+    
+    
     public Room fetchRoomByRoomID(int roomID) {
         Room room = null;
         String query
