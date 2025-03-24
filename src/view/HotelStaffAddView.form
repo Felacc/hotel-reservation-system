@@ -52,7 +52,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="enterInfoPanel" max="32767" attributes="0"/>
-                      <Component id="lblStaffRegister" alignment="0" pref="388" max="32767" attributes="0"/>
+                      <Component id="lblStaffRegister" alignment="0" pref="421" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -105,7 +105,7 @@
                           <Component id="txtStaffStatus" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblStaffUnitNumber" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="243" max="32767" attributes="0"/>
                               <Component id="btnAddStaff" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnClear" min="-2" max="-2" attributes="0"/>
@@ -121,6 +121,8 @@
                           <Component id="lblStaffCountry" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffCountry" alignment="1" max="32767" attributes="0"/>
                           <Component id="txtStaffPostalCode" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtStaffCreatedBy" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffCreatedBy" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -173,7 +175,11 @@
                       <Component id="lblStaffCountry" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffCountry" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="lblStaffCreatedBy" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtStaffCreatedBy" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="57" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnAddStaff" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -368,6 +374,23 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtStaffPostalCode">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtStaffCreatedBy">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStaffCreatedByActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblStaffCreatedBy">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Helvetica Neue" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Created by UserID:"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

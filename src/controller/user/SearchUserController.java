@@ -25,7 +25,7 @@ public class SearchUserController {
     private HotelUserSearchView hotelUserSearchView;
     private UserDAO userDAO;
 
-    public SearchUserController(HotelUserSearchView hotelUserSearchView, UserDAO UserDAO) {
+    public SearchUserController(HotelUserSearchView hotelUserSearchView, UserDAO userDAO) {
         this.hotelUserSearchView = hotelUserSearchView;
         this.userDAO = userDAO;
 
