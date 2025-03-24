@@ -27,6 +27,7 @@ public class StaffMember{
     // Other info
     private int createdBy; // reference to employee who created the staff member record? if there is one? I think?
     private int userID; // reference to staff member in the users table
+    private int staffId;
 
     // Constructors
     public StaffMember(String firstName, String lastName, String email, String phoneNumber, int SIN, String citizenshipStatus, String unitNumber, String streetAddress, String city, String postalCode, String country, int createdBy) {
@@ -143,14 +144,11 @@ public class StaffMember{
         this.createdBy = createdBy;
     }
 
-    public int getUserID() {
-        return userID;
+    public int getStaffId() {
+        return staffId;
     }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
     }
-    
-    
     
 }
