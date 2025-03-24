@@ -24,20 +24,12 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
         initComponents();
     }    
 
-    public JButton getBtnSeachRoom() {
-        return btnSeachRoom;
+    public JTextField getTxtRoomID() {
+        return txtRoomID;
     }
 
-    public void setBtnSeachRoom(JButton btnSeachRoom) {
-        this.btnSeachRoom = btnSeachRoom;
-    }
-
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
-    }
-
-    public void setjScrollPane1(JScrollPane jScrollPane1) {
-        this.jScrollPane1 = jScrollPane1;
+    public void setTxtRoomID(JTextField txtRoomID) {
+        this.txtRoomID = txtRoomID;
     }
 
     public JTable getTblRooms() {
@@ -48,12 +40,12 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
         this.tblRooms = tblRooms;
     }
 
-    public JTextField getTxtSearchRoom() {
-        return txtSearchRoom;
+    public void searchRoomByIDBtnListener(ActionListener myActionListener){
+        btnSearchRoom.addActionListener(myActionListener);
     }
-
-    public void setTxtSearchRoom(JTextField txtSearchRoom) {
-        this.txtSearchRoom = txtSearchRoom;
+    
+    public void searchAllRoomsBtnListener(ActionListener myActionListener){
+        btnSearchAllRooms.addActionListener(myActionListener);
     }
 
    
@@ -72,8 +64,9 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
         javax.swing.JLabel lbSearchRoom = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRooms = new javax.swing.JTable();
-        btnSeachRoom = new javax.swing.JButton();
-        txtSearchRoom = new javax.swing.JTextField();
+        btnSearchRoom = new javax.swing.JButton();
+        txtRoomID = new javax.swing.JTextField();
+        btnSearchAllRooms = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search User Account");
@@ -107,20 +100,30 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
         tblRooms.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(tblRooms);
 
-        btnSeachRoom.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachRoom.setForeground(new java.awt.Color(0, 0, 0));
-        btnSeachRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        btnSeachRoom.setText("Search By RoomID...");
-        btnSeachRoom.addActionListener(new java.awt.event.ActionListener() {
+        btnSearchRoom.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchRoom.setForeground(new java.awt.Color(0, 0, 0));
+        btnSearchRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchRoom.setText("Search By RoomID...");
+        btnSearchRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeachRoomActionPerformed(evt);
+                btnSearchRoomActionPerformed(evt);
             }
         });
 
-        txtSearchRoom.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        txtSearchRoom.addActionListener(new java.awt.event.ActionListener() {
+        txtRoomID.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        txtRoomID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSearchRoomActionPerformed(evt);
+                txtRoomIDActionPerformed(evt);
+            }
+        });
+
+        btnSearchAllRooms.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchAllRooms.setForeground(new java.awt.Color(0, 0, 0));
+        btnSearchAllRooms.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchAllRooms.setText("Search All Rooms");
+        btnSearchAllRooms.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchAllRoomsActionPerformed(evt);
             }
         });
 
@@ -137,9 +140,12 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
                             .addComponent(jScrollPane1)))
                     .addGroup(childPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(txtSearchRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtRoomID, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSearchRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSeachRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSearchAllRooms, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78)))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -151,9 +157,10 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearchRoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeachRoom))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(txtRoomID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSearchRoom)
+                    .addComponent(btnSearchAllRooms))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
@@ -172,13 +179,17 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSearchRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchRoomActionPerformed
+    private void txtRoomIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRoomIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSearchRoomActionPerformed
+    }//GEN-LAST:event_txtRoomIDActionPerformed
 
-    private void btnSeachRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachRoomActionPerformed
+    private void btnSearchRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchRoomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSeachRoomActionPerformed
+    }//GEN-LAST:event_btnSearchRoomActionPerformed
+
+    private void btnSearchAllRoomsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchAllRoomsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchAllRoomsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,9 +204,10 @@ public class HotelRoomSearchView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSeachRoom;
+    private javax.swing.JButton btnSearchAllRooms;
+    private javax.swing.JButton btnSearchRoom;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRooms;
-    private javax.swing.JTextField txtSearchRoom;
+    private javax.swing.JTextField txtRoomID;
     // End of variables declaration//GEN-END:variables
 }

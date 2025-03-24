@@ -22,22 +22,6 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnAddRoom() {
-        return btnAddRoom;
-    }
-
-    public void setBtnAddRoom(JButton btnAddRoom) {
-        this.btnAddRoom = btnAddRoom;
-    }
-
-    public JButton getBtnClear() {
-        return btnClear;
-    }
-
-    public void setBtnClear(JButton btnClear) {
-        this.btnClear = btnClear;
-    }
-
     public JTextField getTxtPricePerNight() {
         return txtPricePerNight;
     }
@@ -70,11 +54,19 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         this.txtRoomType = txtRoomType;
     }
 
-    public void addGuestBtnListener(ActionListener myActionListener){
+    public JTextField getTxtUpdatedBy() {
+        return txtUpdatedBy;
+    }
+
+    public void setTxtUpdatedBy(JTextField txtUpdatedBy) {
+        this.txtUpdatedBy = txtUpdatedBy;
+    }
+
+    public void addRoomBtnListener(ActionListener myActionListener){
         btnAddRoom.addActionListener(myActionListener);
     }
     
-    public void addClearAllBtnListener(ActionListener myActionListener){
+    public void clearAllBtnListener(ActionListener myActionListener){
         btnClear.addActionListener(myActionListener);
     }
   
@@ -100,7 +92,9 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         btnClear = new javax.swing.JButton();
         btnAddRoom = new javax.swing.JButton();
         javax.swing.JLabel lblRoomStatus = new javax.swing.JLabel();
+        txtUpdatedBy = new javax.swing.JTextField();
         txtRoomStatus = new javax.swing.JTextField();
+        javax.swing.JLabel lblUpdatedBy = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register User Account");
@@ -150,6 +144,22 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         lblRoomStatus.setForeground(java.awt.Color.black);
         lblRoomStatus.setText("Room Status:");
 
+        txtUpdatedBy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUpdatedByActionPerformed(evt);
+            }
+        });
+
+        txtRoomStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRoomStatusActionPerformed(evt);
+            }
+        });
+
+        lblUpdatedBy.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblUpdatedBy.setForeground(java.awt.Color.black);
+        lblUpdatedBy.setText("Updated By:");
+
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
@@ -161,22 +171,23 @@ public class HotelRoomAddView extends javax.swing.JFrame {
                     .addComponent(txtRoomNumber)
                     .addComponent(lblRoomType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtRoomType)
-                    .addComponent(lblPricePerNight, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+                    .addComponent(lblPricePerNight, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
                     .addComponent(txtPricePerNight)
                     .addComponent(lblRoomStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtRoomStatus)
+                    .addComponent(txtUpdatedBy)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnAddRoom)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnClear)))
+                        .addComponent(btnClear))
+                    .addComponent(lblUpdatedBy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtRoomStatus))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblRoomNumber)
+                .addComponent(lblRoomNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtRoomNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -191,11 +202,15 @@ public class HotelRoomAddView extends javax.swing.JFrame {
                 .addComponent(lblRoomStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtRoomStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblUpdatedBy)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUpdatedBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddRoom)
                     .addComponent(btnClear))
-                .addGap(56, 56, 56))
+                .addGap(0, 0, 0))
         );
 
         btnClear.getAccessibleContext().setAccessibleParent(this);
@@ -208,18 +223,18 @@ public class HotelRoomAddView extends javax.swing.JFrame {
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCreateRoom, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+                    .addComponent(lblCreateRoom, javax.swing.GroupLayout.DEFAULT_SIZE, 643, Short.MAX_VALUE)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
             childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(childPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblCreateRoom)
+                .addContainerGap()
+                .addComponent(lblCreateRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enterInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addComponent(enterInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
@@ -242,6 +257,14 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddRoomActionPerformed
 
+    private void txtUpdatedByActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdatedByActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUpdatedByActionPerformed
+
+    private void txtRoomStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRoomStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRoomStatusActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -261,5 +284,6 @@ public class HotelRoomAddView extends javax.swing.JFrame {
     private javax.swing.JTextField txtRoomNumber;
     private javax.swing.JTextField txtRoomStatus;
     private javax.swing.JTextField txtRoomType;
+    private javax.swing.JTextField txtUpdatedBy;
     // End of variables declaration//GEN-END:variables
 }

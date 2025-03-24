@@ -56,5 +56,4 @@ public class AddReservationController {
             hotelReservationAddView.getTxtReservationStatus().setText("");
         }
     }
-    
 }

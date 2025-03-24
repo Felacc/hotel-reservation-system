@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 /**
@@ -9,6 +5,8 @@ package model;
  * @author felix
  */
 public class Room {
+    // Primary key - auto incremented
+    private int roomID;
     // Room info
     private String roomNumber; // used string in case of rooms like "101A"
     private String roomType;
@@ -26,6 +24,15 @@ public class Room {
     }
     
     // Getters and Setters
+
+    public int getRoomID() {
+        return roomID;
+    }
+
+    public void setRoomID(int roomID) {
+        this.roomID = roomID;
+    }
+    
     public String getRoomNumber() {
         return roomNumber;
     }
