@@ -4,6 +4,10 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -17,6 +21,26 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JTextField getTxtDeleteStaff() {
+        return txtDeleteStaff;
+    }
+
+    public void setTxtDeleteStaff(JTextField txtDeleteStaff) {
+        this.txtDeleteStaff = txtDeleteStaff;
+    }
+    
+     public void deleteStaffBtnListener (ActionListener myActionListener){
+        btnClear.addActionListener(myActionListener);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,11 +75,6 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
         btnClear.setText("Delete Staff...");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
 
         txtDeleteStaff.setText("This cannot be undone...");
 
@@ -119,10 +138,6 @@ public class HotelStaffDeleteView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClearActionPerformed
 
     /**
      * @param args the command line arguments

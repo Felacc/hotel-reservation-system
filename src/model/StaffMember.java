@@ -8,7 +8,7 @@ package model;
  *
  * @author felix
  */
-public class StaffMember extends User {
+public class StaffMember{
     // Name
     private String firstName;
     private String lastName;
@@ -27,29 +27,25 @@ public class StaffMember extends User {
     // Other info
     private int createdBy; // reference to employee who created the staff member record? if there is one? I think?
     private int userID; // reference to staff member in the users table
+    private int staffId;
 
     // Constructors
-    public StaffMember(String username, String password, String userType) {
-        super(username, password, userType);
-    }
-
-    public StaffMember(String firstName, String lastName, String email, String phoneNumber, String unitNumber, String streetAddress, String city, String postalCode, String country, int SIN, String citizenshipStatus, int createdBy, int userID, String username, String password, String userType) {
-        super(username, password, userType);
+    public StaffMember(String firstName, String lastName, String email, String phoneNumber, int SIN, String citizenshipStatus, String unitNumber, String streetAddress, String city, String postalCode, String country, int createdBy) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.SIN = SIN;
+        this.citizenshipStatus = citizenshipStatus;
         this.unitNumber = unitNumber;
         this.streetAddress = streetAddress;
         this.city = city;
         this.postalCode = postalCode;
         this.country = country;
-        this.SIN = SIN;
-        this.citizenshipStatus = citizenshipStatus;
         this.createdBy = createdBy;
-        this.userID = userID;
     }
-    
+
+   
     // Getters and Setters
 
     public String getFirstName() {
@@ -148,14 +144,11 @@ public class StaffMember extends User {
         this.createdBy = createdBy;
     }
 
-    public int getUserID() {
-        return userID;
+    public int getStaffId() {
+        return staffId;
     }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
     }
-    
-    
     
 }
