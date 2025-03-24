@@ -3,6 +3,8 @@ package controller.reservation;
 import dao.ReservationDAO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import model.Reservation;
 import view.HotelReservationAddView;
 
 /**
@@ -24,7 +26,22 @@ public class AddReservationController {
     private class AddReservationRecord implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            int customerID = Integer.valueOf(hotelReservationAddView.getTxtReservationCustomerID().getText());
+            int roomID = Integer.valueOf(hotelReservationAddView.getTxtReservationRoomID().getText());
+            int employeeID = Integer.valueOf(hotelReservationAddView.getTxtReservationEmployeeID().getText());
+            String checkInDate =hotelReservationAddView.getTxtReservationCheckInDate().getText();
+            String checkOutDate = hotelReservationAddView.getTxtReservationCheckOutDate().getText();
+            String status = hotelReservationAddView.getTxtReservationStatus().getText();
             
+            
+            Reservation newReservation = new Reservation(customerID, roomID, employeeID, checkInDate, checkOutDate, status);
+            
+            boolean result = reservationDAO.addReservationRecord(newReservation);
+            if (result) {
+                JOptionPane.showMessageDialog(null, "Successfull reservation!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Was not able to reserve :(");
+            }
         }
     }
     
