@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 /**
  *
@@ -14,6 +15,16 @@ public class HotelReservationDeleteView extends javax.swing.JFrame {
     public HotelReservationDeleteView() {
         initComponents();
     }
+
+    public JTextField getTxtDeleteReservation() {
+        return txtDeleteReservation;
+    }
+
+    public void setTxtDeleteReservation(JTextField txtDeleteReservation) {
+        this.txtDeleteReservation = txtDeleteReservation;
+    }
+    
+    
     
     public void deleteReservationBtnListener(ActionListener myActionListener){
         btnDeleteReservation.addActionListener(myActionListener);
