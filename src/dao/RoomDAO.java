@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import model.Room;
 import util.DBConnection;
 
@@ -46,5 +48,69 @@ public class RoomDAO {
             ex.printStackTrace();
         }
         return false;
+    }
+    
+    
+    public Room fetchRoomByRoomID(int roomID) {
+        Room room = null;
+        String query
+                = """
+            SELECT *
+            FROM   hotelreservationdb.rooms
+            WHERE  room_id = ?
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, roomID);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                room = new Room (
+                        resultSet.getString("room_number"),
+                        resultSet.getString("room_type"),
+                        resultSet.getDouble("price_per_night"),
+                        resultSet.getString("room_status"),
+                        resultSet.getInt("updated_by")
+                );
+                room.setRoomID(resultSet.getInt("room_id"));
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return room;
+    }
+
+    public List<Room> fetchAllRooms() {
+        List<Room> roomList = new ArrayList<>();
+        String query
+                = """
+           SELECT *
+           FROM  rooms
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                Room room = new Room (
+                        resultSet.getString("room_number"),
+                        resultSet.getString("room_type"),
+                        resultSet.getDouble("price_per_night"),
+                        resultSet.getString("room_status"),
+                        resultSet.getInt("updated_by")
+                );
+                room.setRoomID(resultSet.getInt("room_id"));
+                roomList.add(room);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return roomList;
     }
 }
