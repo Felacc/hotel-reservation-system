@@ -26,8 +26,8 @@ public class BookingDAO {
         //Connect to database
         try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
                  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, booking.getReservationID()); // first question mark - first name
-            preparedStatement.setString(2, booking.getBookingDate()); // second question mark - last name
+            preparedStatement.setInt(1, booking.getReservationID());
+            preparedStatement.setString(2, booking.getBookingDate());
             preparedStatement.setDouble(3, booking.getTotalPrice());
             return preparedStatement.executeUpdate() > 0; //successful insertion
         } catch (Exception ex) {

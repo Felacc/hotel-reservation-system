@@ -17,20 +17,20 @@ public class HotelReservationAddView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JFormattedTextField getTxtCheckInDate() {
-        return txtCheckInDate;
+    public JFormattedTextField getTxtReservationCheckInDate() {
+        return txtReservationCheckInDate;
     }
 
-    public void setTxtCheckInDate(JFormattedTextField txtCheckInDate) {
-        this.txtCheckInDate = txtCheckInDate;
+    public void setTxtReservationCheckInDate(JFormattedTextField txtReservationCheckInDate) {
+        this.txtReservationCheckInDate = txtReservationCheckInDate;
     }
 
-    public JFormattedTextField getTxtCheckOutDate() {
-        return txtCheckOutDate;
+    public JFormattedTextField getTxtReservationCheckOutDate() {
+        return txtReservationCheckOutDate;
     }
 
-    public void setTxtCheckOutDate(JFormattedTextField txtCheckOutDate) {
-        this.txtCheckOutDate = txtCheckOutDate;
+    public void setTxtReservationCheckOutDate(JFormattedTextField txtReservationCheckOutDate) {
+        this.txtReservationCheckOutDate = txtReservationCheckOutDate;
     }
 
     public JTextField getTxtReservationCustomerID() {
@@ -98,9 +98,9 @@ public class HotelReservationAddView extends javax.swing.JFrame {
         txtReservationStatus = new javax.swing.JTextField();
         btnClearReservation = new javax.swing.JButton();
         btnAddReservation = new javax.swing.JButton();
-        javax.swing.JLabel lblRegistrationCheckInDate = new javax.swing.JLabel();
-        txtCheckInDate = new javax.swing.JFormattedTextField();
-        txtCheckOutDate = new javax.swing.JFormattedTextField();
+        javax.swing.JLabel lblReservationCheckInDate = new javax.swing.JLabel();
+        txtReservationCheckInDate = new javax.swing.JFormattedTextField();
+        txtReservationCheckOutDate = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create Reservation Account");
@@ -146,15 +146,15 @@ public class HotelReservationAddView extends javax.swing.JFrame {
         btnAddReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/add.png"))); // NOI18N
         btnAddReservation.setText("Reserve");
 
-        lblRegistrationCheckInDate.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblRegistrationCheckInDate.setText("Check-In Date:");
+        lblReservationCheckInDate.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblReservationCheckInDate.setText("Check-In Date:");
 
-        txtCheckInDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("y-MM-dd"))));
-        txtCheckInDate.setText("Jan 1, 2000");
-        txtCheckInDate.setToolTipText("");
+        txtReservationCheckInDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("y-MM-dd"))));
+        txtReservationCheckInDate.setText("Jan 1, 2000");
+        txtReservationCheckInDate.setToolTipText("");
 
-        txtCheckOutDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("y-MM-dd"))));
-        txtCheckOutDate.setText("Jan 2, 2000");
+        txtReservationCheckOutDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("y-MM-dd"))));
+        txtReservationCheckOutDate.setText("Jan 2, 2000");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
@@ -172,14 +172,14 @@ public class HotelReservationAddView extends javax.swing.JFrame {
                     .addComponent(lblReservationCheckOutDate, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
                     .addComponent(lblReservationStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtReservationStatus)
-                    .addComponent(lblRegistrationCheckInDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblReservationCheckInDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnAddReservation)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnClearReservation))
-                    .addComponent(txtCheckInDate)
-                    .addComponent(txtCheckOutDate))
+                    .addComponent(txtReservationCheckInDate)
+                    .addComponent(txtReservationCheckOutDate))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
@@ -198,13 +198,13 @@ public class HotelReservationAddView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtReservationEmployeeID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblRegistrationCheckInDate)
+                .addComponent(lblReservationCheckInDate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtReservationCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(lblReservationCheckOutDate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtReservationCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(lblReservationStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -293,8 +293,8 @@ public class HotelReservationAddView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddReservation;
     private javax.swing.JButton btnClearReservation;
-    private javax.swing.JFormattedTextField txtCheckInDate;
-    private javax.swing.JFormattedTextField txtCheckOutDate;
+    private javax.swing.JFormattedTextField txtReservationCheckInDate;
+    private javax.swing.JFormattedTextField txtReservationCheckOutDate;
     private javax.swing.JTextField txtReservationCustomerID;
     private javax.swing.JTextField txtReservationEmployeeID;
     private javax.swing.JTextField txtReservationRoomID;

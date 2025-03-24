@@ -1,7 +1,5 @@
 package model;
 
-import java.time.LocalDate;
-
 /**
  *
  * @author felix
@@ -12,13 +10,13 @@ public class Reservation {
     private int roomID;
     private int employeeID;
     // Check in and check out date
-    private LocalDate checkInDate;
-    private LocalDate checkOutDate;
+    private String checkInDate;
+    private String checkOutDate;
     // no clue what this is
     private String status;
 
     // Constructor
-    public Reservation(int customerID, int roomID, int employeeID, LocalDate checkInDate, LocalDate checkOutDate, String status) {
+    public Reservation(int customerID, int roomID, int employeeID, String checkInDate, String checkOutDate, String status) {
         this.customerID = customerID;
         this.roomID = roomID;
         this.employeeID = employeeID;
@@ -52,19 +50,19 @@ public class Reservation {
         this.employeeID = employeeID;
     }
 
-    public LocalDate getCheckInDate() {
+    public String getCheckInDate() {
         return checkInDate;
     }
 
-    public void setCheckInDate(LocalDate checkInDate) {
+    public void setCheckInDate(String checkInDate) {
         this.checkInDate = checkInDate;
     }
 
-    public LocalDate getCheckOutDate() {
+    public String getCheckOutDate() {
         return checkOutDate;
     }
 
-    public void setCheckOutDate(LocalDate checkOutDate) {
+    public void setCheckOutDate(String checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
 
