@@ -70,11 +70,11 @@ public class HotelRoomAddView extends javax.swing.JFrame {
         this.txtRoomType = txtRoomType;
     }
 
-    public void addGuestBtnListener(ActionListener myActionListener){
+    public void addRoomBtnListener(ActionListener myActionListener){
         btnAddRoom.addActionListener(myActionListener);
     }
     
-    public void addClearAllBtnListener(ActionListener myActionListener){
+    public void clearAllBtnListener(ActionListener myActionListener){
         btnClear.addActionListener(myActionListener);
     }
   
