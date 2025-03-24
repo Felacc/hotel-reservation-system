@@ -4,6 +4,10 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -16,6 +20,32 @@ public class HotelReservationSearchView extends javax.swing.JFrame {
     public HotelReservationSearchView() {
         initComponents();
     }
+
+    public JTable getTblReservation() {
+        return tblReservation;
+    }
+
+    public void setTblReservation(JTable tblReservation) {
+        this.tblReservation = tblReservation;
+    }
+
+    public JTextField getTxtReservationID() {
+        return txtReservationID;
+    }
+
+    public void setTxtReservationID(JTextField txtReservationID) {
+        this.txtReservationID = txtReservationID;
+    }
+    
+    public void searchReservationByIDBtnListener(ActionListener myActionListener) {
+        btnSearchReservation.addActionListener(myActionListener);
+    }
+    
+    public void searchAllReservationsBtnListener(ActionListener myActionListener) {
+        btnSearchAllReservations.addActionListener(myActionListener);
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,8 +60,9 @@ public class HotelReservationSearchView extends javax.swing.JFrame {
         javax.swing.JLabel lblReservationRegister = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblReservation = new javax.swing.JTable();
-        btnSeachReservation = new javax.swing.JButton();
-        txtSearchReservation = new javax.swing.JTextField();
+        btnSearchReservation = new javax.swing.JButton();
+        txtReservationID = new javax.swing.JTextField();
+        btnSearchAllReservations = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search Reservation Account");
@@ -59,19 +90,29 @@ public class HotelReservationSearchView extends javax.swing.JFrame {
         tblReservation.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jScrollPane1.setViewportView(tblReservation);
 
-        btnSeachReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        btnSeachReservation.setText("Search By ReservationID...");
-        btnSeachReservation.addActionListener(new java.awt.event.ActionListener() {
+        btnSearchReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchReservation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchReservation.setText("Search By ReservationID");
+        btnSearchReservation.setToolTipText("");
+        btnSearchReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeachReservationActionPerformed(evt);
+                btnSearchReservationActionPerformed(evt);
             }
         });
 
-        txtSearchReservation.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        txtSearchReservation.addActionListener(new java.awt.event.ActionListener() {
+        txtReservationID.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        txtReservationID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSearchReservationActionPerformed(evt);
+                txtReservationIDActionPerformed(evt);
+            }
+        });
+
+        btnSearchAllReservations.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchAllReservations.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchAllReservations.setText("Search All");
+        btnSearchAllReservations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchAllReservationsActionPerformed(evt);
             }
         });
 
@@ -87,10 +128,12 @@ public class HotelReservationSearchView extends javax.swing.JFrame {
                             .addComponent(lblReservationRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1)))
                     .addGroup(childPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(txtSearchReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSeachReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 616, Short.MAX_VALUE)
+                        .addComponent(txtReservationID, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSearchReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSearchAllReservations, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -102,32 +145,41 @@ public class HotelReservationSearchView extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSearchReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeachReservation))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtReservationID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSearchReservation)
+                    .addComponent(btnSearchAllReservations))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(childPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(childPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSeachReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachReservationActionPerformed
+    private void btnSearchReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchReservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSeachReservationActionPerformed
+    }//GEN-LAST:event_btnSearchReservationActionPerformed
 
-    private void txtSearchReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchReservationActionPerformed
+    private void txtReservationIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReservationIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSearchReservationActionPerformed
+    }//GEN-LAST:event_txtReservationIDActionPerformed
+
+    private void btnSearchAllReservationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchAllReservationsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchAllReservationsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,9 +217,10 @@ public class HotelReservationSearchView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSeachReservation;
+    private javax.swing.JButton btnSearchAllReservations;
+    private javax.swing.JButton btnSearchReservation;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblReservation;
-    private javax.swing.JTextField txtSearchReservation;
+    private javax.swing.JTextField txtReservationID;
     // End of variables declaration//GEN-END:variables
 }

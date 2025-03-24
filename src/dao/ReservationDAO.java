@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import model.Reservation;
 import util.DBConnection;
 
@@ -47,6 +49,71 @@ public class ReservationDAO {
             ex.printStackTrace();
         }
         return false;
+    }
+
+    public Reservation fetchReservationByReservationID(int reservationID) {
+        Reservation reservation = null;
+        String query
+                = """
+            SELECT *
+            FROM   hotelreservationdb.reservations
+            WHERE  reservation_id = ?
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1, reservationID);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                reservation = new Reservation(
+                        resultSet.getInt("customer_id"),
+                        resultSet.getInt("room_id"),
+                        resultSet.getInt("employee_id"),
+                        resultSet.getString("check_in_date"),
+                        resultSet.getString("check_out_date"),
+                        resultSet.getString("reservation_status")
+                );
+                reservation.setReservationID(resultSet.getInt("reservation_id"));
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return reservation;
+    }
+
+    public List<Reservation> fetchAllReservations() {
+        List<Reservation> reservationList = new ArrayList<>();
+        String query
+                = """
+           SELECT *
+           FROM  reservations
+        """;
+
+        try (Connection connection = DBConnection.getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                Reservation reservation = new Reservation (
+                        resultSet.getInt("customer_id"),
+                        resultSet.getInt("room_id"),
+                        resultSet.getInt("employee_id"),
+                        resultSet.getString("check_in_date"),
+                        resultSet.getString("check_out_date"),
+                        resultSet.getString("reservation_status")
+                );
+                reservation.setReservationID(resultSet.getInt("reservation_id"));
+                reservationList.add(reservation);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return reservationList;
     }
 
 }
