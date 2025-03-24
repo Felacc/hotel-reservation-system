@@ -35,4 +35,16 @@ public class RoomDAO {
         }
         return false;
     }
+    
+    public boolean deleteRoomRecord(int roomID) {
+        String query = "DELETE FROM hotelReservationDB.rooms WHERE room_id = ?";
+        try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
+                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, roomID);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
 }
