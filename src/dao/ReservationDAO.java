@@ -50,6 +50,24 @@ public class ReservationDAO {
         }
         return false;
     }
+    
+    public boolean updateReservationRecord(int customerID, int roomID, int employeeID, String checkInDate, String checkOutDate, String status) {
+        String query = "UPDATE reservations SET customer_id = ?, room_id = ?, employee_id = ?, check_in_date = ?, check_out_date = ?, reservation_status = ?"
+                + " WHERE reservation_id = ?";
+        try (Connection connection = DBConnection.getConnection(); 
+                PreparedStatement preparedStatement = connection.prepareStatement(query)) { //Prepared statement for query
+            preparedStatement.setInt(1, customerID);
+            preparedStatement.setInt(2, roomID);
+            preparedStatement.setInt(3, employeeID);
+            preparedStatement.setString(4, checkInDate);
+            preparedStatement.setString(5, checkOutDate);
+            preparedStatement.setString(6, status);
+            return preparedStatement.executeUpdate() > 0; //successful insertion
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
 
     public Reservation fetchReservationByReservationID(int reservationID) {
         Reservation reservation = null;
