@@ -102,8 +102,6 @@
                           <Component id="lblStaffSIN" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtStaffSIN" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblStaffStatus" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtStaffStatus" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblStaffUnitNumber" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="243" max="32767" attributes="0"/>
                               <Component id="btnAddStaff" min="-2" max="-2" attributes="0"/>
@@ -123,6 +121,8 @@
                           <Component id="txtStaffPostalCode" alignment="1" max="32767" attributes="0"/>
                           <Component id="txtStaffCreatedBy" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblStaffCreatedBy" alignment="0" max="32767" attributes="0"/>
+                          <Component id="boxCitizenType" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblStaffUnitNumber" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -154,8 +154,8 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lblStaffStatus" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtStaffStatus" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="boxCitizenType" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="lblStaffUnitNumber" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffUnitNumber" min="-2" max="-2" attributes="0"/>
@@ -179,7 +179,7 @@
                       <Component id="lblStaffCreatedBy" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtStaffCreatedBy" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnAddStaff" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -263,8 +263,6 @@
                 <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
               </AuxValues>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtStaffStatus">
             </Component>
             <Component class="javax.swing.JLabel" name="lblStaffUnitNumber">
               <Properties>
@@ -390,6 +388,22 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="boxCitizenType">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="2">
+                    <StringItem index="0" value="Permanent"/>
+                    <StringItem index="1" value="Temporary"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boxCitizenTypeActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
           </SubComponents>

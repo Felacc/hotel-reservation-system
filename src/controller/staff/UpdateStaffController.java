@@ -30,11 +30,29 @@ public class UpdateStaffController {
         this.hotelStaffUpdateView.updateEmailBtnListener(new UpdateEmailRecord());
         this.hotelStaffUpdateView.updatePhoneBtnListener(new UpdatesPhoneRecord());
         this.hotelStaffUpdateView.updateSINBtnListener(new UpdateSINRecord());
+        this.hotelStaffUpdateView.updateCitizenBtnListener(new UpdateCitizenRecord());
         this.hotelStaffUpdateView.updateUnitBtnListener(new updateUnitRecord());
         this.hotelStaffUpdateView.updateAddressBtnListener(new UpdateAddressRecord());
         this.hotelStaffUpdateView.updateCityBtnListener(new UpdateCityRecord());
         this.hotelStaffUpdateView.updatePostalBtnListener(new UpdatePostalRecord());
         this.hotelStaffUpdateView.updateCountryBtnListener(new UpdateCountryRecord());
+    }
+
+    private class UpdateCitizenRecord implements ActionListener {
+
+       @Override
+        public void actionPerformed(ActionEvent e) {
+            int staffId = Integer.parseInt(hotelStaffUpdateView.getTxtStaffId().getText());
+            String status = hotelStaffUpdateView.getBoxCitizenType().getSelectedItem().toString().toLowerCase();
+            String column = "citizenship_status";
+            
+            boolean result = staffDAO.updateStaffMemberRecord(staffId, column, status);
+            if (result) {
+                JOptionPane.showMessageDialog(null, "Successfully updated Staff");
+            } else {
+                JOptionPane.showMessageDialog(null, "Staff does not exist");
+            }
+        }
     }
 
     private class UpdateFirstNameRecord implements ActionListener {

@@ -7,7 +7,11 @@ import java.sql.SQLException;
 /**
  *
  * @author C0522047
+ *  mysql -h 5b94af937a-dbserver.mysql.database.azure.com -P 3306 -u pncrcccpdq -p
+
  */
+
+
 
 public class DBConnection {
     public static final String URL = "jdbc:mysql://5b94af937a-dbserver.mysql.database.azure.com:3306/hotelreservationdb";
