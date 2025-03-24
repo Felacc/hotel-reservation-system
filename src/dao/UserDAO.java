@@ -15,7 +15,7 @@ import util.DBConnection;
 
 /**
  *
- * @author C0522047
+ * @author Caleb Irvine | C0522047
  */
 
 public class UserDAO {

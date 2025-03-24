@@ -4,6 +4,12 @@
  */
 package view;
 
+import controller.staff.SearchStaffController;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -17,6 +23,47 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnSearchStaff() {
+        return btnSearchStaffId;
+    }
+
+    public void setBtnSearchStaff(JButton btnSearchStaff) {
+        this.btnSearchStaffId = btnSearchStaff;
+    }
+
+    public JButton getBtnSearchStaffAll() {
+        return btnSearchStaffAll;
+    }
+
+    public void setBtnSearchStaffAll(JButton btnSearchStaffAll) {
+        this.btnSearchStaffAll = btnSearchStaffAll;
+    }
+
+    public JTable getTblStaff() {
+        return tblStaff;
+    }
+
+    public void setTblStaff(JTable tblStaff) {
+        this.tblStaff = tblStaff;
+    }
+
+    public JTextField getTxtSearchStaff() {
+        return txtSearchStaff;
+    }
+
+    public void setTxtSearchStaff(JTextField txtSearchStaff) {
+        this.txtSearchStaff = txtSearchStaff;
+    }
+    
+    
+    
+    public void searchStaffAllBtnListener(ActionListener myActionListener) {
+        btnSearchStaffId.addActionListener(myActionListener);
+    }
+
+    public void searchStaffIdBtnListener(ActionListener myActionListener) {
+        btnSearchStaffAll.addActionListener(myActionListener);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,12 +73,23 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnSeachStaff1 = new javax.swing.JButton();
         javax.swing.JPanel childPanel = new javax.swing.JPanel();
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblStaff = new javax.swing.JTable();
-        btnSeachStaff = new javax.swing.JButton();
+        btnSearchStaffAll = new javax.swing.JButton();
         txtSearchStaff = new javax.swing.JTextField();
+        btnSearchStaffId = new javax.swing.JButton();
+
+        btnSeachStaff1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSeachStaff1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSeachStaff1.setText("Search By StaffID...");
+        btnSeachStaff1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeachStaff1ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Search Staff Account");
@@ -47,24 +105,24 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
         tblStaff.setAutoCreateRowSorter(true);
         tblStaff.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Employee ID", "First Name", "Last Name", "Email", "Phone", "SIN", "Status", "Unit Number", "Street Address", "City", "Postal Code", "Country"
+                "Employee ID", "First Name", "Last Name", "Email", "Phone", "SIN", "Status", "Unit Number", "Street Address", "City", "Postal Code", "Country", "Created By"
             }
         ));
         tblStaff.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jScrollPane1.setViewportView(tblStaff);
 
-        btnSeachStaff.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnSeachStaff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
-        btnSeachStaff.setText("Search By StaffID...");
-        btnSeachStaff.addActionListener(new java.awt.event.ActionListener() {
+        btnSearchStaffAll.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchStaffAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchStaffAll.setText("Search All Staff...");
+        btnSearchStaffAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeachStaffActionPerformed(evt);
+                btnSearchStaffAllActionPerformed(evt);
             }
         });
 
@@ -72,6 +130,15 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
         txtSearchStaff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSearchStaffActionPerformed(evt);
+            }
+        });
+
+        btnSearchStaffId.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnSearchStaffId.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/search.png"))); // NOI18N
+        btnSearchStaffId.setText("Search By StaffID...");
+        btnSearchStaffId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchStaffIdActionPerformed(evt);
             }
         });
 
@@ -87,10 +154,12 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
                             .addComponent(lblStaffRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1)))
                     .addGroup(childPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 546, Short.MAX_VALUE)
                         .addComponent(txtSearchStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSeachStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSearchStaffId, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSearchStaffAll, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -103,7 +172,8 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSearchStaff, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeachStaff))
+                    .addComponent(btnSearchStaffAll)
+                    .addComponent(btnSearchStaffId))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -121,13 +191,21 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSeachStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachStaffActionPerformed
+    private void btnSearchStaffAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchStaffAllActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSeachStaffActionPerformed
+    }//GEN-LAST:event_btnSearchStaffAllActionPerformed
 
     private void txtSearchStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchStaffActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchStaffActionPerformed
+
+    private void btnSeachStaff1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeachStaff1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSeachStaff1ActionPerformed
+
+    private void btnSearchStaffIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchStaffIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchStaffIdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,9 +243,13 @@ public class HotelStaffSearchView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSeachStaff;
+    private javax.swing.JButton btnSeachStaff1;
+    private javax.swing.JButton btnSearchStaffAll;
+    private javax.swing.JButton btnSearchStaffId;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblStaff;
     private javax.swing.JTextField txtSearchStaff;
     // End of variables declaration//GEN-END:variables
+
+  
 }

@@ -4,6 +4,10 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author JekKath
@@ -17,6 +21,243 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTextField getTxtStaffId() {
+        return txtStaffId;
+    }
+
+    public void setTxtStaffId(JTextField txtStaffId) {
+        this.txtStaffId = txtStaffId;
+    }
+
+    
+    
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JButton getBtnUpdateAddress() {
+        return btnUpdateAddress;
+    }
+
+    public void setBtnUpdateAddress(JButton btnUpdateAddress) {
+        this.btnUpdateAddress = btnUpdateAddress;
+    }
+
+    public JButton getBtnUpdateCitizen() {
+        return btnUpdateCitizen;
+    }
+
+    public void setBtnUpdateCitizen(JButton btnUpdateCitizen) {
+        this.btnUpdateCitizen = btnUpdateCitizen;
+    }
+
+    public JButton getBtnUpdateCity() {
+        return btnUpdateCity;
+    }
+
+    public void setBtnUpdateCity(JButton btnUpdateCity) {
+        this.btnUpdateCity = btnUpdateCity;
+    }
+
+    public JButton getBtnUpdateCountry() {
+        return btnUpdateCountry;
+    }
+
+    public void setBtnUpdateCountry(JButton btnUpdateCountry) {
+        this.btnUpdateCountry = btnUpdateCountry;
+    }
+
+    public JButton getBtnUpdateEmail() {
+        return btnUpdateEmail;
+    }
+
+    public void setBtnUpdateEmail(JButton btnUpdateEmail) {
+        this.btnUpdateEmail = btnUpdateEmail;
+    }
+
+    public JButton getBtnUpdateFirst() {
+        return btnUpdateFirst;
+    }
+
+    public void setBtnUpdateFirst(JButton btnUpdateFirst) {
+        this.btnUpdateFirst = btnUpdateFirst;
+    }
+
+    public JButton getBtnUpdateLast() {
+        return btnUpdateLast;
+    }
+
+    public void setBtnUpdateLast(JButton btnUpdateLast) {
+        this.btnUpdateLast = btnUpdateLast;
+    }
+
+    public JButton getBtnUpdatePhone() {
+        return btnUpdatePhone;
+    }
+
+    public void setBtnUpdatePhone(JButton btnUpdatePhone) {
+        this.btnUpdatePhone = btnUpdatePhone;
+    }
+
+    public JButton getBtnUpdatePostal() {
+        return btnUpdatePostal;
+    }
+
+    public void setBtnUpdatePostal(JButton btnUpdatePostal) {
+        this.btnUpdatePostal = btnUpdatePostal;
+    }
+
+    public JButton getBtnUpdateSIN() {
+        return btnUpdateSIN;
+    }
+
+    public void setBtnUpdateSIN(JButton btnUpdateSIN) {
+        this.btnUpdateSIN = btnUpdateSIN;
+    }
+
+    public JButton getBtnUpdateUnit() {
+        return btnUpdateUnit;
+    }
+
+    public void setBtnUpdateUnit(JButton btnUpdateUnit) {
+        this.btnUpdateUnit = btnUpdateUnit;
+    }
+
+    public JTextField getTxtStaffAddress() {
+        return txtStaffAddress;
+    }
+
+    public void setTxtStaffAddress(JTextField txtStaffAddress) {
+        this.txtStaffAddress = txtStaffAddress;
+    }
+
+    public JTextField getTxtStaffCity() {
+        return txtStaffCity;
+    }
+
+    public void setTxtStaffCity(JTextField txtStaffCity) {
+        this.txtStaffCity = txtStaffCity;
+    }
+
+    public JTextField getTxtStaffCountry() {
+        return txtStaffCountry;
+    }
+
+    public void setTxtStaffCountry(JTextField txtStaffCountry) {
+        this.txtStaffCountry = txtStaffCountry;
+    }
+
+    public JTextField getTxtStaffEmail() {
+        return txtStaffEmail;
+    }
+
+    public void setTxtStaffEmail(JTextField txtStaffEmail) {
+        this.txtStaffEmail = txtStaffEmail;
+    }
+
+    public JTextField getTxtStaffFirstName() {
+        return txtStaffFirstName;
+    }
+
+    public void setTxtStaffFirstName(JTextField txtStaffFirstName) {
+        this.txtStaffFirstName = txtStaffFirstName;
+    }
+
+    public JTextField getTxtStaffLastName() {
+        return txtStaffLastName;
+    }
+
+    public void setTxtStaffLastName(JTextField txtStaffLastName) {
+        this.txtStaffLastName = txtStaffLastName;
+    }
+
+    public JTextField getTxtStaffPhone() {
+        return txtStaffPhone;
+    }
+
+    public void setTxtStaffPhone(JTextField txtStaffPhone) {
+        this.txtStaffPhone = txtStaffPhone;
+    }
+
+    public JTextField getTxtStaffPostalCode() {
+        return txtStaffPostalCode;
+    }
+
+    public void setTxtStaffPostalCode(JTextField txtStaffPostalCode) {
+        this.txtStaffPostalCode = txtStaffPostalCode;
+    }
+
+    public JTextField getTxtStaffSIN() {
+        return txtStaffSIN;
+    }
+
+    public void setTxtStaffSIN(JTextField txtStaffSIN) {
+        this.txtStaffSIN = txtStaffSIN;
+    }
+
+    public JTextField getTxtStaffStatus() {
+        return txtStaffStatus;
+    }
+
+    public void setTxtStaffStatus(JTextField txtStaffStatus) {
+        this.txtStaffStatus = txtStaffStatus;
+    }
+
+    public JTextField getTxtUnitNumber() {
+        return txtUnitNumber;
+    }
+
+    public void setTxtUnitNumber(JTextField txtUnitNumber) {
+        this.txtUnitNumber = txtUnitNumber;
+    }
+    
+    
+
+     public void updateFirstNameBtnListener(ActionListener myActionListener) {
+        btnUpdateFirst.addActionListener(myActionListener);
+    }
+
+    public void updateLastNameBtnListener(ActionListener myActionListener) {
+        btnUpdateLast.addActionListener(myActionListener);
+    }
+
+    public void updatePhoneBtnListener(ActionListener myActionListener) {
+        btnUpdatePhone.addActionListener(myActionListener);
+    }
+
+    public void updateEmailBtnListener(ActionListener myActionListener) {
+        btnUpdateEmail.addActionListener(myActionListener);
+    }
+    public void updateSINBtnListener(ActionListener myActionListener) {
+        btnUpdateSIN.addActionListener(myActionListener);
+    }
+     public void updateCountryBtnListener(ActionListener myActionListener) {
+        btnUpdateCountry.addActionListener(myActionListener);
+    }
+
+    public void updatePostalBtnListener(ActionListener myActionListener) {
+        btnUpdatePostal.addActionListener(myActionListener);
+    }
+
+    public void updateAddressBtnListener(ActionListener myActionListener) {
+        btnUpdateAddress.addActionListener(myActionListener);
+    }
+
+    public void updateUnitBtnListener(ActionListener myActionListener) {
+        btnUpdateUnit.addActionListener(myActionListener);
+    }
+
+    public void updateCitizenBtnListener(ActionListener myActionListener) {
+        btnUpdateCitizen.addActionListener(myActionListener);
+    }
+
+    public void updateCityBtnListener(ActionListener myActionListener) {
+        btnUpdateCity.addActionListener(myActionListener);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,8 +291,20 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         javax.swing.JLabel lblStaffCountry = new javax.swing.JLabel();
         txtStaffCountry = new javax.swing.JTextField();
         txtStaffPostalCode = new javax.swing.JTextField();
-        btnUpdateStaff = new javax.swing.JButton();
+        btnUpdateCountry = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
+        btnUpdatePhone = new javax.swing.JButton();
+        btnUpdatePostal = new javax.swing.JButton();
+        btnUpdateCity = new javax.swing.JButton();
+        btnUpdateAddress = new javax.swing.JButton();
+        btnUpdateUnit = new javax.swing.JButton();
+        btnUpdateCitizen = new javax.swing.JButton();
+        btnUpdateSIN = new javax.swing.JButton();
+        btnUpdateFirst = new javax.swing.JButton();
+        btnUpdateEmail = new javax.swing.JButton();
+        btnUpdateLast = new javax.swing.JButton();
+        txtStaffId = new javax.swing.JTextField();
+        javax.swing.JLabel lblFirstName1 = new javax.swing.JLabel();
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -113,13 +366,13 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
             }
         });
 
-        btnUpdateStaff.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnUpdateStaff.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        btnUpdateStaff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
-        btnUpdateStaff.setText("Update Filled Fields...");
-        btnUpdateStaff.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateCountry.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateCountry.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateCountry.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateCountry.setText("Update");
+        btnUpdateCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateStaffActionPerformed(evt);
+                btnUpdateCountryActionPerformed(evt);
             }
         });
 
@@ -133,94 +386,276 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
             }
         });
 
+        btnUpdatePhone.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdatePhone.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdatePhone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdatePhone.setText("Update");
+        btnUpdatePhone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdatePhoneActionPerformed(evt);
+            }
+        });
+
+        btnUpdatePostal.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdatePostal.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdatePostal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdatePostal.setText("Update");
+        btnUpdatePostal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdatePostalActionPerformed(evt);
+            }
+        });
+
+        btnUpdateCity.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateCity.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateCity.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateCity.setText("Update");
+        btnUpdateCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateCityActionPerformed(evt);
+            }
+        });
+
+        btnUpdateAddress.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateAddress.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateAddress.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateAddress.setText("Update");
+        btnUpdateAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateAddressActionPerformed(evt);
+            }
+        });
+
+        btnUpdateUnit.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateUnit.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateUnit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateUnit.setText("Update");
+        btnUpdateUnit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateUnitActionPerformed(evt);
+            }
+        });
+
+        btnUpdateCitizen.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateCitizen.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateCitizen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateCitizen.setText("Update");
+        btnUpdateCitizen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateCitizenActionPerformed(evt);
+            }
+        });
+
+        btnUpdateSIN.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateSIN.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateSIN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateSIN.setText("Update");
+        btnUpdateSIN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateSINActionPerformed(evt);
+            }
+        });
+
+        btnUpdateFirst.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateFirst.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateFirst.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateFirst.setText("Update");
+        btnUpdateFirst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateFirstActionPerformed(evt);
+            }
+        });
+
+        btnUpdateEmail.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateEmail.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateEmail.setText("Update");
+        btnUpdateEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateEmailActionPerformed(evt);
+            }
+        });
+
+        btnUpdateLast.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnUpdateLast.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateLast.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
+        btnUpdateLast.setText("Update");
+        btnUpdateLast.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateLastActionPerformed(evt);
+            }
+        });
+
+        txtStaffId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStaffIdActionPerformed(evt);
+            }
+        });
+
+        lblFirstName1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblFirstName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFirstName1.setText("STAFF ID:");
+
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStaffFirstName)
-                    .addComponent(lblLastName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStaffLastName)
-                    .addComponent(lblAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStaffEmail)
-                    .addComponent(lblSIN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStaffSIN)
-                    .addComponent(lblStaffStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStaffStatus)
-                    .addComponent(lblUnitNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblBillingAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtUnitNumber)
-                    .addComponent(txtStaffPhone)
-                    .addComponent(txtStaffCity, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblStaffAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
-                    .addComponent(txtStaffAddress)
-                    .addComponent(lblStaffPostalCode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStaffCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStaffCountry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtStaffCountry, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(243, 243, 243))
+                    .addComponent(lblLastName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblSIN, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffStatus, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblUnitNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblBillingAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffPostalCode, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffCity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStaffCountry, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnClear))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                         .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnUpdateStaff, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnClear, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateLast, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateFirst, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdatePhone, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtUnitNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffCity, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateCity, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdatePostal, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdateCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(lblFirstName1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(txtStaffId, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(lblFirstName1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtStaffId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
                 .addComponent(lblFirstName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtStaffFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdateFirst))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblLastName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtStaffLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdateLast))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtStaffEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdateEmail))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblBillingAddress)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(lblSIN)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtStaffPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(lblSIN))
+                    .addComponent(btnUpdatePhone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffSIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblStaffStatus)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtStaffSIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblStaffStatus))
+                    .addComponent(btnUpdateSIN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblUnitNumber)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtStaffStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblUnitNumber))
+                    .addComponent(btnUpdateCitizen))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUnitNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblStaffAddress)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtUnitNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblStaffAddress))
+                    .addComponent(btnUpdateUnit))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(lblStaffCity)
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtStaffAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(lblStaffCity))
+                    .addComponent(btnUpdateAddress))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblStaffPostalCode)
-                .addGap(7, 7, 7)
-                .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(lblStaffCountry)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtStaffCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnUpdateStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnClear)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(txtStaffCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblStaffPostalCode)
+                        .addGap(7, 7, 7)
+                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)
+                                .addComponent(lblStaffCountry)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                                        .addComponent(txtStaffCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(53, 53, 53)
+                                        .addComponent(btnClear))
+                                    .addComponent(btnUpdateCountry)))
+                            .addComponent(btnUpdatePostal)))
+                    .addComponent(btnUpdateCity))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         lblStaffRegister.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -237,7 +672,7 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStaffRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                    .addComponent(lblStaffRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         childPanelLayout.setVerticalGroup(
@@ -254,7 +689,9 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(childPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(childPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,13 +713,57 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStaffCountryActionPerformed
 
-    private void btnUpdateStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateStaffActionPerformed
+    private void btnUpdateCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateCountryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateStaffActionPerformed
+    }//GEN-LAST:event_btnUpdateCountryActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnUpdatePhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdatePhoneActionPerformed
+
+    private void btnUpdatePostalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePostalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdatePostalActionPerformed
+
+    private void btnUpdateCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateCityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateCityActionPerformed
+
+    private void btnUpdateAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateAddressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateAddressActionPerformed
+
+    private void btnUpdateUnitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateUnitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateUnitActionPerformed
+
+    private void btnUpdateCitizenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateCitizenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateCitizenActionPerformed
+
+    private void btnUpdateSINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateSINActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateSINActionPerformed
+
+    private void btnUpdateFirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateFirstActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateFirstActionPerformed
+
+    private void btnUpdateEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateEmailActionPerformed
+
+    private void btnUpdateLastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateLastActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateLastActionPerformed
+
+    private void txtStaffIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStaffIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStaffIdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -321,12 +802,23 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnUpdateStaff;
+    private javax.swing.JButton btnUpdateAddress;
+    private javax.swing.JButton btnUpdateCitizen;
+    private javax.swing.JButton btnUpdateCity;
+    private javax.swing.JButton btnUpdateCountry;
+    private javax.swing.JButton btnUpdateEmail;
+    private javax.swing.JButton btnUpdateFirst;
+    private javax.swing.JButton btnUpdateLast;
+    private javax.swing.JButton btnUpdatePhone;
+    private javax.swing.JButton btnUpdatePostal;
+    private javax.swing.JButton btnUpdateSIN;
+    private javax.swing.JButton btnUpdateUnit;
     private javax.swing.JTextField txtStaffAddress;
     private javax.swing.JTextField txtStaffCity;
     private javax.swing.JTextField txtStaffCountry;
     private javax.swing.JTextField txtStaffEmail;
     private javax.swing.JTextField txtStaffFirstName;
+    private javax.swing.JTextField txtStaffId;
     private javax.swing.JTextField txtStaffLastName;
     private javax.swing.JTextField txtStaffPhone;
     private javax.swing.JTextField txtStaffPostalCode;
@@ -334,4 +826,5 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
     private javax.swing.JTextField txtStaffStatus;
     private javax.swing.JTextField txtUnitNumber;
     // End of variables declaration//GEN-END:variables
+
 }
