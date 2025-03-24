@@ -30,12 +30,16 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
         this.btnDeleteRoom = btnClear;
     }
 
-    public JTextField getjTextField1() {
-        return txtDeleteGuest;
+    public JTextField getTxtDeleteRoom() {
+        return txtDeleteRoom;
     }
 
-    public void setjTextField1(JTextField jTextField1) {
-        this.txtDeleteGuest = jTextField1;
+    public void setTxtDeleteRoom(JTextField txtDeleteRoom) {
+        this.txtDeleteRoom = txtDeleteRoom;
+    }
+
+    public void deleteRoomBtnListener(ActionListener myActionListener){
+        btnDeleteRoom.addActionListener(myActionListener);
     }
 
     
@@ -56,7 +60,7 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
         javax.swing.JLabel lblDeleteRoom = new javax.swing.JLabel();
         javax.swing.JPanel enterInfoPanel = new javax.swing.JPanel();
         btnDeleteRoom = new javax.swing.JButton();
-        txtDeleteGuest = new javax.swing.JTextField();
+        txtDeleteRoom = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Delete User Account");
@@ -86,10 +90,10 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
             }
         });
 
-        txtDeleteGuest.setText("This cannot be undone...");
-        txtDeleteGuest.addActionListener(new java.awt.event.ActionListener() {
+        txtDeleteRoom.setText("This cannot be undone...");
+        txtDeleteRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDeleteGuestActionPerformed(evt);
+                txtDeleteRoomActionPerformed(evt);
             }
         });
 
@@ -104,14 +108,14 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
                         .addComponent(btnDeleteRoom))
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(txtDeleteGuest)))
+                        .addComponent(txtDeleteRoom)))
                 .addContainerGap())
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtDeleteGuest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDeleteRoom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDeleteRoom)
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -138,8 +142,6 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        enterInfoPanel.getAccessibleContext().setAccessibleName("Search by RoomID");
-
         javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
         parentPanel.setLayout(parentPanelLayout);
         parentPanelLayout.setHorizontalGroup(
@@ -160,9 +162,9 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteRoomActionPerformed
 
-    private void txtDeleteGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteGuestActionPerformed
+    private void txtDeleteRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteRoomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDeleteGuestActionPerformed
+    }//GEN-LAST:event_txtDeleteRoomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,6 +180,6 @@ public class HotelRoomDeleteView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDeleteRoom;
-    private javax.swing.JTextField txtDeleteGuest;
+    private javax.swing.JTextField txtDeleteRoom;
     // End of variables declaration//GEN-END:variables
 }

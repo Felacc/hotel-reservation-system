@@ -40,7 +40,7 @@ public class ReservationDAO {
     }
 
     public boolean deleteReservationRecord(int reservationID) {
-        String query = "DELETE FROM hotelReservationDB.reservations WHERE reservation_id = (?)";
+        String query = "DELETE FROM hotelReservationDB.reservations WHERE reservation_id = ?";
         try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
                  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, reservationID);
