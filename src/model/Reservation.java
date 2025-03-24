@@ -5,6 +5,8 @@ package model;
  * @author felix
  */
 public class Reservation {
+    // Primary Key - auto incremented
+    private int reservationID;
     // Customer that booked, room that they booked, and employee that helped
     private int customerID;
     private int roomID;
@@ -23,6 +25,8 @@ public class Reservation {
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.status = status;
+        
+        this.reservationID = -1;
     }
     
     // Getters and Setters
@@ -73,6 +77,16 @@ public class Reservation {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public int getReservationID() {
+        return reservationID;
+    }
+
+    public void setReservationID(int reservationID) {
+        this.reservationID = reservationID;
+    }
+    
+    
     
     
     

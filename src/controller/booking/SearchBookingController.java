@@ -36,7 +36,7 @@ public class SearchBookingController {
                 booking.getBookingID(),
                 booking.getReservationID(),
                 booking.getBookingDate(),
-                booking.getTotalPrice(),
+                booking.getTotalPrice()
             };
             model.addRow(row);
             }
@@ -47,15 +47,15 @@ public class SearchBookingController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            int guestID = Integer.valueOf(hotelBookingSearchView.getTxtBookingID().getText());
+            int bookingID = Integer.valueOf(hotelBookingSearchView.getTxtBookingID().getText());
             
             Booking booking = null;
             
             DefaultTableModel model = (DefaultTableModel)hotelBookingSearchView.getTblBooking().getModel();
             model.setRowCount(0);
             
-            if(guestID != 0){
-               booking = (Booking) bookingDAO.fetchBookingByBookingID(guestID);
+            if(bookingID != 0){
+               booking = bookingDAO.fetchBookingByBookingID(bookingID);
                 Object[] row = {
                     booking.getBookingID(),
                     booking.getReservationID(),
