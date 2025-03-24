@@ -46,7 +46,7 @@ public class AddStaffMemberController {
             String email = hotelStaffAddView.getTxtStaffEmail().getText();
             String phone = hotelStaffAddView.getTxtStaffPhone().getText();
             int SIN = Integer.parseInt(hotelStaffAddView.getTxtStaffSIN().getText());
-            String citizenStatus = hotelStaffAddView.getTxtStaffStatus().getText();
+            String status = hotelStaffAddView.getBoxCitizenType().getSelectedItem().toString().toLowerCase();
             String unit = hotelStaffAddView.getTxtStaffUnitNumber().getText();
             String address = hotelStaffAddView.getTxtStaffAddress().getText();
             String city = hotelStaffAddView.getTxtStaffCity().getText();
@@ -54,7 +54,7 @@ public class AddStaffMemberController {
             String country = hotelStaffAddView.getTxtStaffCountry().getText();
             int createdBy = Integer.parseInt(hotelStaffAddView.getTxtStaffCreatedBy().getText());
             
-             StaffMember newStaffMember = new StaffMember(firstName, lastName, email, phone, SIN, citizenStatus, unit, address, city, postal, country, createdBy);
+             StaffMember newStaffMember = new StaffMember(firstName, lastName, email, phone, SIN, status, unit, address, city, postal, country, createdBy);
                    
            boolean result = StaffMemberDAO.addStaffMemberRecord(newStaffMember);
            if (result) {

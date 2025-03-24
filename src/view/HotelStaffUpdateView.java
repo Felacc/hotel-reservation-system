@@ -6,6 +6,7 @@ package view;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /**
@@ -199,12 +200,12 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         this.txtStaffSIN = txtStaffSIN;
     }
 
-    public JTextField getTxtStaffStatus() {
-        return txtStaffStatus;
+    public JComboBox<String> getBoxCitizenType() {
+        return boxCitizenType;
     }
 
-    public void setTxtStaffStatus(JTextField txtStaffStatus) {
-        this.txtStaffStatus = txtStaffStatus;
+    public void setBoxCitizenType(JComboBox<String> boxCitizenType) {
+        this.boxCitizenType = boxCitizenType;
     }
 
     public JTextField getTxtUnitNumber() {
@@ -278,7 +279,6 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         javax.swing.JLabel lblSIN = new javax.swing.JLabel();
         txtStaffSIN = new javax.swing.JTextField();
         javax.swing.JLabel lblStaffStatus = new javax.swing.JLabel();
-        txtStaffStatus = new javax.swing.JTextField();
         javax.swing.JLabel lblUnitNumber = new javax.swing.JLabel();
         javax.swing.JLabel lblBillingAddress = new javax.swing.JLabel();
         txtUnitNumber = new javax.swing.JTextField();
@@ -305,6 +305,7 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         btnUpdateLast = new javax.swing.JButton();
         txtStaffId = new javax.swing.JTextField();
         javax.swing.JLabel lblFirstName1 = new javax.swing.JLabel();
+        boxCitizenType = new javax.swing.JComboBox<>();
         javax.swing.JLabel lblStaffRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -496,6 +497,13 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         lblFirstName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFirstName1.setText("STAFF ID:");
 
+        boxCitizenType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Permanent", "Temporary" }));
+        boxCitizenType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxCitizenTypeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
         enterInfoPanelLayout.setHorizontalGroup(
@@ -519,54 +527,54 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnClear))
+                    .addComponent(lblFirstName1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
-                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                        .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateLast, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateFirst, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdatePhone, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                                .addComponent(txtStaffStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
+                                .addComponent(boxCitizenType, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtUnitNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffCity, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateCity, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffPostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdatePostal, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(enterInfoPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, enterInfoPanelLayout.createSequentialGroup()
                                 .addComponent(txtStaffCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUpdateCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(lblFirstName1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(enterInfoPanelLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
@@ -616,8 +624,8 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(enterInfoPanelLayout.createSequentialGroup()
-                        .addComponent(txtStaffStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(boxCitizenType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
                         .addComponent(lblUnitNumber))
                     .addComponent(btnUpdateCitizen))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -765,6 +773,10 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStaffIdActionPerformed
 
+    private void boxCitizenTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxCitizenTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxCitizenTypeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -801,6 +813,7 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> boxCitizenType;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnUpdateAddress;
     private javax.swing.JButton btnUpdateCitizen;
@@ -823,7 +836,6 @@ public class HotelStaffUpdateView extends javax.swing.JFrame {
     private javax.swing.JTextField txtStaffPhone;
     private javax.swing.JTextField txtStaffPostalCode;
     private javax.swing.JTextField txtStaffSIN;
-    private javax.swing.JTextField txtStaffStatus;
     private javax.swing.JTextField txtUnitNumber;
     // End of variables declaration//GEN-END:variables
 
