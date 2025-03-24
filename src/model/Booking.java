@@ -1,10 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
-
-import java.time.LocalDate;
 
 /**
  *
@@ -12,19 +6,20 @@ import java.time.LocalDate;
  */
 public class Booking {
     // Booking info
+    private int bookingID;
     private int reservationID;
-    private LocalDate bookingDate;
+    private String bookingDate;
     private double totalPrice;
 
     // Constructor
-    public Booking(int reservationID, LocalDate bookingDate, double totalPrice) {
+    public Booking(int reservationID, String bookingDate, double totalPrice) {
+        this.bookingID = -1;
         this.reservationID = reservationID;
         this.bookingDate = bookingDate;
         this.totalPrice = totalPrice;
     }
     
     // Getters and Setters
-
     public int getReservationID() {
         return reservationID;
     }
@@ -33,11 +28,11 @@ public class Booking {
         this.reservationID = reservationID;
     }
 
-    public LocalDate getBookingDate() {
+    public String getBookingDate() {
         return bookingDate;
     }
 
-    public void setBookingDate(LocalDate bookingDate) {
+    public void setBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
     }
 
@@ -47,6 +42,14 @@ public class Booking {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+    
+    public int getBookingID() {
+        return bookingID;
+    }
+
+    public void setBookingID(int bookingID) {
+        this.bookingID = bookingID;
     }
 
 }

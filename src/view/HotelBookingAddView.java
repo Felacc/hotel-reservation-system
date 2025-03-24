@@ -62,6 +62,14 @@ public class HotelBookingAddView extends javax.swing.JFrame {
     public void setTxtReservationId(JTextField txtReservationId) {
         this.txtReservationId = txtReservationId;
     }
+    
+    public void addBookingBtnListener(ActionListener myActionListener){
+        btnAddBooking.addActionListener(myActionListener);
+    }
+    
+    public void clearAllBtnListener(ActionListener myActionListener){
+        btnClearBooking.addActionListener(myActionListener);
+    }
 
     
     
@@ -107,11 +115,11 @@ public class HotelBookingAddView extends javax.swing.JFrame {
 
         lblReservationId.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblReservationId.setForeground(java.awt.Color.black);
-        lblReservationId.setText("Reservation ID");
+        lblReservationId.setText("Reservation ID:");
 
         lblBookingDate.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         lblBookingDate.setForeground(java.awt.Color.black);
-        lblBookingDate.setText("Set Booking Date");
+        lblBookingDate.setText("Set Booking Date:");
 
         btnClearBooking.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClearBooking.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
@@ -129,7 +137,8 @@ public class HotelBookingAddView extends javax.swing.JFrame {
 
         txtFormatPrice.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
 
-        txtDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        txtDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("y-MM-dd"))));
+        txtDate.setText("Jan 1, 2000");
 
         javax.swing.GroupLayout enterInfoPanelLayout = new javax.swing.GroupLayout(enterInfoPanel);
         enterInfoPanel.setLayout(enterInfoPanelLayout);
