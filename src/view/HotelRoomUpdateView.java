@@ -22,28 +22,20 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getBtnClear() {
-        return btnClear;
-    }
-
-    public void setBtnClear(JButton btnClear) {
-        this.btnClear = btnClear;
-    }
-
-    public JButton getBtnUpdateRoom() {
-        return btnUpdateRoom;
-    }
-
-    public void setBtnUpdateRoom(JButton btnUpdateRoom) {
-        this.btnUpdateRoom = btnUpdateRoom;
-    }
-
     public JTextField getTxtPricePerNight() {
         return txtPricePerNight;
     }
 
     public void setTxtPricePerNight(JTextField txtPricePerNight) {
         this.txtPricePerNight = txtPricePerNight;
+    }
+
+    public JTextField getTxtRoomID() {
+        return txtRoomID;
+    }
+
+    public void setTxtRoomID(JTextField txtRoomID) {
+        this.txtRoomID = txtRoomID;
     }
 
     public JTextField getTxtRoomNumber() {
@@ -78,14 +70,17 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
         this.txtUpdatedBy = txtUpdatedBy;
     }
 
-
     
-    public void addGuestBtnListener(ActionListener myActionListener){
+    public void updateRoomBtnListener(ActionListener myActionListener){
         btnUpdateRoom.addActionListener(myActionListener);
     }
     
-    public void addClearAllBtnListener(ActionListener myActionListener){
+    public void clearAllBtnListener(ActionListener myActionListener){
         btnClear.addActionListener(myActionListener);
+    }
+    
+    public void getRoomInfoBtnListener(ActionListener myActionListener){
+        btnGetRoomInfo.addActionListener(myActionListener);
     }
   
     /**
@@ -113,6 +108,10 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
         txtRoomStatus = new javax.swing.JTextField();
         btnUpdateRoom = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
+        getRoomInfoPanel = new javax.swing.JPanel();
+        lblRoomID = new javax.swing.JLabel();
+        txtRoomID = new javax.swing.JTextField();
+        btnGetRoomInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register User Account");
@@ -152,10 +151,10 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
         lblRoomStatus.setText("Room Status:");
 
         btnUpdateRoom.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
-        btnUpdateRoom.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        btnUpdateRoom.setFont(btnUpdateRoom.getFont());
         btnUpdateRoom.setForeground(new java.awt.Color(0, 0, 0));
         btnUpdateRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/update.png"))); // NOI18N
-        btnUpdateRoom.setText("Update Filled Fields...");
+        btnUpdateRoom.setText("Update");
         btnUpdateRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateRoomActionPerformed(evt);
@@ -165,7 +164,7 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
         btnClear.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
         btnClear.setForeground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
         btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/clear.png"))); // NOI18N
-        btnClear.setText("Clear All...");
+        btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
@@ -185,17 +184,16 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
                     .addComponent(txtRoomType)
                     .addComponent(lblPricePerNight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtPricePerNight)
-                    .addComponent(lblUpdatedBy, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+                    .addComponent(lblUpdatedBy, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE)
                     .addComponent(txtUpdatedBy)
                     .addComponent(lblRoomStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtRoomStatus))
+                    .addComponent(txtRoomStatus)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
+                        .addComponent(btnUpdateRoom)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnClear)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterInfoPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnUpdateRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnClear)
-                .addGap(14, 14, 14))
         );
         enterInfoPanelLayout.setVerticalGroup(
             enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,10 +219,53 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtUpdatedBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnUpdateRoom, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(enterInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnClear)
+                    .addComponent(btnUpdateRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(11, 11, 11))
+        );
+
+        getRoomInfoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Get Room Info:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 1, 14), java.awt.Color.black)); // NOI18N
+        getRoomInfoPanel.setOpaque(false);
+
+        lblRoomID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        lblRoomID.setForeground(java.awt.Color.black);
+        lblRoomID.setText("Room ID:");
+
+        btnGetRoomInfo.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Grey"));
+        btnGetRoomInfo.setFont(btnGetRoomInfo.getFont());
+        btnGetRoomInfo.setForeground(new java.awt.Color(0, 0, 0));
+        btnGetRoomInfo.setText("Get Room Info");
+        btnGetRoomInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGetRoomInfoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout getRoomInfoPanelLayout = new javax.swing.GroupLayout(getRoomInfoPanel);
+        getRoomInfoPanel.setLayout(getRoomInfoPanelLayout);
+        getRoomInfoPanelLayout.setHorizontalGroup(
+            getRoomInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(getRoomInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(getRoomInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRoomID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtRoomID)
+                    .addGroup(getRoomInfoPanelLayout.createSequentialGroup()
+                        .addComponent(btnGetRoomInfo)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        getRoomInfoPanelLayout.setVerticalGroup(
+            getRoomInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(getRoomInfoPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblRoomID)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtRoomID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnGetRoomInfo)
+                .addGap(259, 259, 259))
         );
 
         javax.swing.GroupLayout childPanelLayout = new javax.swing.GroupLayout(childPanel);
@@ -234,7 +275,8 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
             .addGroup(childPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(childPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCreateRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(getRoomInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblCreateRoom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(enterInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -244,8 +286,10 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblCreateRoom)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(getRoomInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enterInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout parentPanelLayout = new javax.swing.GroupLayout(parentPanel);
@@ -262,7 +306,7 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
             .addGroup(parentPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(childPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         getContentPane().add(parentPanel, java.awt.BorderLayout.CENTER);
@@ -278,6 +322,10 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnClearActionPerformed
 
+    private void btnGetRoomInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetRoomInfoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGetRoomInfoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -292,8 +340,12 @@ public class HotelRoomUpdateView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnGetRoomInfo;
     private javax.swing.JButton btnUpdateRoom;
+    private javax.swing.JPanel getRoomInfoPanel;
+    private javax.swing.JLabel lblRoomID;
     private javax.swing.JTextField txtPricePerNight;
+    private javax.swing.JTextField txtRoomID;
     private javax.swing.JTextField txtRoomNumber;
     private javax.swing.JTextField txtRoomStatus;
     private javax.swing.JTextField txtRoomType;
