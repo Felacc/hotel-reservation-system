@@ -21,7 +21,7 @@ public class RoomDAO {
     
     public boolean addRoomRecord(Room room) {
         //The ?, ? values are not known yet
-        String query = "INSERT INTO hotelReservationDB.rooms (room_number, room_type, price_per_night, room_status, updated_by) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO hotelreservationdb.rooms (room_number, room_type, price_per_night, room_status, updated_by) VALUES (?, ?, ?, ?, ?)";
 
         //Connect to database
         try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
@@ -39,7 +39,7 @@ public class RoomDAO {
     }
     
     public boolean deleteRoomRecord(int roomID) {
-        String query = "DELETE FROM hotelReservationDB.rooms WHERE room_id = ?";
+        String query = "DELETE FROM hotelreservationdb.rooms WHERE room_id = ?";
         try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
                  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, roomID);

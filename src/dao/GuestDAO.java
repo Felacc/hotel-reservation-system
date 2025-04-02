@@ -39,7 +39,7 @@ public class GuestDAO {
 
     public boolean addGuestRecord(Guest guest) {
         //The ?, ? values are not known yet
-        String query = "INSERT INTO hotelReservationDB.guests (first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO hotelreservationdb.guests (first_name, last_name, email, phone_number, unit_number, street_address, city, postal_code, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         //Connect to database
         try (Connection connection = DBConnection.getConnection(); //Preparse statement for query
