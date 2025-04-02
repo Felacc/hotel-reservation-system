@@ -21,7 +21,7 @@ public class ReservationDAO {
 
     public boolean addReservationRecord(Reservation reservation) {
         //The ?, ? values are not known yet
-        String query = "INSERT INTO hotelReservationDB.reservations (customer_id, room_id, employee_id, check_in_date, check_out_date, reservation_status) VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO hotelreservationdb.reservations (customer_id, room_id, employee_id, check_in_date, check_out_date, reservation_status) VALUES (?, ?, ?, ?, ?, ?)";
 
         //Connect to database
         try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
@@ -40,7 +40,7 @@ public class ReservationDAO {
     }
 
     public boolean deleteReservationRecord(int reservationID) {
-        String query = "DELETE FROM hotelReservationDB.reservations WHERE reservation_id = ?";
+        String query = "DELETE FROM hotelReservationdb.reservations WHERE reservation_id = ?";
         try (Connection connection = DBConnection.getConnection(); // Prepared statement for query
                  PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, reservationID);

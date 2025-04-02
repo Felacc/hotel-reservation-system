@@ -3,14 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/dao/UserDAO.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/model/StaffMember.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/dao/StaffMemberDAO.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/controller/staff/DeleteStaffController.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/dao/GuestDAO.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/util/DBConnection.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/controller/staff/AddStaffMemberController.java</file>
-            <file>file:/Users/kale/Library/CloudStorage/OneDrive-CamosunCollege/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/view/HotelStaffDeleteView.java</file>
+            <file>file:/Users/kale/OneDrive%20-%20Camosun%20College/Camosun/~Winter%202025/ICS%20125%20-%20SENG%20process/Final_Project/HotelRezzo/hotel-reservation-system/src/dao/ReservationDAO.java</file>
         </group>
     </open-files>
 </project-private>
