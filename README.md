@@ -8,4 +8,4 @@ This project uses ANT and all dependencies that must be added to the project can
 
 This is a more polished version of the project that contains more changes that I have made since the course has ended.
 
-- Felix Michel
+Felix Michel
