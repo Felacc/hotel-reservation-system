@@ -9,4 +9,5 @@ This project was developed in NetBeans and uses the Maven build system, Java Swi
 This is a more polished version of the project that contains more changes that have been made since the course has ended.
 
 Team Name: Diamond Scrum Cooperative
+
 Members: Caleb Irvine, Edwynne, Felix Michel
