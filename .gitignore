@@ -1,2 +1,8 @@
-/build/
+# Maven target directory
 /target/
+
+# IntelliJ IDEA files
+.idea/
+
+# OS Generated files
+.DS_Store
