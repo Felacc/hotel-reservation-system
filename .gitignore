@@ -6,3 +6,6 @@
 
 # OS Generated files
 .DS_Store
+
+# DB files
+src/main/resources/db/*
