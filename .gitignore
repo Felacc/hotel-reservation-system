@@ -8,4 +8,4 @@
 .DS_Store
 
 # DB files
-src/main/resources/app/hotelreservationsystem/db/*
+src/main/resources/app/hotelreservationsystem/utils/*
