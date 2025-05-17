@@ -12,13 +12,13 @@ import java.util.Properties;
  * @author Felix
  */
 public class DBConnection {
-    private static final String PROPERTIES_FILE = "db.properties";
+    private static final String PROPERTIES_FILE = "/app/hotelreservationsystem/utils/db.properties";
     private static String dbUrl;
     private static String dbUsername;
     private static String dbPassword;
     
     static {
-        try (InputStream input = DBConnection.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE)) {
+        try (InputStream input = DBConnection.class.getResourceAsStream(PROPERTIES_FILE)) {
             if (input == null) {
                 throw new IOException("Unable to find " + PROPERTIES_FILE);
             }

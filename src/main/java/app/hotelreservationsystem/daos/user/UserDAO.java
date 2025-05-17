@@ -38,7 +38,7 @@ public class UserDAO {
     
     public boolean addUserRecord(User user){
         //The ?, ? values are not known yet
-        String query = "INSERT INTO hotelReservationdb.users (username, password, user_type) VALUES (?, ?, ?)";
+        String query = "INSERT INTO hotel_reservation_db.user (username, password, user_type) VALUES (?, ?, ?)";
         
         //Connect to database
         try(Connection connection = DBConnection.getConnection();

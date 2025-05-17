@@ -1,0 +1,11 @@
+# DO NOT WRITE TO THIS FILE
+# Make a copy of this file and name it db.properties (in this package)
+# db.properties is automatically ignored by .gitignore and can be used to safely store your sensitive db info
+#
+# What to update:
+# Change the db.url below to whatever the url to your mysql/mariadb database made from the provided DDL Create Script (found in this package) is
+# Add your username and password
+
+db.url=jdbc:mysql://localhost:3306/hotel_reservation_db
+db.username=your_username
+db.password=your_password
