@@ -2,7 +2,7 @@
 
 This is a group project that was created for the class ICS-125 (Software Engineering Process) at Camosun College.
 
-We were a team of three, tasked with making a hotel reservation database management system that performs CRUD operations on a MariaDB/MySQL database.
+We were a team of three, tasked with making a hotel reservation management system that performs CRUD operations on a MariaDB/MySQL database.
 
 ## The Design
 
